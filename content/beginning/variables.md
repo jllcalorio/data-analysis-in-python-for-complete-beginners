@@ -5,8 +5,6 @@ title: Variables
 topics: variable, data, values
 ---
 
-**Variables**
-
 *Variables* are like containers that store data values. In Python, you don't need to declare the type of variable explicitly - Python figures it out automatically!
 
 # **Creating Variables**
