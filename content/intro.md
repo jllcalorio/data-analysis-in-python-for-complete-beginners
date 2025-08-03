@@ -3,39 +3,141 @@ nav_order: 1
 title: Introduction
 ---
 
-Learn-Static Lesson Template is a Jekyll project to create a simple lesson or workshop website, with a [Bootstrap](https://getbootstrap.com/)-based theme, designed for hosting on [GitHub Pages](https://pages.github.com/).
+# Python Workshop
+## DMSFI CRD Python Workshop - August 2025
 
-It features a sidebar navigation providing clear structure for step by step content.
-The sidebar nav supports pages nested into sections to help organize your lesson content. 
+Welcome to our comprehensive Python programming workshop! This intensive learning experience is designed to take you from complete beginner to confident Python programmer with practical data analysis skills.
 
-All content is written using basic Markdown, making it simple to write, edit, and reuse lesson materials.
+---
 
-To use Lesson Template to create your own website--> make a copy and replace the template content with your own!
+## Workshop Overview
 
-### Why?
+Python has become one of the most popular and versatile programming languages in the world, powering everything from web applications to artificial intelligence systems. This workshop provides a structured, hands-on approach to learning Python programming fundamentals and applying them to real-world data analysis tasks.
 
-Rather than making slides for a workshop, why not make a website? 
-It's easier to write, access, share, and reuse. 
-GitHub and GitHub Pages makes this relatively straightforward.
+### Duration & Format
+- **Duration**: 3-day intensive workshop
+- **Format**: Hands-on learning with practical exercises
+- **Schedule**: August 2025
+- **Delivery**: Interactive sessions with live coding demonstrations
 
-Writing content in this simple, reuseable format makes for a better [Open Educational Resource](https://en.wikipedia.org/wiki/Open_educational_resources) since anyone can make a copy and adapt!
+---
 
-## GitHub Pages 
+## Learning Objectives
 
-One amazingly useful GitHub feature is [GitHub Pages](https://guides.github.com/features/pages/).
-It provides free static web hosting from any repository.
-Gh-pages is intended to host relatively simple sites for your GitHub portfolio, project, or documentation.
-Because it is free and a valuable transferable skill, this is a great option for teaching and learning.
+By the end of this workshop, participants will be able to:
 
-Many organizations are using GitHub to collaboratively create and publish public workshop websites. 
-For example: 
+### Technical Skills
+- **Master Python Fundamentals**: Understand variables, data types, operators, and control structures
+- **Write Functional Code**: Create reusable functions and work with Python modules
+- **Handle Data Effectively**: Use lists, dictionaries, and string manipulation techniques
+- **Perform Data Analysis**: Utilize pandas for data manipulation and basic statistical analysis
+- **Create Visualizations**: Generate meaningful charts and graphs from data
+- **Debug and Troubleshoot**: Identify and resolve common programming errors
 
-- [Programming Historian](http://programminghistorian.org/)
-- [Software Carpentry](https://software-carpentry.org/), [Data Carpentry](http://www.datacarpentry.org/), [Library Carpentry](https://librarycarpentry.org/)
-- this site!
+### Practical Applications
+- Read and process data from various file formats
+- Filter and query datasets to extract meaningful insights
+- Perform statistical tests (t-tests, ANOVA, chi-square, logistic regression)
+- Create professional data visualizations
+- Build a foundation for advanced Python applications
 
-{% capture text %}Note:
-There are *soft* limits and guidelines for gh-pages usage: sites should be < 1GB, use < 100GB bandwidth per month, and make < 10 builds per hour.
-If your site exceeds these quotas, GitHub will send you a notice asking you to modify the repository.
-All content must follow the [community guidelines](https://help.github.com/articles/github-community-guidelines/), e.g. no violence, obscene sex, or illegal stuff.{% endcapture %}
+---
+
+## Target Audience
+
+This workshop is designed for:
+
+### Primary Audience
+- **Students** in data science, computer science, or related fields
+- **Complete beginners** with no prior programming experience
+- **Professionals** looking to add Python skills to their toolkit
+- **Researchers** who need to analyze data programmatically
+
+### Prerequisites
+- **No programming experience required** - we start from the very basics
+- Basic computer literacy (file management, using applications)
+- Willingness to learn and practice hands-on coding
+- A laptop with internet connection for installation and practice
+
+### Who Will Benefit Most
+- Individuals seeking to transition into data-driven roles
+- Students preparing for advanced coursework requiring programming
+- Professionals in fields like business, healthcare, education, or research
+- Anyone curious about programming and data analysis
+
+---
+
+## Expected Outcomes
+
+### Immediate Skills (End of Workshop)
+- Confidently write basic to intermediate Python programs
+- Understand and apply fundamental programming concepts
+- Perform basic data manipulation and analysis tasks
+- Create simple visualizations from datasets
+- Debug common programming errors independently
+
+### Long-term Benefits
+- **Career Advancement**: Python skills are highly valued across industries
+- **Research Capabilities**: Analyze your own data more efficiently
+- **Problem-Solving**: Develop computational thinking skills
+- **Foundation Building**: Prepared for advanced topics like machine learning
+- **Automation**: Streamline repetitive tasks in your work or studies
+
+### Practical Projects
+By workshop completion, you'll have created:
+- A personal library of useful Python functions
+- Several data analysis projects you can showcase
+- Solutions to real-world data problems
+- A foundation for continued learning and development
+
+---
+
+## Workshop Structure
+
+### Day 1: Foundation Building
+- Python basics and development environment setup
+- Variables, data types, and basic operations
+- Introduction to programming logic
+
+### Day 2: Building Complexity
+- Control structures and functions
+- Working with modules and handling errors
+- Hands-on practice with increasingly complex problems
+
+### Day 3: Real-World Application
+- Data analysis with pandas
+- Statistical analysis and visualization
+- Capstone project and wrap-up
+
+---
+
+## What You'll Take Away
+
+### Skills Portfolio
+- Comprehensive understanding of Python fundamentals
+- Experience with industry-standard data analysis tools
+- Portfolio of completed programming projects
+- Confidence to tackle new programming challenges
+
+### Resources for Continued Learning
+- Complete workshop materials and code examples
+- Recommended resources for further study
+- Access to a supportive learning community
+- Clear pathways for advancing your Python skills
+
+### Certificate of Completion
+Participants who complete all workshop activities will receive a certificate recognizing their achievement and newly acquired Python programming skills.
+
+---
+
+## Getting Started
+
+Ready to begin your Python journey? Let's dive into the fundamentals and start building your programming skills from the ground up. The next section will introduce you to the basic building blocks of Python programming.
+
+**Important**: Make sure you have Python installed on your computer before we begin. Installation instructions and setup guidance will be provided in our first session.
+
+---
+
+{% capture text %}
+*This workshop is brought to you by the Senior Statistician form the Center for Research and Development. The center is committed to providing quality technical education and fostering innovation in data science and programming.*{% endcapture %}
 {% include alert.html text=text color=secondary %}
