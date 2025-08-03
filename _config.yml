@@ -11,14 +11,15 @@
 # SITE SETTINGS
 #
 # title appears in the header
-title: Python Workshop (August 2025)
+title: Python Workshop
+tagline: "DMSFI-CRD Python Workshop - August 2025"
 # title-icon appears in the header to give some pizazz (leave blank for none)
 # choose from Bootstrap Icons in _includes/bootstrap-icons
 # find names on https://icons.getbootstrap.com/ (or look in "_includes/bootstrap-icons")
 # some options: code-slash file-code gear tools lightblub book bookmark-star
 title-icon: code-slash
 # description appears in sidebar footer
-description: "A workshop for complete beginners in Python (a programming language)."
+description: "A workshop for complete beginners in Python (a programming language) covering basics to data analysis."
 # keywords for meta tags used by search engines
 keywords: "workshops, python, dmsf, crd, davao"
 # image for meta tags, will appear when sharing link on social media
