@@ -22,7 +22,7 @@ print(a % b)   # Modulus (remainder): 1
 print(a ** b)  # Exponentiation: 1000
 ```
 
-Comparison Operators
+# Comparison Operators
 
 ```python
 x = 5
@@ -36,7 +36,7 @@ print(x <= y)   # Less than or equal: True
 print(x >= y)   # Greater than or equal: False
 ```
 
-Logical Operators
+# Logical Operators
 
 ```python
 is_sunny = True
@@ -47,7 +47,7 @@ print(is_sunny or is_warm)   # True
 print(not is_sunny)          # False
 ```
 
-Assignment Operators
+# Assignment Operators
 
 ```python
 counter = 0
