@@ -1,3 +1,10 @@
+---
+section_id: Beginning Python
+nav_order: 2
+title: Introduction
+topics: intro, lecture cover
+---
+
 **Welcome to the foundation of your Python journey!**
 
 In this section, we'll cover all the essential building blocks you need to start programming in Python. 
