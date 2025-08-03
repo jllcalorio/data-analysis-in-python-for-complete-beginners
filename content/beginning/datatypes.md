@@ -1,6 +1,6 @@
 ---
 section: Beginning Python
-nav_order: 2
+nav_order: 4
 title: Basic Data Types
 topics: data type, int, float, string
 ---
