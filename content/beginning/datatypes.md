@@ -5,8 +5,6 @@ title: Basic Data Types
 topics: data type, int, float, string
 ---
 
-# **Basic Data Types**
-
 Python has several built-in data types. Understanding these is crucial for effective programming.
 
 # **The Four Main Data Types**
