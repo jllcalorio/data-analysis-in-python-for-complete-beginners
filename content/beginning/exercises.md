@@ -25,23 +25,21 @@ intro = f"Hi! I'm {name}, I'm {age} years old, I live in {city}, and I was born 
 print(intro)
 ```
 
-{% include question.html
-  header="Exercise 1: Personal Information"
-  text="Create a program that:
+{% include question.html header="Exercise 1: Personal Information" text="Create a program that:
 
 - Stores your personal information in variables (name, age, city)
 - Calculates your birth year
 - Creates a formatted introduction message
-"
-  solution="name = \"Your Name\"
+" solution="
+name = \"Your Name\"
 age = 25
 city = \"Your City\"
 current_year = 2025
 
 birth_year = current_year - age
 intro = f\"Hi! I'm {name}, I'm {age} years old, I live in {city}, and I was born in {birth_year}.\"
-print(intro)"
-%}
+print(intro)
+" %}
 
 # Exercise 2: Shopping List Manager
 
