@@ -1,8 +1,7 @@
 ---
-section_id: Wrap up
 nav_order: 5
+title: Wrap-up
 ---
-
 
 # Wrap-up: Your Python Journey Ends Here
 
