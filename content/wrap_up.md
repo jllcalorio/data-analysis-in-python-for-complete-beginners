@@ -3,7 +3,7 @@ nav_order: 5
 title: Wrap-up
 ---
 
-# Wrap-up: Your Python Journey Ends Here
+# Your Python Journey Ends Here
 
 ## Congratulations on Your Achievement! 🎉
 
@@ -74,7 +74,7 @@ You're no longer just a consumer of technology—you're a creator. You can:
 
 Your experience today helps us improve future workshops for students and beginners just like you were this morning. Please take 3-5 minutes to share your thoughts:
 
-**📝 Workshop Feedback Form**: [Insert feedback form link here]
+**📝 Workshop Feedback Form**: [bit.ly/crd_pythonworkshop](https:://bit.ly/crd_pythonworkshop)
 
 Your honest feedback about:
 - What worked well for your learning style
@@ -141,7 +141,7 @@ You've earned this recognition through your dedication, curiosity, and hard work
 
 ## A Personal Message
 
-Remember, every expert was once a beginner. Every accomplished programmer wrote their first "Hello, World!" program just like you did today. The difference between those who succeed in programming and those who don't isn't talent—it's persistence and curiosity.
+Remember, every expert was once a beginner. Every accomplished programmer wrote their first "Hello, World!" program just like you did 3 days ago. The difference between those who succeed in programming and those who don't isn't talent—it's persistence and curiosity.
 
 You have both. You've proven it by dedicating your time to learning something completely new and challenging. You've asked questions, worked through problems, and pushed through moments of confusion to reach understanding.
 
@@ -152,7 +152,7 @@ Programming is a journey, not a destination. There will always be new things to 
 Don't let today be the end of your Python story—let it be the beginning. We believe in your potential, and we're excited to see what you'll build next.
 
 **Questions? Need help?** Don't hesitate to reach out:
-- Workshop instructor email: [jllcalorio@gmail.com]
+- Workshop instructor email: jllcalorio@gmail.com
 - Follow-up Q&A session: August 25-29, 2025
 
 Thank you for your enthusiasm, your questions, your willingness to try new things, and for making this workshop engaging and rewarding for everyone involved.
@@ -160,7 +160,7 @@ Thank you for your enthusiasm, your questions, your willingness to try new thing
 Now go forth and code! Your Python adventure starts now. 🐍✨
 
 ---
-{% capture text %}
+{% capture text %}One last thing:
 *"The best time to plant a tree was 20 years ago. The second best time is now."* - Chinese Proverb
 
 Your Python tree has been planted today. With consistent care and attention, it will grow into something amazing.
