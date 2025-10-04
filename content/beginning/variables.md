@@ -22,6 +22,13 @@ is_student = True
 print(name)    # Output: Alice
 print(age)     # Output: 25
 ```
+
+**Bonus**: Comments
+
+Comments are lines in the code that are ignored by the interpreter and serve as notes or explanations for humans reading the code.
+
+- A comment starts with the '#' symbol and continues to the end of the line.
+- Python also supports multi-line comments using triple quotes (''' or \"\"\"), though these are technically treated as multi-line strings unless assigned or used in docstrings (used later on in the 'Control Structures' section).
 " %}
 
 {% include question.html header="Variable Naming Rules" text="
@@ -37,7 +44,7 @@ print(age)     # Output: 25
 - Avoid abbreviations unless they're widely understood (```num``` is okay, ```nm``` is not)
 " %}
 
-{% include question.html header="Good Variable Naming Practices" text="
+{% include question.html header="Variable Naming Practices" text="
 
 **Good variable names**
 
@@ -50,8 +57,8 @@ is_valid = True
 **Avoid these**
 
 ```python
-x = \"john_doe\"         # Not descriptive
-userName = \"john_doe\"  # Use snake_case in Python
+x = \"john_doe\"         # Not descriptive, but usable
+userName = \"john_doe\"  # Use snake_case in Python, but usable
 2name = \"invalid\"      # Cannot start with number
 ```
 " %}
