@@ -50,8 +50,8 @@ for i, item in enumerate(shopping_list, 1):
 " solution="
 ```python
 student = {
-    "name": \"Alice\",
-    "grades": [85, 92, 78, 96, 88]
+    \"name\": \"Alice\",
+    \"grades\": [85, 92, 78, 96, 88]
 }
 
 average = sum(student[\"grades\"]) / len(student[\"grades\"])
