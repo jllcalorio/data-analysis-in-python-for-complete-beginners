@@ -29,7 +29,7 @@ print(intro)
 - Adds 2 more items to the list
 - Removes 1 item from the list
 - Prints the final list with item numbers
-
+" solution="
 ```python
 Solution
 shopping_list = ["milk", "bread", "eggs", "apples", "chicken"]
@@ -48,7 +48,7 @@ for i, item in enumerate(shopping_list, 1):
 - Calculates the average grade
 - Determines letter grade based on average
 - Prints a formatted report
-
+" solution="
 ```python
 # Solution
 student = {
@@ -81,7 +81,7 @@ print(f"Letter Grade: {letter_grade}")
 - At least 8 characters long
 - Contains at least one number
 - Contains at least one uppercase letter
-
+" solution="
 ```python
 # Solution
 def validate_password(password):
