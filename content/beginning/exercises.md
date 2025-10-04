@@ -18,7 +18,7 @@ city = \"Your City\"
 current_year = 2025
 
 birth_year = current_year - age
-intro = f\"Hi! I\'m {name}, I\'m {age} years old, I live in {city}, and I was born in {birth_year}.\"
+intro = f\"Hi! I'm {name}, I'm {age} years old, I live in {city}, and I was born in {birth_year}.\"
 print(intro)
 ```
 " %}
@@ -67,8 +67,8 @@ elif average >= 60:
 else:
     letter_grade = \"F\"
 
-print(f\"Student: {student[\'name\']}\")
-print(f\"Grades: {student[\'grades\']}\")
+print(f\"Student: {student['name']}\")
+print(f\"Grades: {student['grades']}\")
 print(f\"Average: {average:.1f}\")
 print(f\"Letter Grade: {letter_grade}\")
 ```
@@ -100,6 +100,6 @@ def validate_password(password):
 test_passwords = [\"weak\", \"StrongPass1\", \"nodigits\", \"NONUMBERS\"]
 for pwd in test_passwords:
     is_valid, message = validate_password(pwd)
-    print(f\"\'{pwd}\': {message}\")
+    print(f\"'{pwd}': {message}\")
 ```
 " %}
