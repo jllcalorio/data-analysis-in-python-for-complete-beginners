@@ -20,7 +20,7 @@ By the end of this section, you'll be able to
 - control the flow of your programs.
 
 
-{% header="Welcome to the foundation of your Python journey!" text="
+{% include question.html header="Welcome to the foundation of your Python journey!" text="
 
 In this section, we'll cover all the essential building blocks you need to start programming in Python. 
 
