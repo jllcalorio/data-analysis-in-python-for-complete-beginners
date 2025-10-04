@@ -23,9 +23,7 @@ print(intro)
 ```
 " %}
 
-# Exercise 2: Shopping List Manager
-
-Create a program that:
+{% include question.html header="Exercise 2: Shopping List Manager" text="Create a program that:
 
 - Creates a shopping list with at least 5 items
 - Adds 2 more items to the list
@@ -42,10 +40,9 @@ print("Shopping List:")
 for i, item in enumerate(shopping_list, 1):
     print(f"{i}. {item}")
 ```
+" %}
 
-# Exercise 3: Grade Calculator
-
-Create a program that:
+{% include question.html header="Exercise 3: Grade Calculator" text="Create a program that:
 
 - Stores student information in a dictionary
 - Calculates the average grade
@@ -77,10 +74,9 @@ print(f"Grades: {student['grades']}")
 print(f"Average: {average:.1f}")
 print(f"Letter Grade: {letter_grade}")
 ```
+" %}
 
-# Exercise 4: Password Validator
-
-Create a function that validates a password based on these criteria:
+{% include question.html header="Exercise 4: Password Validator" text="Create a function that validates a password based on these criteria:
 
 - At least 8 characters long
 - Contains at least one number
@@ -109,3 +105,4 @@ for pwd in test_passwords:
     is_valid, message = validate_password(pwd)
     print(f"'{pwd}': {message}")
 ```
+" %}
