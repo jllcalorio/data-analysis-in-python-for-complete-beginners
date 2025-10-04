@@ -7,7 +7,7 @@ topics: variable, data, values, comments
 
 *Variables* are like containers that store data values. In Python, you don't need to declare the type of variable explicitly - Python figures it out automatically!
 
-{% include topic_creating_variable.html header="Creating Variables" text="
+{% include question.html header="Creating Variables" text="
 
 Creating variables is simple. 
 
@@ -24,7 +24,7 @@ print(age)     # Output: 25
 ```
 " %}
 
-{% include topic_creating_variable.html header="Variable Naming Rules" text="
+{% include question.html header="Variable Naming Rules" text="
 
 - Must start with a letter or underscore (_)
 - Avoid using a single underscore as a variable name
@@ -37,7 +37,7 @@ print(age)     # Output: 25
 - Avoid abbreviations unless they're widely understood (```num``` is okay, ```nm``` is not)
 " %}
 
-{% include topic_creating_variable.html header="Good Variable Naming Practices" text="
+{% include question.html header="Good Variable Naming Practices" text="
 
 **Good variable names**
 
