@@ -5,26 +5,6 @@ title: Practice Exercises
 topics: exercises
 ---
 
-# Exercise 1: Personal Information
-
-Create a program that:
-
-- Stores your personal information in variables (name, age, city)
-- Calculates your birth year
-- Creates a formatted introduction message
-
-```python
-# Your solution here
-name = "Your Name"
-age = 25
-city = "Your City"
-current_year = 2025
-
-birth_year = current_year - age
-intro = f"Hi! I'm {name}, I'm {age} years old, I live in {city}, and I was born in {birth_year}."
-print(intro)
-```
-
 {% include question.html header="Exercise 1: Personal Information" text="Create a program that:
 
 - Stores your personal information in variables (name, age, city)
