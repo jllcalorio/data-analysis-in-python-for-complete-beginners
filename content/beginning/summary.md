@@ -37,7 +37,6 @@ You're now ready to move on to Intermediate Python, where you'll learn to:
 
 The foundation you've built here will serve you well as we explore more advanced Python concepts. Keep practicing these fundamentals - they're the building blocks for everything else you'll learn in Python!
 
-{% capture text %}Remember:
-Programming is learned by doing. Don't just read the code examples - type them out, modify them, and experiment with your own variations!
+{% capture text %}Programming is learned by doing. Don't just read the code examples - type them out, modify them, and experiment with your own variations!
 {% endcapture %}
-{% include card.html text=text header="Setup Overview" %}
+{% include card.html text=text header="Remember" %}
