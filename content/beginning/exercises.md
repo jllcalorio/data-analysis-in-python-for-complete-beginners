@@ -31,13 +31,13 @@ print(intro)
 - Prints the final list with item numbers
 " solution="
 ```python
-shopping_list = ["milk", "bread", "eggs", "apples", "chicken"]
-shopping_list.extend(["rice", "cheese"])
-shopping_list.remove("bread")
+shopping_list = [\"milk\", \"bread\", \"eggs\", \"apples\", \"chicken\"]
+shopping_list.extend([\"rice\", \"cheese\"])
+shopping_list.remove(\"bread\")
 
-print("Shopping List:")
+print(\"Shopping List:\")
 for i, item in enumerate(shopping_list, 1):
-    print(f"{i}. {item}")
+    print(f\"{i}. {item}\")
 ```
 " %}
 
@@ -50,27 +50,27 @@ for i, item in enumerate(shopping_list, 1):
 " solution="
 ```python
 student = {
-    "name": "Alice",
+    "name": \"Alice\",
     "grades": [85, 92, 78, 96, 88]
 }
 
-average = sum(student["grades"]) / len(student["grades"])
+average = sum(student[\"grades\"]) / len(student[\"grades\"])
 
 if average >= 90:
-    letter_grade = "A"
+    letter_grade = \"A\"
 elif average >= 80:
-    letter_grade = "B"
+    letter_grade = \"B\"
 elif average >= 70:
-    letter_grade = "C"
+    letter_grade = \"C\"
 elif average >= 60:
-    letter_grade = "D"
+    letter_grade = \"D\"
 else:
-    letter_grade = "F"
+    letter_grade = \"F\"
 
-print(f"Student: {student['name']}")
-print(f"Grades: {student['grades']}")
-print(f"Average: {average:.1f}")
-print(f"Letter Grade: {letter_grade}")
+print(f\"Student: {student['name']}\")
+print(f\"Grades: {student['grades']}\")
+print(f\"Average: {average:.1f}\")
+print(f\"Letter Grade: {letter_grade}\")
 ```
 " %}
 
@@ -83,23 +83,23 @@ print(f"Letter Grade: {letter_grade}")
 ```python
 def validate_password(password):
     if len(password) < 8:
-        return False, "Password must be at least 8 characters long"
+        return False, \"Password must be at least 8 characters long\"
     
     has_number = any(char.isdigit() for char in password)
     has_upper = any(char.isupper() for char in password)
     
     if not has_number:
-        return False, "Password must contain at least one number"
+        return False, \"Password must contain at least one number\"
     
     if not has_upper:
-        return False, "Password must contain at least one uppercase letter"
+        return False, \"Password must contain at least one uppercase letter\"
     
-    return True, "Password is valid"
+    return True, \"Password is valid\"
 
 # Test the function
-test_passwords = ["weak", "StrongPass1", "nodigits", "NONUMBERS"]
+test_passwords = [\"weak\", \"StrongPass1\", \"nodigits\", \"NONUMBERS\"]
 for pwd in test_passwords:
     is_valid, message = validate_password(pwd)
-    print(f"'{pwd}': {message}")
+    print(f\"'{pwd}': {message}\")
 ```
 " %}
