@@ -31,7 +31,6 @@ print(intro)
 - Prints the final list with item numbers
 " solution="
 ```python
-Solution
 shopping_list = ["milk", "bread", "eggs", "apples", "chicken"]
 shopping_list.extend(["rice", "cheese"])
 shopping_list.remove("bread")
@@ -50,7 +49,6 @@ for i, item in enumerate(shopping_list, 1):
 - Prints a formatted report
 " solution="
 ```python
-# Solution
 student = {
     "name": "Alice",
     "grades": [85, 92, 78, 96, 88]
@@ -83,7 +81,6 @@ print(f"Letter Grade: {letter_grade}")
 - Contains at least one uppercase letter
 " solution="
 ```python
-# Solution
 def validate_password(password):
     if len(password) < 8:
         return False, "Password must be at least 8 characters long"
