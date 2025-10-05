@@ -143,5 +143,5 @@ Remember the **indents** in your if, for, while statements and in your functions
 
 {% capture text %}
 Note:
-Remember the **indents** in your if, for, while statements and in your functions. They act as indicators for Python to recognize that the next line of code is part of the if statement or function.{% endcapture %}
+Remember the **indents** in your ```if```, for, while statements and in your functions. They act as indicators for Python to recognize that the next line of code is part of the if statement or function.{% endcapture %}
 {% include alert.html text=text color=secondary %}
