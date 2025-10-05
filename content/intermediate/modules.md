@@ -9,7 +9,7 @@ Understanding **modules** is key to organizing your code and leveraging Python's
 
 ## What Are Modules?
 
-A module is simply a Python file containing functions, classes, and variables. Any .py file can be imported as a module.
+A module is simply a Python file containing functions, classes, and variables. Any ```.py``` file can be imported as a module.
 
 {% include question.html header="Creating Your Own Modules" text="
 
@@ -17,6 +17,8 @@ A module is simply a Python file containing functions, classes, and variables. A
 
 - This is a simple calculator module.
 - This module provides basic mathematical operations.
+
+Let's define some functions:
 
 ```python
 def add(a, b):
@@ -40,15 +42,24 @@ def divide(a, b):
 def power(base, exponent):
     \"\"\"Raise base to the power of exponent.\"\"\"
     return base ** exponent
+```
 
-# Module-level variables
+Let's also define module-level variables
+
+```python
 PI = 3.14159
 E = 2.71828
+```
 
-# Code that runs when module is imported
+Code that runs when module is imported
+
+```python
 print(f\"Calculator module loaded. PI = {PI}\")
+```
 
-# Code that only runs when module is executed directly
+Code that only runs when module is executed directly
+
+```python
 if __name__ == \"__main__\":
     print(\"Running calculator module tests...\")
     print(f\"5 + 3 = {add(5, 3)}\")
