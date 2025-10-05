@@ -48,10 +48,10 @@ Printing methods for strings.
 ```python
 text = \"  Hello World  \"
 
-print(text)                                  #   Hello World  
-print(text.upper())                          #   HELLO WORLD  
-print(text.lower())                          #   hello world  
-print(text.strip())                          # Hello World (removes whitespace)
+print(text)                              #   Hello World  
+print(text.upper())                      #   HELLO WORLD  
+print(text.lower())                      #   hello world  
+print(text.strip())                      # Hello World (removes whitespace)
 print(text.replace(\"World\", \"Python\"))  #   Hello Python  
 ```
 
