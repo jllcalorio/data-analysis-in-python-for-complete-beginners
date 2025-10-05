@@ -186,7 +186,7 @@ You might have heard of something called a ```package```. A package is a **direc
 You import modules from a package like:
 
 ```python
-from my_package import math_utils
+from my_package import myy_module
 ```
 {% endcapture %}
-{% include card.html text=text header="TIP" %}
+{% include alert.html text=text header="PRO TIP" color=secondary %}
