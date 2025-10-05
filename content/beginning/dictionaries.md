@@ -20,7 +20,7 @@ student = {
     \"gpa\": 3.8
 }
 
-print(student)
+print(student) # {'name': 'Alice', 'age': 20, 'major': 'Computer Science', 'gpa': 3.8}
 ```
 " %}
 
@@ -41,11 +41,11 @@ student[\"grade\"] = \"A\"        # Add new key-value pair
 student[\"age\"] = 21           # Update existing value
 
 print(student)  # {'name': 'Alice', 'major': 'Computer Science', 'grade': 'A', 'age': 21}
-```python
+```
 
 Removing items
 
-```
+```python
 del student[\"grade\"]                             # Remove specific key
 removed_value = student.pop(\"age\", \"Not found\")  # Remove and return value
 
