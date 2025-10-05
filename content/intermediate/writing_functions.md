@@ -9,12 +9,17 @@ topics: functions
 
 {% include question.html header="Function Basics Review" text="
 
+Let's say we want to create a function that will take a person's name and greet them.
+
 ```python
 def greet(name):
     \"\"\"A simple function that greets someone.\"\"\"
     return f\"Hello, {name}!\"
+```
 
-# Function call
+Call the function.
+
+```python
 message = greet(\"Alice\")
 print(message)  # Output: Hello, Alice!
 ```
@@ -22,26 +27,32 @@ print(message)  # Output: Hello, Alice!
 
 # Advanced Function Features
 
-## Default Parameters
+{% include question.html header="Default Parameters" text="
+
+The function below creates a profile of a person. It asks for the person's ```name```, ```age```, ```city```, and ```occupation```.
 
 ```python
-def create_profile(name, age, city="Unknown", occupation="Student"):
+def create_profile(name, age, city=\"Unknown\", occupation=\"Student\"):
     """Create a user profile with default values."""
     profile = {
-        "name": name,
-        "age": age,
-        "city": city,
-        "occupation": occupation
+        \"name\": name,
+        \"age\": age,
+        \"city\": city,
+        \"occupation\": occupation
     }
     return profile
+```
 
-# Using default parameters
-profile1 = create_profile("Alice", 22)
-profile2 = create_profile("Bob", 25, "New York", "Developer")
+Run the function using the default parameters
+
+```python
+profile1 = create_profile(\"Alice\", 22)
+profile2 = create_profile(\"Bob\", 25, \"New York\", \"Developer\")
 
 print(profile1)  # city and occupation use defaults
 print(profile2)  # all parameters specified
 ```
+" %}
 
 ## Keyword Arguments
 ```python
