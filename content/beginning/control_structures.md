@@ -110,21 +110,32 @@ while user_input != \"quit\":
 
 **Functions** are *reusable blocks of code* designed to perform a specific task (e.g., ```def calculate_area(length, width): return length * width```). They are used to break down complex problems into smaller, manageable pieces, promote code reusability, and improve the organization and readability of your programs.
 
+Basic function
+
 ```python
-# Basic function
 def greet(name):
     return f\"Hello, {name}!\"
+```
 
-# Function with default parameters
+Function with default parameters
+
+```python
 def introduce(name, age=25):
     return f\"Hi, I'm {name} and I'm {age} years old.\"
 
-# Function with multiple parameters
+```
+
+Function with multiple parameters
+
+```python
 def calculate_area(length, width):
     area = length * width
     return area
+```
 
-# Using functions
+Using functions
+
+```python
 message = greet(\"Alice\")
 print(message)  # Hello, Alice!
 
