@@ -90,7 +90,7 @@ Basic mathematical operations
 ```python
 print(math.sqrt(16))        # Square root: 4.0
 print(math.pow(2, 3))       # Power: 8.0, the same as 2^3
-print(math.factorial(5))    # Factorial: 120, in mathematics, this is '5!' = 5*4*3*2*1
+print(math.factorial(5))    # Factorial: 120, in mathematics, this is '5! = 5*4*3*2*1'
 ```
 
 Trigonometric functions
@@ -124,32 +124,48 @@ print(math.e)               # 2.718281828459045
 ```
 " %}
 
-## Random Module
+{% include question.html header="Random Module" text="
+
+
 ```python
 import random
+```
 
-# Generate random numbers
-print(random.random())          # Float between 0-1
-print(random.randint(1, 10))    # Integer between 1-10
-print(random.uniform(1.5, 10.5))  # Float between 1.5-10.5
+Generate random numbers.
 
-# Work with sequences
-fruits = ["apple", "banana", "orange", "grape"]
+This can be used for randomization purposes. Remember when your panelists ask you how did you randomize your participants to be assigned in the Control Group, Treatment, etc.? This is it! Python can do that.
+
+```python
+print(random.random())            # Float between   0-1
+print(random.randint(1, 10))      # Integer between 1-10
+print(random.uniform(1.5, 10.5))  # Float between   1.5-10.5
+```
+
+Work with sequences
+
+```python
+fruits = [\"apple\", \"banana\", \"orange\", \"grape\"]
 print(random.choice(fruits))    # Random choice
 print(random.sample(fruits, 2)) # Random sample of 2 items
+```
 
-# Shuffle a list
+Shuffle a list
+
+```python
 numbers = [1, 2, 3, 4, 5]
 random.shuffle(numbers)
 print(numbers)  # List is now shuffled
+```
 
-# Set seed for reproducible results
+Set seed for reproducible results
+
+```python
 random.seed(42)
 print(random.randint(1, 100))  # Will always be the same with seed 42
 ```
+" %}
 
-
-## Datetime Module
+{% include question.html header="Datetime Module" text="
 ```python
 from datetime import datetime, date, timedelta
 
@@ -157,65 +173,67 @@ from datetime import datetime, date, timedelta
 now = datetime.now()
 today = date.today()
 
-print(f"Current datetime: {now}")
-print(f"Today's date: {today}")
+print(f\"Current datetime: {now}\")
+print(f\"Today's date: {today}\")
 
 # Formatting dates
-formatted_date = now.strftime("%Y-%m-%d %H:%M:%S")
-print(f"Formatted: {formatted_date}")
+formatted_date = now.strftime(\"%Y-%m-%d %H:%M:%S\")
+print(f\"Formatted: {formatted_date}\")
 
 # Date arithmetic
 tomorrow = today + timedelta(days=1)
 next_week = today + timedelta(weeks=1)
 past_date = today - timedelta(days=30)
 
-print(f"Tomorrow: {tomorrow}")
-print(f"Next week: {next_week}")
-print(f"30 days ago: {past_date}")
+print(f\"Tomorrow: {tomorrow}\")
+print(f\"Next week: {next_week}\")
+print(f\"30 days ago: {past_date}\")
 
 # Parse date strings
-date_string = "2025-12-25"
-christmas = datetime.strptime(date_string, "%Y-%m-%d")
-print(f"Christmas: {christmas}")
+date_string = \"2025-12-25\"
+christmas = datetime.strptime(date_string, \"%Y-%m-%d\")
+print(f\"Christmas: {christmas}\")
 ```
+" %}
 
-## OS Module
+{% include question.html header="OS Module" text="
 ```python
 import os
 
 # Get current working directory
 current_dir = os.getcwd()
-print(f"Current directory: {current_dir}")
+print(f\"Current directory: {current_dir}\")
 
 # List files in directory
-files = os.listdir(".")
-print(f"Files in current directory: {files}")
+files = os.listdir(\".\")
+print(f\"Files in current directory: {files}\")
 
 # Environment variables
-user = os.getenv("USER", "Unknown")  # Get USER env var with default
-print(f"Current user: {user}")
+user = os.getenv(\"USER\", \"Unknown\")  # Get USER env var with default
+print(f\"Current user: {user}\")
 
 # Path operations
-file_path = os.path.join("data", "files", "example.txt")
-print(f"File path: {file_path}")
+file_path = os.path.join(\"data\", \"files\", \"example.txt\")
+print(f\"File path: {file_path}\")
 
 # Check if file/directory exists
-print(f"Path exists: {os.path.exists(file_path)}")
+print(f\"Path exists: {os.path.exists(file_path)}\")
 ```
+" %}
 
-## Creating Import-Friendly Functions
+{% include question.html header="Creating Import-Friendly Functions" text="
 ```python
 # utils.py - A module you might create
-def format_currency(amount, currency="USD"):
-    """Format a number as currency."""
-    return f"{currency} {amount:,.2f}"
+def format_currency(amount, currency=\"USD\"):
+    \"\"\"Format a number as currency.\"\"\"
+    return f\"{currency} {amount:,.2f}\"
 
 def validate_email(email):
-    """Basic email validation."""
-    return "@" in email and "." in email.split("@")[1]
+    \"\"\"Basic email validation.\"\"\"
+    return \"@\" in email and \".\" in email.split(\"@\")[1]
 
 def calculate_tip(bill_amount, tip_percentage=15):
-    """Calculate tip amount."""
+    \"\"\"Calculate tip amount.\"\"\"
     return bill_amount * (tip_percentage / 100)
 
 # main.py - Using your module
@@ -225,10 +243,11 @@ bill = 85.50
 tip = calculate_tip(bill, 18)
 total = bill + tip
 
-print(f"Bill: {format_currency(bill)}")
-print(f"Tip: {format_currency(tip)}")
-print(f"Total: {format_currency(total)}")
+print(f\"Bill: {format_currency(bill)}\")
+print(f\"Tip: {format_currency(tip)}\")
+print(f\"Total: {format_currency(total)}\")
 ```
+" %}
 
 {% capture text %}
 **PRO TIP**
