@@ -15,7 +15,7 @@ Welcome to our comprehensive Python programming workshop! This intensive learnin
 Python has become one of the most popular and versatile programming languages in the world, powering everything from web applications to artificial intelligence systems. This workshop provides a structured, hands-on approach to learning Python programming fundamentals and applying them to real-world data analysis tasks.
 " %}
 
-{% include question.html header="Duration & Format
+{% include question.html header="Duration & Format" text="
 - **Duration**: 3-day intensive workshop
 - **Format**: Hands-on learning with practical exercises
 - **Schedule**: August 2025
