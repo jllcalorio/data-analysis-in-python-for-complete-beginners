@@ -63,8 +63,11 @@ def order_pizza(size, *toppings, **details):
 
     for key, value in details.items():
         print(f\"{key}: {value}\")
+```
 
-# Various ways to call the function
+Call the function
+
+```python
 order_pizza(\"Large\", \"pepperoni\", \"mushrooms\",
             delivery=True, special_instructions=\"Extra cheese\")
 ```
