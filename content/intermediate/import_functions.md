@@ -166,21 +166,33 @@ print(random.randint(1, 100))  # Will always be the same with seed 42
 " %}
 
 {% include question.html header="Datetime Module" text="
+
+Import the ```datetime``` module
+
 ```python
 from datetime import datetime, date, timedelta
+```
 
-# Current date and time
+Current date and time
+
+```python
 now = datetime.now()
 today = date.today()
 
 print(f\"Current datetime: {now}\")
 print(f\"Today's date: {today}\")
+```
 
-# Formatting dates
+Formatting dates
+
+```python
 formatted_date = now.strftime(\"%Y-%m-%d %H:%M:%S\")
 print(f\"Formatted: {formatted_date}\")
+```
 
-# Date arithmetic
+Date arithmetic
+
+```python
 tomorrow = today + timedelta(days=1)
 next_week = today + timedelta(weeks=1)
 past_date = today - timedelta(days=30)
@@ -188,8 +200,11 @@ past_date = today - timedelta(days=30)
 print(f\"Tomorrow: {tomorrow}\")
 print(f\"Next week: {next_week}\")
 print(f\"30 days ago: {past_date}\")
+```
 
-# Parse date strings
+Parse date strings
+
+```python
 date_string = \"2025-12-25\"
 christmas = datetime.strptime(date_string, \"%Y-%m-%d\")
 print(f\"Christmas: {christmas}\")
@@ -197,48 +212,85 @@ print(f\"Christmas: {christmas}\")
 " %}
 
 {% include question.html header="OS Module" text="
+
+Import the ```os``` module
+
 ```python
 import os
+```
 
-# Get current working directory
+Get current working directory
+
+```python
 current_dir = os.getcwd()
 print(f\"Current directory: {current_dir}\")
+```
 
-# List files in directory
+List files in directory
+
+```python
 files = os.listdir(\".\")
 print(f\"Files in current directory: {files}\")
+```
 
-# Environment variables
+Environment variables
+
+```python
 user = os.getenv(\"USER\", \"Unknown\")  # Get USER env var with default
 print(f\"Current user: {user}\")
+```
 
-# Path operations
+Path operations
+
+```python
 file_path = os.path.join(\"data\", \"files\", \"example.txt\")
 print(f\"File path: {file_path}\")
+```
 
-# Check if file/directory exists
+Check if file/directory exists
+
+```python
 print(f\"Path exists: {os.path.exists(file_path)}\")
 ```
 " %}
 
 {% include question.html header="Creating Import-Friendly Functions" text="
+
+
+
 ```python
 # utils.py - A module you might create
 def format_currency(amount, currency=\"USD\"):
     \"\"\"Format a number as currency.\"\"\"
     return f\"{currency} {amount:,.2f}\"
+    ```
 
+Basic email validation
+
+    ```python
 def validate_email(email):
     \"\"\"Basic email validation.\"\"\"
     return \"@\" in email and \".\" in email.split(\"@\")[1]
+    ```
 
+Calculate tip amount
+
+    ```python
 def calculate_tip(bill_amount, tip_percentage=15):
     \"\"\"Calculate tip amount.\"\"\"
     return bill_amount * (tip_percentage / 100)
+    ```
 
+
+
+    ```python
 # main.py - Using your module
 from utils import format_currency, calculate_tip
+```
 
+Execute the function
+
+```python
 bill = 85.50
 tip = calculate_tip(bill, 18)
 total = bill + tip
@@ -254,7 +306,7 @@ print(f\"Total: {format_currency(total)}\")
 
 You might have heard of something called a ```package```. A package is a **directory** that contains **one or more modules** and a special ```__init__.py``` file. It allows you to organize **related modules** under a common namespace.
 
-You import modules from a package like:
+You can import modules from a package like:
 
 ```python
 from my_package import my_module
