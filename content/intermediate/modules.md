@@ -34,7 +34,7 @@ def multiply(a, b):
 def divide(a, b):
     \"\"\"Divide first number by second.\"\"\"
     if b == 0:
-        raise ValueError(\"Cannot divide by zero\!")
+        raise ValueError(\"Cannot divide by zero!\")
     return a / b
 
 def power(base, exponent):
