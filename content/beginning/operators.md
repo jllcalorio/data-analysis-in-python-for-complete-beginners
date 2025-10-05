@@ -9,7 +9,7 @@ Operators allow you to perform operations on variables and values.
 
 This includes mathematical operators, comparative operators, etc.
 
-{% include question.html header="Arithmetic Operators" text="
+{% include question.html header="Arithmetic Operators
 
 Performing mathematical operators can be done in Python. If you remember PEMDAS, yes, it can be done.
 
@@ -22,6 +22,8 @@ PEMDAS is a mathematical acronym for the order of operations, namely
 - Division,
 - Addition, and
 - Subtraction.
+
+" text="
 
 ```python
 a = 10
