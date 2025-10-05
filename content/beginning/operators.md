@@ -9,7 +9,7 @@ Operators allow you to perform operations on variables and values.
 
 This includes mathematical operators, comparative operators, etc.
 
-{% include question.html header="Arithmetic Operators"
+{% include question.html header="Arithmetic Operators" text="
 
 Performing mathematical operators can be done in Python. If you remember PEMDAS, yes, it can be done.
 
