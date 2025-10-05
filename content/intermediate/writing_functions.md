@@ -33,7 +33,7 @@ The function below creates a profile of a person. It asks for the person's ```na
 
 ```python
 def create_profile(name, age, city=\"Unknown\", occupation=\"Student\"):
-    """Create a user profile with default values."""
+    \"\"\"Create a user profile with default values.\"\"\"
     profile = {
         \"name\": name,
         \"age\": age,
