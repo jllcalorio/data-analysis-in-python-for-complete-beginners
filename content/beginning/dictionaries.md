@@ -26,38 +26,38 @@ print(student)
 
 {% include question.html header="Accessing Dictionary Values" text="
 ```python
-student = {\"name\": \"Alice\", \"age\": 20, \"major\": \"Computer Science\"}
-
-# Accessing values
 print(student[\"name\"])                    # Alice
 print(student.get(\"age\"))                 # 20
-print(student.get(\"grade\", \"Not found\"))  # Default if key doesn't exist
+print(student.get(\"grade\", \"Not found\"))  # Not found (Default if key doesn't exist)
 ```
 " %}
 
 {% include question.html header="Modifying Dictionaries" text="
-```python
-student = {\"name\": \"Alice\", \"age\": 20}
 
-# Adding/updating values
+Adding/updating values
+
+```python
 student[\"grade\"] = \"A\"        # Add new key-value pair
 student[\"age\"] = 21           # Update existing value
 
-# Removing items
+print(student)  # {'name': 'Alice', 'major': 'Computer Science', 'grade': 'A', 'age': 21}
+```python
+
+Removing items
+
+```
 del student[\"grade\"]                             # Remove specific key
 removed_value = student.pop(\"age\", \"Not found\")  # Remove and return value
 
-print(student)  # {\"name\": \"Alice\"}
+print(student)  # {'name': 'Alice', 'major': 'Computer Science'}
 ```
 " %}
 
 {% include question.html header="Dictionary Methods" text="
 ```python
-student = {\"name\": \"Alice\", \"age\": 20, \"major\": \"CS\"}
-
-print(student.keys())      # dict_keys(['name', 'age', 'major'])
-print(student.values())    # dict_values(['Alice', 20, 'CS'])
-print(student.items())     # dict_items([('name', 'Alice'), ('age', 20), ('major', 'CS')])
+print(student.keys())      # dict_keys(['name', 'major'])
+print(student.values())    # dict_values(['Alice', 'Computer Science'])
+print(student.items())     # dict_items([('name', 'Alice'), ('major', 'Computer Science')])
 
 # Check if key exists
 print(\"name\" in student)   # True
