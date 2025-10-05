@@ -7,13 +7,14 @@ topics: Template; Basic Config
 
 Understanding **modules** is key to organizing your code and leveraging Python's ecosystem effectively.
 
-# What Are Modules?
+## What Are Modules?
 
 A module is simply a Python file containing functions, classes, and variables. Any .py file can be imported as a module.
 
-# Creating Your Own Modules
+{% include question.html header="Creating Your Own Modules" text="
 
-## Example: calculator.py
+Example: calculator.py
+
 ```python
 # A simple calculator module.
 # This module provides basic mathematical operations.
@@ -55,6 +56,7 @@ if __name__ == "__main__":
     print(f"6 * 7 = {multiply(6, 7)}")
     print(f"15 / 3 = {divide(15, 3)}")
 ```
+" %}
 
 ## Using Your Module
 ```python
