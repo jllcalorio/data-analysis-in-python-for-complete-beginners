@@ -7,7 +7,7 @@ topics: summary, next steps
 
 **Congratulations!** You've learned the fundamental building blocks of Python programming:
 
-# Key Concepts Mastered:
+{% include question.html header="Key Concepts Mastered" text="
 
 - **Variables:** Storing and managing data
 - **Data Types:** Working with strings, integers, floats, and booleans
@@ -16,8 +16,9 @@ topics: summary, next steps
 - **Dictionaries:** Storing key-value pairs for structured data
 - **String Formatting:** Creating professional, readable output
 - **Control Structures:** Making decisions and repeating actions with if statements, loops, and functions
+" %}
 
-# Skills You Can Now Apply:
+{% include question.html header="Skills You Can Now Apply" text="
 
 - Store and manipulate different types of data
 - Organize information using lists and dictionaries
@@ -25,8 +26,9 @@ topics: summary, next steps
 - Create reusable code with functions
 - Format output professionally
 - Debug basic programming errors
+" %}
 
-# What's Next?
+{% include question.html header="What's Next?" text="
 
 You're now ready to move on to Intermediate Python, where you'll learn to:
 
@@ -34,6 +36,7 @@ You're now ready to move on to Intermediate Python, where you'll learn to:
 - Work with modules and external libraries
 - Handle errors gracefully
 - Build larger, more organized programs
+" %}
 
 The foundation you've built here will serve you well as we explore more advanced Python concepts. Keep practicing these fundamentals - they're the building blocks for everything else you'll learn in Python!
 
