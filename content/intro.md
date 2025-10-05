@@ -3,8 +3,7 @@ nav_order: 1
 title: Introduction
 ---
 
-# Python Workshop
-## DMSFI CRD Python Workshop - October 2025
+## Python Workshop brought to you by DMSFI CRD Python Workshop - October 2025
 
 Welcome to our comprehensive Python programming workshop! This intensive learning experience is designed to take you from complete beginner to confident Python programmer with practical data analysis skills.
 
