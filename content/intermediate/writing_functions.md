@@ -71,20 +71,30 @@ order_pizza(\"Large\", \"pepperoni\", \"mushrooms\",
 " %}
 
 {% include question.html header="Variable-Length Arguments" text="
+
+This function below calculates the average.
+
 ```python
 def calculate_average(*numbers):
     \"\"\"Calculate average of any number of arguments.\"\"\"
     if not numbers:
         return 0
     return sum(numbers) / len(numbers)
+```
 
+This function below creates a record of student information.
+
+```python
 def create_student_record(name, **info):
     \"\"\"Create a student record with flexible information.\"\"\"
     record = {\"name\": name}
     record.update(info)
     return record
+```
 
-# Examples
+Examples
+
+```python
 avg1 = calculate_average(85, 90, 78, 92)
 avg2 = calculate_average(95, 87)
 
@@ -95,8 +105,11 @@ student = create_student_record(
     gpa=3.8,
     year=\"Junior\"
 )
+```
 
-# Output
+Let's view what the 'student' variable contains
+"solution="
+```python
 # {'name': 'Alice',
 #  'age': 20,
 #  'major': 'Computer Science',
