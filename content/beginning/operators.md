@@ -13,18 +13,6 @@ This includes mathematical operators, comparative operators, etc.
 
 Performing mathematical operators can be done in Python. If you remember PEMDAS, yes, it can be done.
 
-Remember that PEMDAS is?
-" solution="
-PEMDAS is a mathematical acronym for the order of operations, namely
-- Parentheses,
-- Exponents,
-- Multiplication,
-- Division,
-- Addition, and
-- Subtraction.
-
-" text="
-
 ```python
 a = 10
 b = 3
@@ -38,7 +26,15 @@ print(a % b)   # Modulus (remainder): 1
 print(a ** b)  # Exponentiation: 1000
 ```
 
-
+Remember that PEMDAS is?
+" solution="
+PEMDAS is a mathematical acronym for the order of operations, namely
+- Parentheses,
+- Exponents,
+- Multiplication,
+- Division,
+- Addition, and
+- Subtraction.
 " %}
 
 {% include question.html header="Comparison Operators" text="
