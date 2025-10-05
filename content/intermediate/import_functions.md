@@ -13,10 +13,17 @@ Below are the common ways to import functions that are already built by other pe
 
 **Import entire module**
 
+The ```import math``` code below actually imports the 'module' called ```math```.
+
+A ```module```:
+
+- contains a single .py file containing Python code
+- can define functions, classes, variables, or runnable code
+
 ```python
 import math
 result = math.sqrt(16)  # Use with module.function
-print(result)  # 4.0
+print(result)           # 4.0
 ```
 
 **Import specific functions**
@@ -172,3 +179,14 @@ print(f"Bill: {format_currency(bill)}")
 print(f"Tip: {format_currency(tip)}")
 print(f"Total: {format_currency(total)}")
 ```
+
+{% capture text %}
+You might have heard of something called a ```package```. A package is a **directory** that contains **one or more modules** and a special ```__init__.py``` file. It allows you to organize **related modules** under a common namespace.
+
+You import modules from a package like:
+
+```python
+from my_package import math_utils
+```
+{% endcapture %}
+{% include card.html text=text header="TIP" %}
