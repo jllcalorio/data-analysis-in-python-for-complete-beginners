@@ -109,7 +109,7 @@ student = create_student_record(
 
 Let's view what the 'student' variable contains.
 
-"solution="
+" solution="
 ```python
 # {'name': 'Alice',
 #  'age': 20,
