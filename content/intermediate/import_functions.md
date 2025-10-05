@@ -28,8 +28,15 @@ print(result)           # 4.0
 
 **Import specific functions**
 
+From a package, import the functions we want
+
+Why we do not import all the functions inside a package?
+
+- a package contains a lot of modules and functions
+- importing all of it could slow down the importing process
+- however, you could import all of the functions IF you do not know which function you specifically want to use. Just use ```from package_name import *```
+
 ```python
-# From a package, import the functions we want
 from math import sqrt, pi, ceil
 
 result = sqrt(25)  # Use directly without module name
