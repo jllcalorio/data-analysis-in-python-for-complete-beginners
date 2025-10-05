@@ -7,7 +7,7 @@ topics: arithmetic, comparison, logical, assignment, operators
 
 Operators allow you to perform operations on variables and values.
 
-# Arithmetic Operators
+{% include question.html header="Arithmetic Operators" text="
 
 ```python
 a = 10
@@ -21,8 +21,9 @@ print(a // b)  # Floor division: 3
 print(a % b)   # Modulus (remainder): 1
 print(a ** b)  # Exponentiation: 1000
 ```
+" %}
 
-# Comparison Operators
+{% include question.html header="Comparison Operators" text="
 
 ```python
 x = 5
@@ -35,8 +36,9 @@ print(x > y)    # Greater than: False
 print(x <= y)   # Less than or equal: True
 print(x >= y)   # Greater than or equal: False
 ```
+" %}
 
-# Logical Operators
+{% include question.html header="Logical Operators" text="
 
 ```python
 is_sunny = True
@@ -46,8 +48,9 @@ print(is_sunny and is_warm)  # False
 print(is_sunny or is_warm)   # True
 print(not is_sunny)          # False
 ```
+" %}
 
-# Assignment Operators
+{% include question.html header="Assignment Operators" text="
 
 ```python
 counter = 0
@@ -58,3 +61,4 @@ counter /= 2    # Same as: counter = counter / 2
 
 print(counter)  # Output: 4.5
 ```
+" %}
