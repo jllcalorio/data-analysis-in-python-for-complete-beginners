@@ -95,6 +95,13 @@ student = create_student_record(
     gpa=3.8,
     year=\"Junior\"
 )
+
+# Output
+# {'name': 'Alice',
+#  'age': 20,
+#  'major': 'Computer Science',
+#  'gpa': 3.8,
+#  'year': 'Junior'}
 ```
 " %}
 
