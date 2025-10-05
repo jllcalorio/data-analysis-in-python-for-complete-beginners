@@ -17,7 +17,7 @@ Python has become one of the most popular and versatile programming languages in
 {% include question.html header="Duration & Format" text="
 - **Duration**: 3-day intensive workshop
 - **Format**: Hands-on learning with practical exercises
-- **Schedule**: August 2025
+- **Schedule**: October 2025
 - **Delivery**: Interactive sessions with live coding demonstrations
 " %}
 
