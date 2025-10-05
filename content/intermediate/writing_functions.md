@@ -111,6 +111,7 @@ Let's view what the 'student' variable contains.
 
 " solution="
 ```python
+student
 {'name': 'Alice',
  'age': 20,
  'major': 'Computer Science',
@@ -120,11 +121,28 @@ Let's view what the 'student' variable contains.
 " %}
 
 {% include question.html header="Lambda Functions (Anonymous Functions)" text="
+
+This is what a regular function looks like. But for most times, this is already fine.
+
 ```python
-# Regular function
 def square(x):
     return x ** 2
+```
 
+Below is what is called a ```lambda``` function.
+
+What are its advantages?
+
+- **Inline definition:** You can define a function in a single line without naming it
+- **Saves space:** Ideal for short, throwaway functions used once or in a small scope
+- Great for Testing and Prototyping
+
+What are the disadvantages?
+
+- they can hurt readability if overused or used for complex logic
+- if your function spans multiple operations or needs documentation, a named def function is usually better
+
+```python
 # Lambda equivalent
 square_lambda = lambda x: x ** 2
 
