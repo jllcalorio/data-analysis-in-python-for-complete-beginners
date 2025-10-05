@@ -66,21 +66,21 @@ def order_pizza(size, *toppings, **details):
 
 # Various ways to call the function
 order_pizza(\"Large\", \"pepperoni\", \"mushrooms\",
-           delivery=True, special_instructions=\"Extra cheese\")
+            delivery=True, special_instructions=\"Extra cheese\")
 ```
 " %}
 
-## Variable-Length Arguments
+{% include question.html header="Variable-Length Arguments" text="
 ```python
 def calculate_average(*numbers):
-    """Calculate average of any number of arguments."""
+    \"\"\"Calculate average of any number of arguments.\"\"\"
     if not numbers:
         return 0
     return sum(numbers) / len(numbers)
 
 def create_student_record(name, **info):
-    """Create a student record with flexible information."""
-    record = {"name": name}
+    \"\"\"Create a student record with flexible information.\"\"\"
+    record = {\"name\": name}
     record.update(info)
     return record
 
@@ -89,13 +89,14 @@ avg1 = calculate_average(85, 90, 78, 92)
 avg2 = calculate_average(95, 87)
 
 student = create_student_record(
-    "Alice",
+    \"Alice\",
     age=20,
-    major="Computer Science",
+    major=\"Computer Science\",
     gpa=3.8,
-    year="Junior"
+    year=\"Junior\"
 )
 ```
+" %}
 
 ## Lambda Functions (Anonymous Functions)
 ```python
