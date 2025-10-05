@@ -28,108 +28,117 @@ Python has become one of the most popular and versatile programming languages in
 
 By the end of this workshop, participants will be able to:
 
-### Technical Skills
+{% include question.html header="Technical Skills" text="
 - **Master Python Fundamentals**: Understand variables, data types, operators, and control structures
 - **Write Functional Code**: Create reusable functions and work with Python modules
 - **Handle Data Effectively**: Use lists, dictionaries, and string manipulation techniques
 - **Perform Data Analysis**: Utilize pandas for data manipulation and basic statistical analysis
 - **Create Visualizations**: Generate meaningful charts and graphs from data
 - **Debug and Troubleshoot**: Identify and resolve common programming errors
+" %}
 
-### Practical Applications
+{% include question.html header="Practical Applications" text="
 - Read and process data from various file formats
 - Filter and query datasets to extract meaningful insights
 - Perform statistical tests (t-tests, ANOVA, chi-square, logistic regression)
 - Create professional data visualizations
 - Build a foundation for advanced Python applications
-
+" %}
 ---
 
 ## Target Audience
 
 This workshop is designed for:
 
-### Primary Audience
+{% include question.html header="Primary Audience" text="
 - **Students** in data science, computer science, or related fields
 - **Complete beginners** with no prior programming experience
 - **Professionals** looking to add Python skills to their toolkit
 - **Researchers** who need to analyze data programmatically
+" %}
 
-### Prerequisites
+{% include question.html header="Prerequisites" text="
 - **No programming experience required** - we start from the very basics
 - Basic computer literacy (file management, using applications)
 - Willingness to learn and practice hands-on coding
 - A laptop with internet connection for installation and practice
+" %}
 
-### Who Will Benefit Most
+{% include question.html header="Who Will Benefit Most" text="
 - Individuals seeking to transition into data-driven roles
 - Students preparing for advanced coursework requiring programming
 - Professionals in fields like business, healthcare, education, or research
 - Anyone curious about programming and data analysis
-
+" %}
 ---
 
 ## Expected Outcomes
 
-### Immediate Skills (End of Workshop)
+{% include question.html header="Immediate Skills (End of Workshop)" text="
 - Confidently write basic to intermediate Python programs
 - Understand and apply fundamental programming concepts
 - Perform basic data manipulation and analysis tasks
 - Create simple visualizations from datasets
 - Debug common programming errors independently
+" %}
 
-### Long-term Benefits
+{% include question.html header="Long-term Benefits" text="
 - **Career Advancement**: Python skills are highly valued across industries
 - **Research Capabilities**: Analyze your own data more efficiently
 - **Problem-Solving**: Develop computational thinking skills
 - **Foundation Building**: Prepared for advanced topics like machine learning
 - **Automation**: Streamline repetitive tasks in your work or studies
+" %}
 
-### Practical Projects
+{% include question.html header="Practical Projects" text="
 By workshop completion, you'll have created:
 - A personal library of useful Python functions
 - Several data analysis projects you can showcase
 - Solutions to real-world data problems
 - A foundation for continued learning and development
-
+" %}
 ---
 
 ## Workshop Structure
 
-### Day 1: Foundation Building
+{% include question.html header="Day 1: Foundation Building" text="
 - Python basics and development environment setup
 - Variables, data types, and basic operations
 - Introduction to programming logic
+" %}
 
-### Day 2: Building Complexity
+{% include question.html header="Day 2: Building Complexity" text="
 - Control structures and functions
 - Working with modules and handling errors
 - Hands-on practice with increasingly complex problems
+" %}
 
-### Day 3: Real-World Application
+{% include question.html header="Day 3: Real-World Application" text="
 - Data analysis with pandas
 - Statistical analysis and visualization
 - Capstone project and wrap-up
-
+" %}
 ---
 
 ## What You'll Take Away
 
-### Skills Portfolio
+{% include question.html header="Skills Portfolio" text="
 - Comprehensive understanding of Python fundamentals
 - Experience with industry-standard data analysis tools
 - Portfolio of completed programming projects
 - Confidence to tackle new programming challenges
+" %}
 
-### Resources for Continued Learning
+{% include question.html header="Resources for Continued Learning" text="
 - Complete workshop materials and code examples
 - Recommended resources for further study
 - Access to a supportive learning community
 - Clear pathways for advancing your Python skills
+" %}
 
-### Certificate of Completion
+{% include question.html header="Certificate of Completion" text="
 Participants who complete all workshop activities will receive a certificate recognizing their achievement and newly acquired Python programming skills.
-
+" %}
 ---
 
 ## Getting Started
