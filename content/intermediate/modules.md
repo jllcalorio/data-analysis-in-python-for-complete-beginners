@@ -13,7 +13,7 @@ A module is simply a Python file containing functions, classes, and variables. A
 
 {% include question.html header="Creating Your Own Modules" text="
 
-Example: calculator.py
+**Example:** ```calculator.py```
 
 - This is a simple calculator module.
 - This module provides basic mathematical operations.
