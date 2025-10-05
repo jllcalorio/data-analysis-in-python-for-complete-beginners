@@ -9,7 +9,7 @@ Control structures determine the order in which your code executes.
 
 {% include question.html header="The If Statements" text="
 
-The ```if``` statements are used for conditional execution, allowing a block of code to run only if a specified condition is true (e.g., if ```temperature > 30: print "It's hot!"```). This is done to create decision-making logic in your programs.
+The ```if``` statements are used for conditional execution, allowing a block of code to run only if a specified condition is true (e.g., if ```temperature > 30: print \"It's hot!\"```). This is done to create decision-making logic in your programs.
 
 ```python
 age = 18
