@@ -92,7 +92,7 @@ We can also do vice-versa.
 ```python
 score = 95
 score_str = str(score)
-print("Your score is: \" + score_str)
+print\"Your score is: \" + score_str)
 ```
 " %}
 
