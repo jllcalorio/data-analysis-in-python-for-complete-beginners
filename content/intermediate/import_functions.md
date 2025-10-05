@@ -89,8 +89,8 @@ Basic mathematical operations
 
 ```python
 print(math.sqrt(16))        # Square root: 4.0
-print(math.pow(2, 3))       # Power: 8.0
-print(math.factorial(5))    # Factorial: 120
+print(math.pow(2, 3))       # Power: 8.0, the same as 2^3
+print(math.factorial(5))    # Factorial: 120, in mathematics, this is '5!' = 5*4*3*2*1
 ```
 
 Trigonometric functions
@@ -110,11 +110,13 @@ print(math.log10(100))      # Base-10 log: 2.0
 Rounding and ceiling
 
 ```python
-print(math.ceil(4.2))       # Round up: 5
-print(math.floor(4.8))      # Round down: 4
+print(math.ceil(4.2))       # Round up: 5 (this is the ceiling function)
+print(math.floor(4.8))      # Round down: 4 (this is the floor function)
 ```
 
 Constants
+
+These are numbers in mathematics that **do not end**.
 
 ```python
 print(math.pi)              # 3.141592653589793
