@@ -29,8 +29,8 @@ print(student)
 student = {\"name\": \"Alice\", \"age\": 20, \"major\": \"Computer Science\"}
 
 # Accessing values
-print(student[\"name\"])                     # Alice
-print(student.get(\"age\"))                  # 20
+print(student[\"name\"])                    # Alice
+print(student.get(\"age\"))                 # 20
 print(student.get(\"grade\", \"Not found\"))  # Default if key doesn't exist
 ```
 " %}
