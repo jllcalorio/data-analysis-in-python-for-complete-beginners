@@ -30,7 +30,7 @@ print(fruits)  # Output: ['apple', 'banana', 'orange']
 
 Items in lists can be accessed using their ```index```. The position of the item in a list start at 0.
 
-Thus, in ```pythonfruits = ["apple", "banana", "orange", "grape"]```, the position of apple is 0, and the position of banana is 1.
+Thus, in ```pythonfruits = [\"apple\", \"banana\", \"orange\", \"grape\"]```, the position of apple is 0, and the position of banana is 1.
 
 **Tip:** In R, the position starts at 1.
 
