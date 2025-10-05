@@ -10,6 +10,9 @@ A list is a built-in Python data structure used to store multiple items in a sin
 They're one of the most useful data structures in Python!
 
 {% include question.html header="Creating Lists" text="
+
+Lists in Python can be of any type: integers, strings, floats, Booleans, even other lists.
+
 ```python
 # Empty list
 empty_list = [] # Can be used to initialize a list as a container of results
@@ -24,6 +27,13 @@ print(fruits)  # Output: ['apple', 'banana', 'orange']
 " %}
 
 {% include question.html header="Accessing List Items" text="
+
+Items in lists can be accessed using their ```index```. The position of the item in a list start at 0.
+
+Thus, in ```pythonfruits = ["apple", "banana", "orange", "grape"]```, the position of apple is 0, and the position of banana is 1.
+
+**Tip:** In R, the position starts at 1.
+
 ```python
 fruits = [\"apple\", \"banana\", \"orange\", \"grape\"]
 
@@ -40,15 +50,15 @@ print(fruits[-2])  # Second to last: orange
 fruits = [\"apple\", \"banana\"]
 
 # Adding items
-fruits.append(\"orange\")        # Add to end
-fruits.insert(1, \"grape\")      # Insert at position 1
-print(fruits)                  # ['apple', 'grape', 'banana', 'orange']
+fruits.append(\"orange\")           # Add to end
+fruits.insert(1, \"grape\")         # Insert at position 1
+print(fruits)                     # ['apple', 'grape', 'banana', 'orange']
 
 # Removing items
-fruits.remove(\"grape\")         # Remove specific item
-last_item = fruits.pop()       # Remove and return last item
-print(fruits)                  # ['apple', 'banana']
-print(last_item)               # orange
+fruits.remove(\"grape\")          # Remove specific item
+last_item = fruits.pop()          # Remove and return last item
+print(fruits)                     # ['apple', 'banana']
+print(last_item)                  # orange
 
 # Other useful methods
 fruits.extend([\"kiwi\", \"mango\"])  # Add multiple items
@@ -57,7 +67,7 @@ print(fruits.count(\"apple\"))      # Count occurrences: 1
 ```
 " %}
 
-# **List Slicing**
+{% include question.html header="List Slicing" text="
 ```python
 numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
@@ -66,3 +76,4 @@ print(numbers[:3])     # First 3 items: [0, 1, 2]
 print(numbers[7:])     # From index 7 to end: [7, 8, 9]
 print(numbers[::2])    # Every second item: [0, 2, 4, 6, 8]
 ```
+" %}
