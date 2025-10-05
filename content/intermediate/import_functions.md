@@ -17,8 +17,8 @@ The ```import math``` code below actually imports the 'module' called ```math```
 
 A ```module```:
 
-- contains a single .py file containing Python code
-- can define functions, classes, variables, or runnable code
+- contains a single ```.py``` file containing Python codes
+- can define functions, classes, variables, or runnable codes
 
 ```python
 import math
@@ -29,11 +29,20 @@ print(result)           # 4.0
 **Import specific functions**
 
 ```python
+# From a package, import the functions we want
 from math import sqrt, pi, ceil
+
 result = sqrt(25)  # Use directly without module name
 area = pi * 5**2
 rounded_up = ceil(4.2)
 ```
+
+{% capture text %}
+**PRO TIP**
+
+You might question like ```Why not just import all the functions inside a package?``` Well, the quick answer is... ```While it is possible to import all the packages by doing 'from my_package import *', the package might have a lot of functions we do not unnecessarily need. Loading them all could slow down the importing process.```
+{% endcapture %}
+{% include alert.html text=text color=secondary%}
 
 **Import with alias**
 
