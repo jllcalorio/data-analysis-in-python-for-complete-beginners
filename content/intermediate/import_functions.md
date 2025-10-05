@@ -28,7 +28,7 @@ print(result)           # 4.0
 
 **Import specific functions**
 
-From a package, import the functions we want
+From a package, we import only the functions we want.
 
 Why we do not import all the functions inside a package?
 
@@ -46,13 +46,36 @@ rounded_up = ceil(4.2)
 
 **Import with alias**
 
+Importing a module as an alias has become a common practice for developers, programmers, and normal users of Python. Using an alias for a module means that instead of using the whole module name, you give it a short name... or nickname.
+
+This just shortens the amount of time you type the module, but ultimately, makes the code cleaner and reduce the human error.
+
+Example 1:
+
 ```python
 import math as m
-result = m.factorial(5)
 
-# Import specific function with alias
+result = m.factorial(5)
+print(result)
+```
+
+Example 2:
+
+```python
 from math import factorial as fact
+
 result = fact(5)
+print(result)
+```
+
+Example 3:
+
+```python
+import numpy as np
+
+array = np.array([1, 2, 3, 4])
+mean_value = np.mean(array)
+print(mean_value)  # Output: 2.5
 ```
 " %}
 
