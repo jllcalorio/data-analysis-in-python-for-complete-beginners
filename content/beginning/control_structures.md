@@ -26,7 +26,7 @@ weather = \"sunny\"
 temperature = 75
 
 if weather == \"sunny\" and temperature > 70:
-    print("Perfect day for a picnic!")
+    print(\"Perfect day for a picnic!\")
 elif weather == \"rainy\" or temperature < 60:
     print(\"Stay inside today\")
 else:
