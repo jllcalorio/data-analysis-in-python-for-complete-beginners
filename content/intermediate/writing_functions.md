@@ -105,7 +105,7 @@ student = create_student_record(
 ```
 " %}
 
-## Lambda Functions (Anonymous Functions)
+{% include question.html header="Lambda Functions (Anonymous Functions)" text="
 ```python
 # Regular function
 def square(x):
@@ -121,20 +121,21 @@ print(squared)  # [1, 4, 9, 16, 25]
 
 # Filtering with lambda
 students = [
-    {"name": "Alice", "grade": 85},
-    {"name": "Bob", "grade": 92},
-    {"name": "Charlie", "grade": 78}
+    {\"name\": \"Alice\", \"grade\": 85},
+    {\"name\": \"Bob\", \"grade\": 92},
+    {\"name\": \"Charlie\", \"grade\": 78}
 ]
 
-high_performers = list(filter(lambda s: s["grade"] >= 85, students))
+high_performers = list(filter(lambda s: s[\"grade\"] >= 85, students))
 print(high_performers)
 ```
+" %}
 
-## Function Documentation and Type Hints
+{% include question.html header="Function Documentation and Type Hints" text="
 ```python
 def calculate_compound_interest(principal: float, rate: float,
                               time: int, compound_frequency: int = 1) -> float:
-    """
+    \"\"\"
     Calculate compound interest.
 
     Args:
@@ -149,23 +150,24 @@ def calculate_compound_interest(principal: float, rate: float,
     Example:
         >>> calculate_compound_interest(1000, 0.05, 10, 4)
         1643.62
-    """
+    \"\"\"
     amount = principal * (1 + rate/compound_frequency) ** (compound_frequency * time)
     return round(amount, 2)
 
 # Usage
 final_amount = calculate_compound_interest(1000, 0.05, 10, 4)
-print(f"Final amount: ${final_amount}")
+print(f\"Final amount: ${final_amount}\")
 ```
+" %}
 
-## Higher-Order Functions
+{% include question.html header="Higher-Order Functions" text="
 ```python
 def apply_operation(numbers, operation):
-    """Apply an operation to a list of numbers."""
+    \"\"\"Apply an operation to a list of numbers.\"\"\"
     return [operation(num) for num in numbers]
 
 def create_multiplier(factor):
-    """Create a function that multiplies by a specific factor."""
+    \"\"\"Create a function that multiplies by a specific factor.\"\"\"
     def multiplier(x):
         return x * factor
     return multiplier
@@ -181,9 +183,10 @@ squared = apply_operation(numbers, lambda x: x ** 2)
 multiply_by_3 = create_multiplier(3)
 tripled = apply_operation(numbers, multiply_by_3)
 
-print(f"Original: {numbers}")
-print(f"Doubled: {doubled}")
+print(f\"Original: {numbers}\")
+print(f\"Doubled: {doubled}\")
 
-print(f"Squared: {squared}")
-print(f"Tripled: {tripled}")
+print(f\"Squared: {squared}\")
+print(f\"Tripled: {tripled}\")
 ```
+" %}
