@@ -62,8 +62,8 @@ sentence = \"apple,banana,orange\"
 fruits   = sentence.split(\",\")   # ['apple', 'banana', 'orange']
 rejoined = \" | \".join(fruits)    # apple | banana | orange
 
-print(sentence)                # apple,banana,orange
-print(fruits)                  # ['apple', 'banana', 'orange']
-print(rejoined)                # apple | banana | orange
+print(sentence)                 # apple,banana,orange
+print(fruits)                   # ['apple', 'banana', 'orange']
+print(rejoined)                 # apple | banana | orange
 ```
 " %}
