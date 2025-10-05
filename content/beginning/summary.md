@@ -10,7 +10,7 @@ topics: summary, next steps
 {% include question.html header="Key Concepts Mastered" text="
 
 - **Variables:** Storing and managing data
-- **Data Types:** Working with strings, integers, floats, and booleans
+- **Data Types:** Working with strings, integers, floats, and Booleans
 - **Operators:** Performing calculations and comparisons
 - **Lists:** Organizing multiple items in order
 - **Dictionaries:** Storing key-value pairs for structured data
