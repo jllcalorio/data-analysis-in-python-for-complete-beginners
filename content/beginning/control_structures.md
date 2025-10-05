@@ -39,7 +39,7 @@ else:
 
 {% include question.html header="For Loops" text="
 
-```for``` loops are employed for iteration, repeating a block of code a fixed number of times or for each item in a collection (e.g., ```for item in list_of_items: process item```). They are crucial for automating repetitive tasks.
+```for``` loops are employed for iteration, repeating a block of code a fixed number of times or for each item in a collection (e.g., ```for item in list_of_items: process item```). They are crucial for **automating repetitive tasks**.
 
 Loop through a list
 
@@ -47,6 +47,11 @@ Loop through a list
 fruits = [\"apple\", \"banana\", \"orange\"]
 for fruit in fruits:
     print(f\"I like {fruit}\")
+
+# Output
+# I like apple
+# I like banana
+# I like orange
 ```
 
 Loop through a range of numbers
@@ -54,14 +59,26 @@ Loop through a range of numbers
 ```python
 for i in range(5):  # 0 to 4
     print(f\"Count: {i}\")
+
+# Output:
+# Count: 0
+# Count: 1
+# Count: 2
+# Count: 3
+# Count: 4
 ```
 
 Loop through a dictionary
 
 ```python
-student = {\"name\": \"Alice\", \"age\": 20, \"major\": \"CS\"}
+student = {\"name\": \"Alice\", \"age\": 20, \"major\": \"Computer Science\"}
 for key, value in student.items():
     print(f\"{key}: {value}\")
+
+# Output
+# name: Alice
+# age: 20
+# major: Computer Science
 ```
 " %}
 
