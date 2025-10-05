@@ -28,11 +28,13 @@ print(fruits)  # Output: ['apple', 'banana', 'orange']
 
 {% include question.html header="Accessing List Items" text="
 
-Items in lists can be accessed using their ```index```. The position of the item in a list start at 0.
+Items in lists can be accessed using their ```index```. The index (or position) of the item in a list start at 0.
 
-Thus, in ```pythonfruits = [\"apple\", \"banana\", \"orange\", \"grape\"]```, the position of apple is 0, and the position of banana is 1.
+Thus, in ```pythonfruits = [\"apple\", \"banana\", \"orange\", \"grape\"]```, the index of apple is 0, and the index of banana is 1.
 
-**Tip:** In R, the position starts at 1.
+Weirdly, the index of the last item in the list is -1, while the 2nd to the last index is -2. Try it out in your PC!
+
+**Tip:** In R, the index starts at 1.
 
 ```python
 fruits = [\"apple\", \"banana\", \"orange\", \"grape\"]
@@ -46,6 +48,14 @@ print(fruits[-2])  # Second to last: orange
 " %}
 
 {% include question.html header="List Methods" text="
+
+These list methods are used when you want to:
+
+- add item/s in the list (whether at the end or at a specific index)
+- remove item/s in the list
+- inspect/count items in a list
+- reordering or copying items in a list
+
 ```python
 fruits = [\"apple\", \"banana\"]
 
@@ -68,6 +78,11 @@ print(fruits.count(\"apple\"))      # Count occurrences: 1
 " %}
 
 {% include question.html header="List Slicing" text="
+
+Slicing allows you to extract a portion of a list using a concise syntax.
+
+It follows this syntax: ```list[start:stop:step]```
+
 ```python
 numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
@@ -76,4 +91,15 @@ print(numbers[:3])     # First 3 items: [0, 1, 2]
 print(numbers[7:])     # From index 7 to end: [7, 8, 9]
 print(numbers[::2])    # Every second item: [0, 2, 4, 6, 8]
 ```
+
+You can still use indexing from the end using negative indices.
+
+```python
+numbers[-3:]    # Last 3 items: [7, 8, 9]
+numbers[:-2]    # All except last 2: [0, 1, 2, 3, 4, 5, 6, 7]
+
+numbers[::3]    # Every third item: [0, 3, 6, 9]
+numbers[::-1]   # Reversed list: [9, 8, 7, ..., 0]
+```
+
 " %}
