@@ -111,11 +111,11 @@ Let's view what the 'student' variable contains.
 
 " solution="
 ```python
-# {'name': 'Alice',
-#  'age': 20,
-#  'major': 'Computer Science',
-#  'gpa': 3.8,
-#  'year': 'Junior'}
+{'name': 'Alice',
+ 'age': 20,
+ 'major': 'Computer Science',
+ 'gpa': 3.8,
+ 'year': 'Junior'}
 ```
 " %}
 
