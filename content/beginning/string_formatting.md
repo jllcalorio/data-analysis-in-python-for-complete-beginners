@@ -37,13 +37,8 @@ name = \"Bob\"
 age  = 30
 
 message = \"Hello, {}! You are {} years old.\".format(name, age)
-print(message)
+print(message) # Hello, Bob! You are 30 years old.
 ```
-
-```python
-# With named placeholders
-message = \"Hello, {name}! You are {age} years old.\".format(name=name, age=age)
-print(message)
 ```
 " %}
 
