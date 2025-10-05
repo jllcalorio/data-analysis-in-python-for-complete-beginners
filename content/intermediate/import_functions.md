@@ -181,12 +181,14 @@ print(f"Total: {format_currency(total)}")
 ```
 
 {% capture text %}
+**PRO TIP**
+
 You might have heard of something called a ```package```. A package is a **directory** that contains **one or more modules** and a special ```__init__.py``` file. It allows you to organize **related modules** under a common namespace.
 
 You import modules from a package like:
 
 ```python
-from my_package import myy_module
+from my_package import my_module
 ```
 {% endcapture %}
-{% include alert.html text=text color=secondary header="PRO TIP"%}
+{% include alert.html text=text color=secondary%}
