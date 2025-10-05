@@ -53,7 +53,7 @@ print(text.upper())      #   HELLO WORLD
 print(text.lower())      #   hello world  
 print(text.strip())      # Hello World (removes whitespace)
 print(text.replace(\"World\", \"Python\"))  #   Hello Python  
-python
+```
 
 Splitting and joining
 
