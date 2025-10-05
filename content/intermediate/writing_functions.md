@@ -107,7 +107,8 @@ student = create_student_record(
 )
 ```
 
-Let's view what the 'student' variable contains
+Let's view what the 'student' variable contains.
+
 "solution="
 ```python
 # {'name': 'Alice',
