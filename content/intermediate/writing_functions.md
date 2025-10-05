@@ -7,17 +7,18 @@ topics: functions
 
 **Functions** are the building blocks of well-organized code. They allow you to write code once and use it many times, making your programs more efficient and easier to maintain.
 
-# Function Basics Review
+{% include question.html header="Function Basics Review" text="
 
 ```python
 def greet(name):
-    """A simple function that greets someone."""
-    return f"Hello, {name}!"
+    \"\"\"A simple function that greets someone.\"\"\"
+    return f\"Hello, {name}!\"
 
 # Function call
-message = greet("Alice")
+message = greet(\"Alice\")
 print(message)  # Output: Hello, Alice!
 ```
+" %}
 
 # Advanced Function Features
 
@@ -48,15 +49,15 @@ def order_pizza(size, *toppings, **details):
     """Order a pizza with flexible arguments."""
     print(f"Pizza size: {size}")
     print(f"Toppings: {', '.join(toppings)}")
-    
+
     for key, value in details.items():
         print(f"{key}: {value}")
 
 # Various ways to call the function
-order_pizza("Large", "pepperoni", "mushrooms", 
+order_pizza("Large", "pepperoni", "mushrooms",
            delivery=True, special_instructions="Extra cheese")
 ```
-           
+
 ## Variable-Length Arguments
 ```python
 def calculate_average(*numbers):
@@ -76,9 +77,9 @@ avg1 = calculate_average(85, 90, 78, 92)
 avg2 = calculate_average(95, 87)
 
 student = create_student_record(
-    "Alice", 
-    age=20, 
-    major="Computer Science", 
+    "Alice",
+    age=20,
+    major="Computer Science",
     gpa=3.8,
     year="Junior"
 )
@@ -111,20 +112,20 @@ print(high_performers)
 
 ## Function Documentation and Type Hints
 ```python
-def calculate_compound_interest(principal: float, rate: float, 
+def calculate_compound_interest(principal: float, rate: float,
                               time: int, compound_frequency: int = 1) -> float:
     """
     Calculate compound interest.
-    
+
     Args:
         principal (float): Initial amount of money
         rate (float): Annual interest rate (as decimal, e.g., 0.05 for 5%)
         time (int): Time period in years
         compound_frequency (int): How many times interest compounds per year
-    
+
     Returns:
         float: Final amount after compound interest
-    
+
     Example:
         >>> calculate_compound_interest(1000, 0.05, 10, 4)
         1643.62
