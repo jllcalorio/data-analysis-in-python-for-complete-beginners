@@ -54,12 +54,28 @@ print(student)  # {'name': 'Alice', 'major': 'Computer Science', 'gpa': 3.8}
 " %}
 
 {% include question.html header="Dictionary Methods" text="
+
+Get the keys
+
 ```python
 print(student.keys())      # dict_keys(['name', 'major', 'gpa'])
-print(student.values())    # dict_values(['Alice', 'Computer Science', 3.8])
-print(student.items())     # dict_items([('name', 'Alice'), ('major', 'Computer Science'), ('gpa', 3.8)])
+```
 
-# Check if key exists
+Get the values
+
+```python
+print(student.values())    # dict_values(['Alice', 'Computer Science', 3.8])
+```
+
+Get the item pairs
+
+```python
+print(student.items())     # dict_items([('name', 'Alice'), ('major', 'Computer Science'), ('gpa', 3.8)])
+```
+
+Check if key exists
+
+```python
 print(\"name\" in student)   # True
 print(\"grade\" in student)  # False
 ```
