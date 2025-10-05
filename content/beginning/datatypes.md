@@ -11,7 +11,7 @@ Python has several built-in data types. Understanding these is crucial for effec
 
 {% include question.html header="Strings (str)" text="
 
-Strings are considered as text data enclosed in single or double quotation marks".
+Strings are considered as text data enclosed in single or double quotation marks\".
 
 ```python
 first_name = \"John\"
