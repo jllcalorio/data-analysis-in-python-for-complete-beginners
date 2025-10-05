@@ -32,6 +32,9 @@ print(f\"Your score is {score:.0f}%\")  # Your score is 88%
 " %}
 
 {% include question.html header=".format() Method" text="
+
+Using the '.format' method lets you make use of these curly braces {} and just specify at the end the variable names. This is a bit cleaner code formatting in my opinion because it lets you see at the end which variables did you use.
+
 ```python
 name = \"Bob\"
 age  = 30
