@@ -7,7 +7,7 @@ topics: loop, if, for, while, functions
 
 Control structures determine the order in which your code executes.
 
-# If Statements
+{% include question.html header="If Statements" text="
 
 ```if``` statements are used for conditional execution, allowing a block of code to run only if a specified condition is true (e.g., if ```temperature > 30: print "It's hot!"```). This is done to create decision-making logic in your programs.
 
@@ -15,24 +15,25 @@ Control structures determine the order in which your code executes.
 age = 18
 
 if age >= 18:
-    print("You are an adult")
+    print(\"You are an adult\")
 elif age >= 13:
-    print("You are a teenager")
+    print(\"You are a teenager\")
 else:
-    print("You are a child")
+    print(\"You are a child\")
 
 # Multiple conditions
-weather = "sunny"
+weather = \"sunny\"
 temperature = 75
 
-if weather == "sunny" and temperature > 70:
+if weather == \"sunny\" and temperature > 70:
     print("Perfect day for a picnic!")
-elif weather == "rainy" or temperature < 60:
-    print("Stay inside today")
+elif weather == \"rainy\" or temperature < 60:
+    print(\"Stay inside today\")
 else:
-    print("Decent weather")
+    print(\"Decent weather\")
 ```
-    
+" %}
+
 # For Loops
 
 ```for``` loops are employed for iteration, repeating a block of code a fixed number of times or for each item in a collection (e.g., ```for item in list_of_items: process item```). They are crucial for automating repetitive tasks.
@@ -52,7 +53,7 @@ student = {"name": "Alice", "age": 20, "major": "CS"}
 for key, value in student.items():
     print(f"{key}: {value}")
 ```
-    
+
 # While Loops
 
 ```when``` (often found in languages like ```Kotlin``` or as ```switch``` in others) is a construct for multi-way branching, providing a cleaner alternative to nested ```if-else if``` statements when you have multiple possible conditions to check against a single value (e.g., ```when day_of_week: "Monday" -> print "Start of the week"```). This improves code readability and maintainability.
@@ -71,7 +72,7 @@ while user_input != "quit":
     if user_input != "quit":
         print(f"You entered: {user_input}")
 ```
-        
+
 # Functions
 
 **Functions** are *reusable blocks of code* designed to perform a specific task (e.g., ```def calculate_area(length, width): return length * width```). They are used to break down complex problems into smaller, manageable pieces, promote code reusability, and improve the organization and readability of your programs.
