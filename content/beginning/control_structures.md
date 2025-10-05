@@ -9,7 +9,7 @@ Control structures determine the order in which your code executes.
 
 {% include question.html header="If Statements" text="
 
-The ```if``` statements are used for conditional execution, allowing a block of code to run only if a specified condition is true (e.g., ```if temperature > 30: print \"It's hot!\"```). This is done to create decision-making logic in your programs.
+The ```if``` statements are used for conditional execution, allowing a block of code to run only if a specified condition is true (e.g., ```if temperature > 30: print \"It's hot!\"```). This is done **to create decision-making logic** in your programs.
 
 ```python
 age = 18
@@ -22,7 +22,7 @@ else:
     print(\"You are a child\")
 ```
 
-You can also have more than one condition.
+You can also have **more than one** condition.
 
 ```python
 weather = \"sunny\"
@@ -84,16 +84,20 @@ for key, value in student.items():
 
 {% include question.html header="While Loops" text="
 
-```when``` (often found in languages like ```Kotlin``` or as ```switch``` in others) is a construct for multi-way branching, providing a cleaner alternative to nested ```if-else if``` statements when you have multiple possible conditions to check against a single value (e.g., ```when day_of_week: \"Monday\" -> print \"Start of the week\"```). This improves code readability and maintainability.
+```when``` (often found in languages like ```switch``` in R) is a construct for multi-way branching, providing a cleaner alternative to nested ```if-else if``` statements when you have multiple possible conditions to check against a single value (e.g., ```when day_of_week: \"Monday\" -> print \"Start of the week\"```). This improves code readability and maintainability.
+
+Basic 'while' loop
 
 ```python
-# Basic while loop
 count = 0
 while count < 5:
     print(f\"Count is {count}\")
     count += 1
+```
 
-# While loop with user input
+'while' loop with user input
+
+```python
 user_input = \"\"
 while user_input != \"quit\":
     user_input = input(\"Enter a command (or 'quit' to exit): \")
