@@ -7,20 +7,30 @@ topics: import, function, module
 
 Python's power comes from its vast ecosystem of modules. Learning to import and use functions from modules effectively is crucial for productive programming.
 
-# Basic Import Statements
+{% include question.html header="Basic Import Statements" text="
+
+Below are the common ways to import functions that are already built by other people, i.e., the developers of the functions.
+
+**Import entire module**
+
 ```python
-# Import entire module
 import math
 result = math.sqrt(16)  # Use with module.function
 print(result)  # 4.0
+```
 
-# Import specific functions
+**Import specific functions**
+
+```python
 from math import sqrt, pi, ceil
 result = sqrt(25)  # Use directly without module name
 area = pi * 5**2
 rounded_up = ceil(4.2)
+```
 
-# Import with alias
+**Import with alias**
+
+```python
 import math as m
 result = m.factorial(5)
 
@@ -28,6 +38,7 @@ result = m.factorial(5)
 from math import factorial as fact
 result = fact(5)
 ```
+" %}
 
 # Common Built-in Modules
 
