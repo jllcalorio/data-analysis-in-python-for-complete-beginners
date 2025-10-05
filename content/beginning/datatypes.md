@@ -79,7 +79,7 @@ If, for some reason, we want to convert from one data type to another, we can do
 In the example below, we convert the data '25' from a 'string' data type to an 'integer' data type.
 
 ```python
-age_str = "25"
+age_str = \"25\"
 age_int = int(age_str)
 print(age_int + 5)       # Output: 30
 ```
@@ -92,13 +92,13 @@ We can also do vice-versa.
 ```python
 score = 95
 score_str = str(score)
-print("Your score is: " + score_str)
+print("Your score is: \" + score_str)
 ```
 " %}
 
 {% include question.html header="String to float" text="
 ```python
-price_str = "19.99"
+price_str = \"19.99\"
 price_float = float(price_str)
 ```
 " %}
@@ -113,7 +113,7 @@ price_int = int(19.99)  # Result: 19
 ```python
 print(bool(1))    # True
 print(bool(0))    # False
-print(bool(""))   # False (empty string)
-print(bool("Hi")) # True (non-empty string)
+print(bool(\"\"))   # False (empty string)
+print(bool(\"Hi\")) # True (non-empty string)
 ```
 " %}
