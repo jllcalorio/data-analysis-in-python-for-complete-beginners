@@ -108,4 +108,3 @@ print(f\"Room area: {room_area} square feet\")
 {% capture text %}Note:
 Remember the **indents** in your if, for, while statements and in your functions. They act as indicators for Python to recognize that the next line of code is part of the if statement or function.
 {% endcapture %}
-{% include card.html text=text header=\"Setup Overview\" %}
