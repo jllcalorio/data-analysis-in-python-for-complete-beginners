@@ -40,7 +40,7 @@ Adding/updating values
 student[\"grade\"] = \"A\"        # Add new key-value pair
 student[\"age\"] = 21           # Update existing value
 
-print(student)  # {'name': 'Alice', 'major': 'Computer Science', 'grade': 'A', 'age': 21}
+print(student)  # {'name': 'Alice', 'age': 21, 'major': 'Computer Science', 'gpa': 3.8, 'grade': 'A'}
 ```
 
 Removing items
@@ -49,15 +49,15 @@ Removing items
 del student[\"grade\"]                             # Remove specific key
 removed_value = student.pop(\"age\", \"Not found\")  # Remove and return value
 
-print(student)  # {'name': 'Alice', 'major': 'Computer Science'}
+print(student)  # {'name': 'Alice', 'major': 'Computer Science', 'gpa': 3.8}
 ```
 " %}
 
 {% include question.html header="Dictionary Methods" text="
 ```python
-print(student.keys())      # dict_keys(['name', 'major'])
-print(student.values())    # dict_values(['Alice', 'Computer Science'])
-print(student.items())     # dict_items([('name', 'Alice'), ('major', 'Computer Science')])
+print(student.keys())      # dict_keys(['name', 'major', 'gpa'])
+print(student.values())    # dict_values(['Alice', 'Computer Science', 3.8])
+print(student.items())     # dict_items([('name', 'Alice'), ('major', 'Computer Science'), ('gpa', 3.8)])
 
 # Check if key exists
 print(\"name\" in student)   # True
