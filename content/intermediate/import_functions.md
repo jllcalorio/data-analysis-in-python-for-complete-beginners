@@ -189,4 +189,4 @@ You import modules from a package like:
 from my_package import myy_module
 ```
 {% endcapture %}
-{% include alert.html text=text header="PRO TIP" color=secondary %}
+{% include alert.html text=text color=secondary header="PRO TIP"%}
