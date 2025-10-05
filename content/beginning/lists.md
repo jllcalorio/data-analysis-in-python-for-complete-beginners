@@ -59,7 +59,7 @@ These list methods are used when you want to:
 ```python
 fruits = [\"apple\", \"banana\"]
 ```
-Adding items.
+Adding items
 
 ```python
 fruits.append(\"orange\")           # Add to end
@@ -69,7 +69,7 @@ print(fruits)                     # ['apple', 'grape', 'banana', 'orange']
 Removing items
 
 ```python
-fruits.remove(\"grape\")          # Remove specific item
+fruits.remove(\"grape\")           # Remove specific item
 last_item = fruits.pop()          # Remove and return last item
 print(fruits)                     # ['apple', 'banana']
 print(last_item)                  # orange
@@ -87,7 +87,7 @@ print(fruits.count(\"apple\"))      # Count occurrences: 1
 
 Slicing allows you to extract a portion of a list using a concise syntax.
 
-It follows this syntax: ```list[start:stop:step]```
+It follows this syntax: ```list_name[start:stop:step]```
 
 ```python
 numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
