@@ -43,7 +43,7 @@ def create_profile(name, age, city=\"Unknown\", occupation=\"Student\"):
     return profile
 ```
 
-Run the function using the default parameters
+Run the function using (1) default parameters and (2) custom characters
 
 ```python
 profile1 = create_profile(\"Alice\", 22)
@@ -54,20 +54,21 @@ print(profile2)  # all parameters specified
 ```
 " %}
 
-## Keyword Arguments
+{% include question.html header="Keyword Arguments" text="
 ```python
 def order_pizza(size, *toppings, **details):
-    """Order a pizza with flexible arguments."""
-    print(f"Pizza size: {size}")
-    print(f"Toppings: {', '.join(toppings)}")
+    \"\"\"Order a pizza with flexible arguments.\"\"\"
+    print(f\"Pizza size: {size}\")
+    print(f\"Toppings: {', '.join(toppings)}\")
 
     for key, value in details.items():
-        print(f"{key}: {value}")
+        print(f\"{key}: {value}\")
 
 # Various ways to call the function
-order_pizza("Large", "pepperoni", "mushrooms",
-           delivery=True, special_instructions="Extra cheese")
+order_pizza(\"Large\", \"pepperoni\", \"mushrooms\",
+           delivery=True, special_instructions=\"Extra cheese\")
 ```
+" %}
 
 ## Variable-Length Arguments
 ```python
