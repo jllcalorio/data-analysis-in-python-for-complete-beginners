@@ -20,25 +20,25 @@ Example: calculator.py
 # This module provides basic mathematical operations.
 
 def add(a, b):
-    """Add two numbers."""
+    \"\"\"Add two numbers.\"\"\"
     return a + b
 
 def subtract(a, b):
-    """Subtract second number from first."""
+    \"\"\"Subtract second number from first.\"\"\"
     return a - b
 
 def multiply(a, b):
-    """Multiply two numbers."""
+    \"\"\"Multiply two numbers.\"\"\"
     return a * b
 
 def divide(a, b):
-    """Divide first number by second."""
+    \"\"\"Divide first number by second.\"\"\"
     if b == 0:
-        raise ValueError("Cannot divide by zero!")
+        raise ValueError(\"Cannot divide by zero\!")
     return a / b
 
 def power(base, exponent):
-    """Raise base to the power of exponent."""
+    \"\"\"Raise base to the power of exponent.\"\"\"
     return base ** exponent
 
 # Module-level variables
@@ -46,15 +46,15 @@ PI = 3.14159
 E = 2.71828
 
 # Code that runs when module is imported
-print(f"Calculator module loaded. PI = {PI}")
+print(f\"Calculator module loaded. PI = {PI}\")
 
 # Code that only runs when module is executed directly
-if __name__ == "__main__":
-    print("Running calculator module tests...")
-    print(f"5 + 3 = {add(5, 3)}")
-    print(f"10 - 4 = {subtract(10, 4)}")
-    print(f"6 * 7 = {multiply(6, 7)}")
-    print(f"15 / 3 = {divide(15, 3)}")
+if __name__ == \"__main__\":
+    print(\"Running calculator module tests...\")
+    print(f\"5 + 3 = {add(5, 3)}\")
+    print(f\"10 - 4 = {subtract(10, 4)}\")
+    print(f\"6 * 7 = {multiply(6, 7)}\")
+    print(f\"15 / 3 = {divide(15, 3)}\")
 ```
 " %}
 
@@ -101,20 +101,20 @@ result5 = calc.power(2, 8)
 ## math_utils/basic.py
 
 ```python
-"""Basic mathematical operations."""
+\"\"\"Basic mathematical operations.\"\"\"
 
 def add_list(numbers):
-    """Add all numbers in a list."""
+    \"\"\"Add all numbers in a list.\"\"\"
     return sum(numbers)
 
 def average(numbers):
-    """Calculate average of a list of numbers."""
+    \"\"\"Calculate average of a list of numbers.\"\"\"
     if not numbers:
         return 0
     return sum(numbers) / len(numbers)
 
 def find_max_min(numbers):
-    """Find maximum and minimum values."""
+    \"\"\"Find maximum and minimum values.\"\"\"
     if not numbers:
         return None, None
     return max(numbers), min(numbers)
@@ -123,7 +123,7 @@ def find_max_min(numbers):
 ## math_utils/init.py
 
 ```python
-"""Math utilities package."""
+\"\"\"Math utilities package.\"\"\"
 
 from .basic import add_list, average, find_max_min
 from .advanced import fibonacci, is_prime
