@@ -21,9 +21,9 @@ print(a + b)   # Addition: 13
 print(a - b)   # Subtraction: 7
 print(a * b)   # Multiplication: 30
 print(a / b)   # Division: 3.333...
-print(a // b)  # Floor division: 3
-print(a % b)   # Modulus (remainder): 1
-print(a ** b)  # Exponentiation: 1000
+print(a // b)  # Floor division: 3 [divides 'a' by 'b' and rounds down to the nearest whole number (integer)]
+print(a % b)   # Modulus (remainder): 1 [an operator that returns the remainder after dividing 'a' by 'b']
+print(a ** b)  # Exponentiation: 1000, in Excel, this is a^b = 10^3
 ```
 
 Remember that PEMDAS stands for?
@@ -48,12 +48,12 @@ If you want to check if two (2) values are the same, you should use double equal
 x = 5
 y = 10
 
-print(x == y)   # Equal: False
-print(x != y)   # Not equal: True
-print(x < y)    # Less than: True
-print(x > y)    # Greater than: False
-print(x <= y)   # Less than or equal: True
-print(x >= y)   # Greater than or equal: False
+print(x == y)   # Equal: False, checks if 2 values ARE EQUAL
+print(x != y)   # Not equal: True, checks if 2 values ARE NOT EQUAL
+print(x < y)    # Less than: True, checks if x is less than y
+print(x > y)    # Greater than: False, checks if x is greater than y
+print(x <= y)   # Less than or equal: True, checks if x is less than or equal to y
+print(x >= y)   # Greater than or equal: False, checks if y is greater than or equal to y
 ```
 " %}
 
