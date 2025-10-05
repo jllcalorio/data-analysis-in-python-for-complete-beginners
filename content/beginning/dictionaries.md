@@ -29,8 +29,8 @@ print(student)
 student = {\"name\": \"Alice\", \"age\": 20, \"major\": \"Computer Science\"}
 
 # Accessing values
-print(student[\"name\"])        # Alice
-print(student.get(\"age\"))     # 20
+print(student[\"name\"])                        # Alice
+print(student.get(\"age\"))                     # 20
 print(student.get(\"grade\", \"Not found\"))  # Default if key doesn't exist
 ```
 " %}
@@ -44,7 +44,7 @@ student[\"grade\"] = \"A\"        # Add new key-value pair
 student[\"age\"] = 21           # Update existing value
 
 # Removing items
-del student[\"grade\"]          # Remove specific key
+del student[\"grade\"]                                 # Remove specific key
 removed_value = student.pop(\"age\", \"Not found\")  # Remove and return value
 
 print(student)  # {\"name\": \"Alice\"}
