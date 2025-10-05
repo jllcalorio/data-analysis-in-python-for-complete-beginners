@@ -16,14 +16,14 @@ name = \"Alice\"
 age = 25
 score = 87.5
 ```
-Basic f-string formatting
+You can combine strings and numbers using this basic f-string formatting. This makes your code dynamic for cases when you want to use this multiple times.
 
 ```python
 message = f\"Hello, {name}! You are {age} years old.\"
 print(message)  # Hello, Alice! You are 25 years old.
 ```
 
-Formatting numbers
+You can also format the numbers using f-strings.
 
 ```python
 print(f\"Your score is {score:.1f}%\")  # Your score is 87.5%
@@ -37,6 +37,7 @@ name = \"Bob\"
 age  = 30
 
 message = \"Hello, {}! You are {} years old.\".format(name, age)
+
 print(message) # Hello, Bob! You are 30 years old.
 ```
 " %}
@@ -62,8 +63,8 @@ sentence = \"apple,banana,orange\"
 fruits   = sentence.split(\",\")   # ['apple', 'banana', 'orange']
 rejoined = \" | \".join(fruits)    # apple | banana | orange
 
-print(sentence)                 # apple,banana,orange
-print(fruits)                   # ['apple', 'banana', 'orange']
-print(rejoined)                 # apple | banana | orange
+print(sentence)                  # apple,banana,orange
+print(fruits)                    # ['apple', 'banana', 'orange']
+print(rejoined)                  # apple | banana | orange
 ```
 " %}
