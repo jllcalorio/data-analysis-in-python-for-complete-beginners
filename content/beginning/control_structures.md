@@ -9,7 +9,7 @@ Control structures determine the order in which your code executes.
 
 {% include question.html header="The If Statements" text="
 
-The if statements are used for conditional execution, allowing a block of code to run only if a specified condition is true (e.g., ```if temperature > 30: print \"It's hot!\")```. This is done to create decision-making logic in your programs.
+The if statements are used for conditional execution, allowing a block of code to run only if a specified condition is true (e.g., ```if temperature > 30: print \"It's hot!\"```). This is done to create decision-making logic in your programs.
 
 ```python
 age = 18
@@ -20,8 +20,11 @@ elif age >= 13:
     print(\"You are a teenager\")
 else:
     print(\"You are a child\")
+```
 
-# Multiple conditions
+You can also have more than one condition/s.
+
+```python
 weather = \"sunny\"
 temperature = 75
 
@@ -38,17 +41,24 @@ else:
 
 ```for``` loops are employed for iteration, repeating a block of code a fixed number of times or for each item in a collection (e.g., ```for item in list_of_items: process item```). They are crucial for automating repetitive tasks.
 
+Loop through a list
+
 ```python
-# Loop through a list
 fruits = [\"apple\", \"banana\", \"orange\"]
 for fruit in fruits:
     print(f\"I like {fruit}\")
+```
 
-# Loop through a range of numbers
+Loop through a range of numbers
+
+```python
 for i in range(5):  # 0 to 4
     print(f\"Count: {i}\")
+```
 
-# Loop through a dictionary
+Loop through a dictionary
+
+```python
 student = {\"name\": \"Alice\", \"age\": 20, \"major\": \"CS\"}
 for key, value in student.items():
     print(f\"{key}: {value}\")
