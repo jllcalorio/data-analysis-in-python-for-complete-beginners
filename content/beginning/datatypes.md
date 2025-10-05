@@ -9,18 +9,19 @@ Python has several built-in data types. Understanding these is crucial for effec
 
 # **The Four Main Data Types**
 
-## Strings (str)
+{% include question.html header="Strings (str)" text="
 
 Text data enclosed in quotes:
 
 ```python
-first_name = "John"
+first_name = \"John\"
 last_name = 'Doe'
-message = """This is a 
-multi-line string"""
+message = \"\"\"This is a
+multi-line string\"\"\"
 
 print(type(first_name))  # Output: <class 'str'>
 ```
+" %}
 
 ## Integers (int)
 
