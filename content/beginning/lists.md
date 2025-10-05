@@ -5,24 +5,27 @@ title: Lists
 topics: list, collection, multiple data storing
 ---
 
-Lists are ordered collections that can store multiple items. They're one of the most useful data structures in Python!
+A list is a built-in Python data structure used to store multiple items in a single variable. Lists are ordered, mutable, and can contain mixed data types.
 
-# **Creating Lists**
+They're one of the most useful data structures in Python!
+
+{% include question.html header="Creating Lists" text="
 ```python
 # Empty list
-empty_list = []
+empty_list = [] # Can be used to initialize a list as a container of results
 
 # List with items
-fruits  = ["apple", "banana", "orange"]
+fruits  = [\"apple\", \"banana\", \"orange\"]
 numbers = [1, 2, 3, 4, 5]
-mixed   = ["hello", 42, 3.14, True]
+mixed   = [\"hello\", 42, 3.14, True]
 
 print(fruits)  # Output: ['apple', 'banana', 'orange']
 ```
+" %}
 
-# **Accessing List Items**
+{% include question.html header="Accessing List Items" text="
 ```python
-fruits = ["apple", "banana", "orange", "grape"]
+fruits = [\"apple\", \"banana\", \"orange\", \"grape\"]
 
 # Accessing by index (starts at 0)
 print(fruits[0])   # First item: apple
@@ -30,6 +33,7 @@ print(fruits[1])   # Second item: banana
 print(fruits[-1])  # Last item: grape
 print(fruits[-2])  # Second to last: orange
 ```
+" %}
 
 # **List Methods**
 ```python
