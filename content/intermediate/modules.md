@@ -15,10 +15,10 @@ A module is simply a Python file containing functions, classes, and variables. A
 
 Example: calculator.py
 
-```python
-# A simple calculator module.
-# This module provides basic mathematical operations.
+- This is a simple calculator module.
+- This module provides basic mathematical operations.
 
+```python
 def add(a, b):
     \"\"\"Add two numbers.\"\"\"
     return a + b
