@@ -263,27 +263,27 @@ print(f\"Path exists: {os.path.exists(file_path)}\")
 def format_currency(amount, currency=\"USD\"):
     \"\"\"Format a number as currency.\"\"\"
     return f\"{currency} {amount:,.2f}\"
-    ```
+```
 
 Basic email validation
 
-    ```python
+```python
 def validate_email(email):
     \"\"\"Basic email validation.\"\"\"
     return \"@\" in email and \".\" in email.split(\"@\")[1]
-    ```
+```
 
 Calculate tip amount
 
-    ```python
+```python
 def calculate_tip(bill_amount, tip_percentage=15):
     \"\"\"Calculate tip amount.\"\"\"
     return bill_amount * (tip_percentage / 100)
-    ```
+```
 
 
 
-    ```python
+```python
 # main.py - Using your module
 from utils import format_currency, calculate_tip
 ```
