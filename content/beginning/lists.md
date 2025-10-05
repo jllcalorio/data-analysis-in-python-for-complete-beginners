@@ -58,19 +58,25 @@ These list methods are used when you want to:
 
 ```python
 fruits = [\"apple\", \"banana\"]
+```
+Adding items.
 
-# Adding items
+```python
 fruits.append(\"orange\")           # Add to end
 fruits.insert(1, \"grape\")         # Insert at position 1
 print(fruits)                     # ['apple', 'grape', 'banana', 'orange']
+```
+Removing items
 
-# Removing items
+```python
 fruits.remove(\"grape\")          # Remove specific item
 last_item = fruits.pop()          # Remove and return last item
 print(fruits)                     # ['apple', 'banana']
 print(last_item)                  # orange
+```
+Other useful methods
 
-# Other useful methods
+```python
 fruits.extend([\"kiwi\", \"mango\"])  # Add multiple items
 print(len(fruits))                # Get length: 4
 print(fruits.count(\"apple\"))      # Count occurrences: 1
