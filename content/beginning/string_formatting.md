@@ -48,10 +48,10 @@ Printing methods for strings.
 ```python
 text = \"  Hello World  \"
 
-print(text)                              #   Hello World  
-print(text.upper())                      #   HELLO WORLD  
-print(text.lower())                      #   hello world  
-print(text.strip())                      # Hello World (removes whitespace)
+print(text)                             #   Hello World  
+print(text.upper())                     #   HELLO WORLD  
+print(text.lower())                     #   hello world  
+print(text.strip())                     # Hello World (removes whitespace)
 print(text.replace(\"World\", \"Python\"))  #   Hello Python  
 ```
 
@@ -62,8 +62,8 @@ sentence = \"apple,banana,orange\"
 fruits   = sentence.split(\",\")   # ['apple', 'banana', 'orange']
 rejoined = \" | \".join(fruits)    # apple | banana | orange
 
-print(sentence)   # apple,banana,orange
-print(fruits)     # ['apple', 'banana', 'orange']
-print(rejoined)   # apple | banana | orange
+print(sentence)                # apple,banana,orange
+print(fruits)                  # ['apple', 'banana', 'orange']
+print(rejoined)                # apple | banana | orange
 ```
 " %}
