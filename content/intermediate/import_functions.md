@@ -50,62 +50,77 @@ Importing a module as an alias has become a common practice for developers, prog
 
 This just shortens the amount of time you type the module, but ultimately, makes the code cleaner and reduce the human error.
 
-Example 1:
+**Example 1:**
 
 ```python
 import math as m
 
 result = m.factorial(5)
-print(result)
+print(result)                    # 120
 ```
 
-Example 2:
+**Example 2:**
 
 ```python
 from math import factorial as fact
 
 result = fact(5)
-print(result)
+print(result)                    # 120
 ```
 
-Example 3:
+**Example 3:**
 
 ```python
 import numpy as np
 
 array = np.array([1, 2, 3, 4])
 mean_value = np.mean(array)
-print(mean_value)  # Output: 2.5
+print(mean_value)                # 2.5
 ```
 " %}
 
-# Common Built-in Modules
+## Common Built-in Modules
 
-## Math Module
+{% include question.html header="Math Module" text="
 ```python
 import math
+```
+Basic mathematical operations
 
-# Basic mathematical operations
-print(math.sqrt(16))      # Square root: 4.0
-print(math.pow(2, 3))     # Power: 8.0
-print(math.factorial(5))  # Factorial: 120
+```python
+print(math.sqrt(16))        # Square root: 4.0
+print(math.pow(2, 3))       # Power: 8.0
+print(math.factorial(5))    # Factorial: 120
+```
 
-# Trigonometric functions
+Trigonometric functions
+
+```python
 print(math.sin(math.pi/2))  # Sine: 1.0
 print(math.cos(0))          # Cosine: 1.0
+```
 
-# Logarithms
+Logarithms
+
+```python
 print(math.log(10))         # Natural log
 print(math.log10(100))      # Base-10 log: 2.0
+```
 
-# Rounding and ceiling
+Rounding and ceiling
+
+```python
 print(math.ceil(4.2))       # Round up: 5
 print(math.floor(4.8))      # Round down: 4
+```
 
-# Constants
+Constants
+
+```python
 print(math.pi)              # 3.141592653589793
 print(math.e)               # 2.718281828459045
 ```
+" %}
 
 ## Random Module
 ```python
@@ -130,6 +145,7 @@ print(numbers)  # List is now shuffled
 random.seed(42)
 print(random.randint(1, 100))  # Will always be the same with seed 42
 ```
+
 
 ## Datetime Module
 ```python
