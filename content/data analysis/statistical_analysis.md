@@ -34,7 +34,7 @@ from scipy import stats
 import numpy as np
 ```
 
-Let's define a comprehensive descriptive statistics function.
+**Let's define a comprehensive descriptive statistics function.**
 
 ```python
 def describe_data(data, column_name):
@@ -52,7 +52,7 @@ def describe_data(data, column_name):
     print(f\"IQR: {np.percentile(data, 75) - np.percentile(data, 25):.2f}\")
 ```
 
-Analyze salary and age
+**Analyze salary and age**
 
 ```python
 describe_data(df['salary'], 'Salary')
@@ -64,9 +64,11 @@ describe_data(df['age'], 'Age')
 
 {% include question.html header="t-tests" text="
 
+One-sample t-test
+
+Let's check if average salary differs significantly from Php 70,000
+
 ```python
-# One-sample t-test
-# Test if average salary differs significantly from $70,000
 population_mean = 70000
 t_stat, p_value = stats.ttest_1samp(df['salary'], population_mean)
 
@@ -76,9 +78,13 @@ print(f\"Sample mean: ${df['salary'].mean():,.2f}\")
 print(f\"T-statistic: {t_stat:.4f}\")
 print(f\"P-value: {p_value:.4f}\")
 print(f\"Significant at α=0.05: {'Yes' if p_value < 0.05 else 'No'}\")
+```
 
-# Two-sample t-test
-# Compare salaries between IT and Finance departments
+Two-sample t-test
+
+Let's compare the salaries between IT and Finance departments
+
+```python
 it_salaries = df[df['department'] == 'IT']['salary']
 finance_salaries = df[df['department'] == 'Finance']['salary']
 
@@ -91,9 +97,13 @@ print(f\"Finance mean salary: ${finance_salaries.mean():,.2f}\")
 print(f\"T-statistic: {t_stat:.4f}\")
 print(f\"P-value: {p_value:.4f}\")
 print(f\"Significant difference at α=0.05: {'Yes' if p_value < 0.05 else 'No'}\")
+```
 
-# Paired t-test example (if we had before/after data)
-# Simulate salary increases
+Paired t-test example (if we had before/after data)
+
+Let's simulate salary increases
+
+```python
 np.random.seed(42)
 salary_before = df['salary'].sample(30).values
 salary_after = salary_before + np.random.normal(5000, 2000, 30)
@@ -112,8 +122,11 @@ print(f\"Significant improvement at α=0.05: {'Yes' if p_value < 0.05 else 'No'}
 
 {% include question.html header="ANOVA (Analysis of Variance)" text="
 
+One-way Analysis of Variance (ANOVA)
+
+ANOVA is an extension to t-test, where there can be more than 2 groups being compared. In this case, we would like to compare salaries across all departments.
+
 ```python
-# One-way ANOVA - Compare salaries across all departments
 department_groups = [group['salary'].values for name, group in df.groupby('department')]
 
 f_stat, p_value = stats.f_oneway(*department_groups)
@@ -123,8 +136,16 @@ print(f\"Testing salary differences across all departments\")
 print(f\"F-statistic: {f_stat:.4f}\")
 print(f\"P-value: {p_value:.4f}\")
 print(f\"Significant differences at α=0.05: {'Yes' if p_value < 0.05 else 'No'}\")
+```
 
-# Post-hoc analysis if ANOVA is significant
+Post-hoc analysis is required to be implemented if ANOVA is significant, i.e., the p-value < 0.05. This threshold is the usual threshold for significant p-values. You can be very strict and go down to 0.01, or maybe less strict by going up to 0.10. However, the latter is not very recommended because studies with these thresholds
+
+- have results that are considered to have **weak evidence** and increases the risk of **Type I errors**—falsely rejecting a true null hypothesis
+- are less likely to replicate in future studies
+- Journals and reviewers may view such results as tentative or inconclusive, reducing their impact
+- can lead to overstated claims or misleading conclusions in public-facing research
+
+```python
 if p_value < 0.05:
     print(\"\nPost-hoc pairwise comparisons:\")
     departments = df['department'].unique()
@@ -134,7 +155,11 @@ if p_value < 0.05:
             group2 = df[df['department'] == dept2]['salary']
             t_stat, p_val = stats.ttest_ind(group1, group2)
             print(f\"{dept1} vs {dept2}: p = {p_val:.4f} {'*' if p_val < 0.05 else ''}\")
+            ```
 
+
+
+            ```python
 # Two-way ANOVA example (salary by department and age group)
 # Create a more balanced dataset for demonstration
 balanced_data = []
@@ -168,7 +193,11 @@ print(f\"\nChi-square statistic: {chi2:.4f}\")
 print(f\"P-value: {p_value:.4f}\")
 print(f\"Degrees of freedom: {dof}\")
 print(f\"Significant association at α=0.05: {'Yes' if p_value < 0.05 else 'No'}\")
+```
 
+
+
+```python
 # Chi-square goodness of fit test
 # Test if department distribution follows expected proportions
 observed_freq = df['department'].value_counts().sort_index()
@@ -236,22 +265,42 @@ print(f\"Standard error: {std_err:.2f}\")
 # Predict high salary (above median) based on age and years employed
 median_salary = df['salary'].median()
 df['high_salary'] = (df['salary'] > median_salary).astype(int)
+```
 
+
+
+```python
 # Prepare features
 X = df[['age', 'years_employed']].values
 y = df['high_salary'].values
+```
 
+
+
+```python
 # Split data
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+```
 
+
+
+```python
 # Fit logistic regression
 log_reg = LogisticRegression()
 log_reg.fit(X_train, y_train)
+```
 
+
+
+```python
 # Make predictions
 y_pred = log_reg.predict(X_test)
 y_pred_proba = log_reg.predict_proba(X_test)[:, 1]
+```
 
+
+
+```python
 print(f\"\n=== Logistic Regression: Predicting High Salary ===\")
 print(f\"Model coefficients: {log_reg.coef_[0]}\")
 print(f\"Model intercept: {log_reg.intercept_[0]:.4f}\")
