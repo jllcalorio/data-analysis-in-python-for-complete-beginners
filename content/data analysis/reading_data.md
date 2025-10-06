@@ -83,8 +83,9 @@ print(df.head())
 
 {% include question.html header="Handling Missing Data" text="
 
+Let's create some missing data for demonstration purposes.
+
 ```python
-# Create some missing data for demonstration
 df_with_missing = df.copy()
 df_with_missing.loc[5:10, 'salary'] = np.nan
 df_with_missing.loc[15:20, 'department'] = np.nan
