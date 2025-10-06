@@ -3,11 +3,12 @@ nav_order: 5
 title: Wrap-up
 ---
 
-# Your Python Journey Ends Here
+## Your Python Journey Ends Here
 
-## Congratulations on Your Achievement! 🎉
+{% include question.html header="Congratulations on Your Achievement! 🎉" text="
 
 Take a moment to appreciate what you've accomplished today and in the past three (3) days. When you walked into this workshop, Python might have seemed like a mysterious programming language spoken only by programmers in hoodies. Now, you're leaving with the fundamental skills to write your own Python programs, analyze real data, and solve problems that matter to you.
+" %}
 
 ## What We've Learned Together
 
@@ -15,7 +16,7 @@ Take a moment to appreciate what you've accomplished today and in the past three
 
 You started with nothing more than curiosity, and now you can:
 
-**Master the Fundamentals**
+{% include question.html header="Master the Fundamentals" text="
 
 - Confidently work with variables and understand how Python stores and manipulates different types of data
 - Convert between data types when needed, knowing exactly when and why to do so
@@ -23,6 +24,7 @@ You started with nothing more than curiosity, and now you can:
 - Create and manipulate lists and dictionaries to organize your data effectively
 - Format strings professionally to display information clearly
 - Control program flow using if statements, loops, and functions to make your code intelligent and responsive
+" %}
 
 **Think Like a Programmer**
 
@@ -92,7 +94,7 @@ helps us create better learning experiences for everyone.
 3. **Find a Small Project**: Think of a simple problem you can solve with your new skills
 
 ### Short-term Goals (Next Month)
-1. **Join the Community**: 
+1. **Join the Community**:
    - Follow Python communities on social media
    - Join local Python meetups or online forums
    - Connect with other beginners for mutual support
