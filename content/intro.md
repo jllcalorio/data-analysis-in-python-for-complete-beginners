@@ -78,7 +78,7 @@ This workshop is designed for:
 - **Understand and apply** fundamental programming concepts
 - Perform basic **data manipulation and analysis tasks**
 - Create **simple visualizations** from datasets
-- **Debug** common programming errors independently
+- **Debug** common programming **errors** independently
 " %}
 
 {% include question.html header="Long-term Benefits" text="
