@@ -11,7 +11,7 @@ topics: summary, next steps
 
 {% include question.html header="Advanced Function Writing" text="
 
-- **Complex parameter handling:** Default parameters, *args, **kwargs
+- **Complex parameter handling:** Default parameters, ```*args```, ```**kwargs```
 - **Lambda functions:** For concise, one-line operations
 - **Higher-order functions:** Functions that work with other functions
 - **Type hints and documentation:** Writing professional, maintainable code
