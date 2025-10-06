@@ -9,6 +9,8 @@ topics: exercises
 
 Analyze a sales dataset to extract business insights.
 
+" solution="
+
 ```python
 # Create sample sales data
 np.random.seed(42)
@@ -117,6 +119,8 @@ print(\"Exercise 1 Complete: Sales data analyzed successfully!\")
 {% include question.html header="Exercise 2: Customer Segmentation Analysis" text="
 
 Perform customer segmentation using statistical methods.
+
+" solution="
 
 ```python
 # Create customer data
@@ -293,6 +297,8 @@ print(\"Exercise 2 Complete: Customer segmentation analysis finished!\")
 {% include question.html header="Exercise 3: A/B Testing Analysis" text="
 
 Analyze the results of an A/B test to determine statistical significance.
+
+" solution="
 
 ```python
 # Create A/B test data
@@ -528,6 +534,8 @@ print(\"Exercise 3 Complete: A/B testing analysis finished!\")
 {% include question.html header="Exercise 4: Time Series Analysis" text="
 
 Analyze time-based data to identify trends and patterns.
+
+" solution="
 
 ```python
 # Create time series data
