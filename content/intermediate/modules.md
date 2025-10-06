@@ -73,22 +73,38 @@ if __name__ == \"__main__\":
 ```python
 # main.py
 import calculator
+```
 
-# Use functions from the module
+Use functions from the module
+
+```python
 result1 = calculator.add(10, 5)
 result2 = calculator.multiply(4, 7)
 
 print(f\"Addition result: {result1}\")
 print(f\"Multiplication result: {result2}\")
 print(f\"PI value: {calculator.PI}\")
+```
 
-# Alternative import methods
+Alternative import methods
+
+```python
 from calculator import add, subtract, PI
+
 result3 = add(20, 15)
 result4 = subtract(30, 12)
 
-# Import with alias
+print(result3)
+print(result4)
+```
+
+Import with alias
+
+```python
 import calculator as calc
+
 result5 = calc.power(2, 8)
+
+print(result5)
 ```
 " %}
