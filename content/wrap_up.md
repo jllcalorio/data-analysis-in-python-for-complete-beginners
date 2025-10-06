@@ -169,17 +169,17 @@ don't let today be the end of your Python story—let it be the beginning. We be
 
 **Questions? Need help?** Don't hesitate to reach out:
 - Workshop instructor email: jllcalorio@gmail.com
-- Follow-up Q&A session: August 25-29, 2025
+- Follow-up Q&A session: November 3-8, 2025, and really, I'm just at the 8th Floor, College of Medicine Bldg.
 " %}
 
-Thank you for your enthusiasm, your questions, your willingness to try new things, and for making this workshop engaging and rewarding for everyone involved.
+**Thank you for your enthusiasm, your questions, your willingness to try new things, and for making this workshop engaging and rewarding for everyone involved.**
 
-Now go forth and code! Your Python adventure starts now. 🐍✨
+**Now go forth and code! Your Python adventure starts now. 🐍✨**
 
 ---
-{% capture text %}One last thing:
+{% capture text %}
 *"The best time to plant a tree was 20 years ago. The second best time is now."* - Chinese Proverb
 
 Your Python tree has been planted today. With consistent care and attention, it will grow into something amazing.
 {% endcapture %}
-{% include card.html text=text header="Setup Overview" %}
+{% include card.html text=text header="One last thing" %}
