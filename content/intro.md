@@ -3,7 +3,7 @@ nav_order: 1
 title: Introduction
 ---
 
-## Python Workshop brought to you by the Center for Research and Development (October 2025).
+## Data Analysis in Python for Complete Beginners (October 2025).
 
 Welcome to our comprehensive Python programming workshop! This intensive learning experience is designed to take you from complete beginner to confident Python programmer with practical data analysis skills.
 
