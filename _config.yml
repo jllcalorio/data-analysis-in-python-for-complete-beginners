@@ -11,8 +11,8 @@
 # SITE SETTINGS
 #
 # title appears in the header
-title: Python Workshop
-tagline: "DMSFI-CRD Python Workshop - August 2025"
+title: Data Analysis in Python for Complete Beginners
+tagline: "DMSFI-CRD's Python Workshop - October 2025"
 # title-icon appears in the header to give some pizazz (leave blank for none)
 # choose from Bootstrap Icons in _includes/bootstrap-icons
 # find names on https://icons.getbootstrap.com/ (or look in "_includes/bootstrap-icons")
@@ -42,14 +42,14 @@ content_license_link: https://creativecommons.org/licenses/by-sa/4.0/
 # leave these commented out or blank for defaults.
 # these options tweak CSS, so should be valid CSS values.
 #
-# header-background: 
-# header-text-color: 
-# breadcrumbs-background: 
-# breadcrumbs-text-color: 
-# active-nav-color: 
+# header-background:
+# header-text-color:
+# breadcrumbs-background:
+# breadcrumbs-text-color:
+# active-nav-color:
 # link-color:
 # next-button-color:
-# text-color: 
+# text-color:
 # base-font-size:
 
 ##########
@@ -70,7 +70,7 @@ content_license_link: https://creativecommons.org/licenses/by-sa/4.0/
 # ROBOTS EXCLUDE [optional!]
 #
 # set noindex to true if you do NOT want Google to index your site
-# noindex: true 
+# noindex: true
 
 
 #######
