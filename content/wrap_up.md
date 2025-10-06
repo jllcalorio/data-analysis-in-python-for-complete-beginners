@@ -155,7 +155,7 @@ You've earned this recognition through your dedication, curiosity, and hard work
 ## A Personal Message
 
 {% include question.html header="Remember" text="
-... every expert was once a beginner. Every accomplished programmer wrote their first "Hello, World!" program just like you did 3 days ago. The difference between those who succeed in programming and those who don't isn't talent—it's persistence and curiosity.
+... every expert was once a beginner. Every accomplished programmer wrote their first \"Hello, World!\" program just like you did 3 days ago. The difference between those who succeed in programming and those who don't isn't talent—it's persistence and curiosity.
 
 You have both. You've proven it by dedicating your time to learning something completely new and challenging. You've asked questions, worked through problems, and pushed through moments of confusion to reach understanding.
 
