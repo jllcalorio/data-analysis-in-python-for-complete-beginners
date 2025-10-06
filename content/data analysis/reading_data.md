@@ -12,7 +12,7 @@ Real-world data comes in various formats. Let's learn to read different file typ
 Reading CSV files (most common format)
 
 ```python
-# df = pd.read_csv('employees.csv')
+df = pd.read_csv('employees.csv')
 ```
 
 Common parameters for CSV reading
