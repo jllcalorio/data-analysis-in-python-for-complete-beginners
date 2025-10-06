@@ -130,9 +130,9 @@ helps us create better learning experiences for everyone.
 - Kaggle Learn (especially for data science)
 
 **Books for Continued Learning**:
-- "Automate the Boring Stuff with Python" by Al Sweigart
-- "Python Crash Course" by Eric Matthes
-- "Python for Data Analysis" by Wes McKinney
+- \"Automate the Boring Stuff with Python\" by Al Sweigart
+- \"Python Crash Course\" by Eric Matthes
+- \"Python for Data Analysis\" by Wes McKinney
 
 **Practice Platforms**:
 - HackerRank
