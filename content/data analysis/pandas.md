@@ -65,6 +65,7 @@ print(f\"Data types:{df.dtypes}\")
 
 Below are some essential DataFrame methods.
 
+
 **This code prints the 1st 3 rows of the DataFrame.**
 
 ```python
