@@ -48,6 +48,8 @@ print(undefined_variable)  # NameError
 
 {% include question.html header="Try-Except Blocks" text="
 
+Define the function
+
 ```python
 def safe_divide(a, b):
     \"\"\"Safely divide two numbers.\"\"\"
@@ -57,14 +59,19 @@ def safe_divide(a, b):
     except ZeroDivisionError:
         print(\"Error: Cannot divide by zero!\")
         return None
+```
 
-# Usage
+Execute the function.
+
+```python
 result1 = safe_divide(10, 2)    # Returns 5.0
 result2 = safe_divide(10, 0)    # Prints error, returns None
 ```
 " %}
 
 {% include question.html header="Handling Multiple Exceptions" text="
+
+Define the function.
 
 ```python
 def process_user_input():
@@ -87,8 +94,11 @@ def process_user_input():
     except KeyboardInterrupt:
         print(\"\nOperation cancelled by user\")
         return None
+```
 
-# Usage
+Execute the function.
+
+```python
 year = process_user_input()
 if year:
     print(f\"You were born in {year}\")
@@ -134,6 +144,8 @@ def read_file_safely(filename):
 
 {% include question.html header="Raising Custom Exceptions" text="
 
+Define the function.
+
 ```python
 class InsufficientFundsError(Exception):
     \"\"\"Custom exception for banking operations.\"\"\"
@@ -156,7 +168,11 @@ class BankAccount:
         self.balance -= amount
         return self.balance
 
-# Usage
+```
+
+Execute the function.
+
+```python
 account = BankAccount(100)
 
 try:
@@ -169,6 +185,8 @@ except ValueError as e:
 " %}
 
 # Debugging Tips
+
+Define the function.
 
 ```python
 def debug_function(data):
@@ -194,8 +212,11 @@ def debug_function(data):
         print(f"DEBUG: Exception occurred: {e}")
         print(f"DEBUG: Exception type: {type(e).__name__}")
         raise  # Re-raise the exception
+```
 
-# Testing
+Execute the function.
+
+```python
 test_data = ["hello", 42, [1, 2, 3], {"key": "value"}]
 for data in test_data:
     try:
