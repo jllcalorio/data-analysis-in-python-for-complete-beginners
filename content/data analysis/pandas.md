@@ -7,23 +7,31 @@ topics: pandas, data frame, data, structured data
 
 **Pandas** is the cornerstone of data analysis in Python. It provides powerful data structures and tools for working with structured data.
 
-# Key Data Structures
-## Series - One-dimensional data
+## Key Data Structures
+
+{% include question.html header="Series - One-dimensional data" text="
 
 ```python
 import pandas as pd
+```
 
-# Creating a Series
-ages = pd.Series([25, 30, 35, 28, 32], 
+Creating a Series
+
+```python
+ages = pd.Series([25, 30, 35, 28, 32],
                  index=['Alice', 'Bob', 'Charlie', 'Diana', 'Eve'])
 print(ages)
-print(f"Data type: {ages.dtype}")
-print(f"Shape: {ages.shape}")
-
-# Basic operations
-print(f"Mean age: {ages.mean()}")
-print(f"Oldest person: {ages.idxmax()}")
+print(f\"Data type: {ages.dtype}\")
+print(f\"Shape: {ages.shape}\")
 ```
+
+Basic operations
+
+```python
+print(f\"Mean age: {ages.mean()}\")
+print(f\"Oldest person: {ages.idxmax()}\")
+```
+" %}
 
 ## DataFrame - Two-dimensional data
 
