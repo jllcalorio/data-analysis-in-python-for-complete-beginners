@@ -7,106 +7,118 @@ topics: summary, next steps
 
 **Congratulations!** You've completed the Intermediate Python section and significantly expanded your programming capabilities. Let's review what you've accomplished:
 
-# Key Skills Mastered:
+## Key Skills Mastered:
 
-## Advanced Function Writing
+{% include question.html header="Advanced Function Writing" text="
 
 - **Complex parameter handling:** Default parameters, *args, **kwargs
 - **Lambda functions:** For concise, one-line operations
 - **Higher-order functions:** Functions that work with other functions
 - **Type hints and documentation:** Writing professional, maintainable code
 - **Function design principles:** Creating reusable, well-structured functions
+" %}
 
-## Module Management
+{% include question.html header="Module Management" text="
 
 - **Import strategies:** Different ways to import functions and modules
 - **Built-in modules:** Leveraging Python's standard library (math, random, datetime, os)
 - **Custom modules:** Creating your own reusable code libraries
 - **Package organization:** Structuring larger projects with packages and init.py files
 - **Module best practices:** Writing importable, testable code
+" %}
 
-## Error Handling Mastery
+{% include question.html header="Error Handling Mastery" text="
 
 - **Exception types:** Understanding different kinds of errors
 - **Try-except blocks:** Graceful error handling
 - **Custom exceptions:** Creating application-specific error types
 - **Debugging techniques:** Strategies for finding and fixing problems
 - **Robust programming:** Writing code that handles unexpected situations
+" %}
 
-# Real-World Applications
+## Real-World Applications
 
-## Through the exercises, you've built:
+{% include question.html header="Through the exercises, you've built:" text="
 
 - **Advanced Calculator:** With comprehensive error handling
 - **Student Grade Manager:** File I/O with JSON data persistence
 - **Data Processing Pipeline:** Data validation and transformation
 - **Configuration Manager:** Professional application configuration system
+" %}
 
-# Programming Principles You Now Understand:
+## Programming Principles You Now Understand:
 
-## Code Organization
+{% include question.html header="Code Organization" text="
 
 - Breaking complex problems into manageable functions
 - Organizing related functions into modules
 - Creating reusable code that can be imported across projects
+" %}
 
-## Error Prevention and Handling
+{% include question.html header="Error Prevention and Handling" text="
 
 - Anticipating potential problems in your code
 - Providing meaningful error messages to users
 - Recovering gracefully from unexpected situations
+" %}
 
-## Professional Development Practices
+{% include question.html header="Professional Development Practices" text="
 
 - Writing documentation and type hints
 - Creating comprehensive test cases
 - Following Python naming conventions and style guidelines
+" %}
 
-# What You Can Now Build:
+## What You Can Now Build:
 
-## Intermediate Applications
+{% include question.html header="Intermediate Applications" text="
 
 - Multi-file Python applications with proper organization
 - Programs that read/write data files with error handling
 - Utilities that other programmers can import and use
 - Applications with robust error handling and user feedback
+" %}
 
-# Foundation for Advanced Topics
+## Foundation for Advanced Topics
 
-## You're now prepared for:
+{% include question.html header="You're now prepared for:" text="
 
 - Object-oriented programming concepts
 - Database integration
 - Web development frameworks
 - Data science libraries (pandas, numpy, matplotlib)
 - API development and consumption
+" %}
 
-# Best Practices You've Learned:
+## Best Practices You've Learned:
 
-## Function Design
+{% include question.html header="Function Design" text="
 
 - Single responsibility principle (each function does one thing well)
 - Clear parameter names and documentation
 - Appropriate error handling and validation
 - Consistent return types and behavior
+" %}
 
-## Module Organization
+{% include question.html header="Module Organization" text="
 
 - Logical grouping of related functionality
 - Clear import paths and dependencies
 - Proper use of name == "main" guards
 - Comprehensive module documentation
+" %}
 
-## Error Management
+{% include question.html header="Error Management" text="
 
 - Specific exception handling rather than catching all errors
 - Meaningful error messages for debugging and user experience
 - Proper resource cleanup with finally blocks
 - Custom exceptions for application-specific problems
+" %}
 
-# Your Development Journey:
+## Your Development Journey:
 
-## From Beginner to Intermediate
+{% include question.html header="From Beginner to Intermediate" text="
 
 You've transitioned from writing simple scripts to creating structured, maintainable applications. You can now:
 
@@ -114,8 +126,9 @@ You've transitioned from writing simple scripts to creating structured, maintain
 - Handle unexpected situations gracefully
 - Create code that other developers can use and understand
 - Debug problems systematically
+" %}
 
-## Ready for Advanced Concepts
+{% include question.html header="Ready for Advanced Concepts" text="
 
 With these intermediate skills mastered, you're prepared to tackle:
 
@@ -123,8 +136,9 @@ With these intermediate skills mastered, you're prepared to tackle:
 - Complex data analysis projects
 - Professional software development practices
 - Collaborative programming projects
+" %}
 
-# Next Steps:
+## Next Steps:
 
 The foundation you've built here will serve you well as we move into Data Analysis with Python, where you'll apply these skills to real-world data problems using powerful libraries like pandas, matplotlib, and scipy.
 
