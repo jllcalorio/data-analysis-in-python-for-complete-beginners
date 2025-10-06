@@ -32,106 +32,111 @@ Where do you think is the error, and what is causing the error?
 ```
 " %}
 
-## Runtime Errors (Exceptions)
+{% include question.html header="Runtime Errors (Exceptions)" text="
+
+These cause runtime errors
 
 ```python
-# These cause runtime errors
 print(10 / 0)              # ZeroDivisionError
 print(numbers[10])         # IndexError (if list has < 11 items)
-print(int("hello"))        # ValueError
+print(int(\"hello\"))        # ValueError
 print(undefined_variable)  # NameError
 ```
+" %}
 
-# Basic Exception Handling
+## Basic Exception Handling
 
-## Try-Except Blocks
+{% include question.html header="Try-Except Blocks" text="
 
 ```python
 def safe_divide(a, b):
-    """Safely divide two numbers."""
+    \"\"\"Safely divide two numbers.\"\"\"
     try:
         result = a / b
         return result
     except ZeroDivisionError:
-        print("Error: Cannot divide by zero!")
+        print(\"Error: Cannot divide by zero!\")
         return None
 
 # Usage
 result1 = safe_divide(10, 2)    # Returns 5.0
 result2 = safe_divide(10, 0)    # Prints error, returns None
 ```
+" %}
 
-## Handling Multiple Exceptions
+{% include question.html header="Handling Multiple Exceptions" text="
 
 ```python
 def process_user_input():
-    """Process user input with error handling."""
+    \"\"\"Process user input with error handling.\"\"\"
     try:
-        age = int(input("Enter your age: "))
+        age = int(input(\"Enter your age: \"))
         birth_year = 2025 - age
 
         if age < 0:
-            raise ValueError("Age cannot be negative")
+            raise ValueError(\"Age cannot be negative\")
 
         return birth_year
 
     except ValueError as e:
-        if "invalid literal" in str(e):
-            print("Please enter a valid number")
+        if \"invalid literal\" in str(e):
+            print(\"Please enter a valid number\")
         else:
-            print(f"Error: {e}")
+            print(f\"Error: {e}\")
         return None
     except KeyboardInterrupt:
-        print("\nOperation cancelled by user")
+        print(\"\nOperation cancelled by user\")
         return None
 
 # Usage
 year = process_user_input()
 if year:
-    print(f"You were born in {year}")
+    print(f\"You were born in {year}\")
 ```
+" %}
 
-## Try-Except-Else-Finally
+{% include question.html header="Try-Except-Else-Finally" text="
 
 ```python
 def read_file_safely(filename):
-    """Read a file with comprehensive error handling."""
+    \"\"\"Read a file with comprehensive error handling.\"\"\"
     file_handle = None
     try:
         file_handle = open(filename, 'r')
         content = file_handle.read()
-        print("File read successfully!")
+        print(\"File read successfully!\")
 
     except FileNotFoundError:
-        print(f"Error: File '{filename}' not found")
+        print(f\"Error: File '{filename}' not found\")
         content = None
 
     except PermissionError:
-        print(f"Error: No permission to read '{filename}'")
+        print(f\"Error: No permission to read '{filename}'\")
         content = None
 
     except Exception as e:
-        print(f"Unexpected error: {e}")
+        print(f\"Unexpected error: {e}\")
         content = None
 
     else:
         # This runs only if no exception occurred
-        print(f"File size: {len(content)} characters")
+        print(f\"File size: {len(content)} characters\")
 
     finally:
         # This always runs, even if there was an exception
         if file_handle:
             file_handle.close()
-            print("File closed")
+            print(\"File closed\")
 
     return content
 ```
+" %}
 
-## Raising Custom Exceptions
+{% include question.html header="Raising Custom Exceptions" text="
 
 ```python
 class InsufficientFundsError(Exception):
-    """Custom exception for banking operations."""
+    \"\"\"Custom exception for banking operations.\"\"\"
     pass
 
 class BankAccount:
@@ -139,13 +144,13 @@ class BankAccount:
         self.balance = balance
 
     def withdraw(self, amount):
-        """Withdraw money from account."""
+        \"\"\"Withdraw money from account.\"\"\"
         if amount <= 0:
-            raise ValueError("Withdrawal amount must be positive")
+            raise ValueError(\"Withdrawal amount must be positive\")
 
         if amount > self.balance:
             raise InsufficientFundsError(
-                f"Cannot withdraw ${amount}. Balance is ${self.balance}"
+                f\"Cannot withdraw ${amount}. Balance is ${self.balance}\"
             )
 
         self.balance -= amount
@@ -157,16 +162,17 @@ account = BankAccount(100)
 try:
     account.withdraw(150)
 except InsufficientFundsError as e:
-    print(f"Transaction failed: {e}")
+    print(f\"Transaction failed: {e}\")
 except ValueError as e:
-    print(f"Invalid amount: {e}")
+    print(f\"Invalid amount: {e}\")
 ```
+" %}
 
 # Debugging Tips
 
 ```python
 def debug_function(data):
-    """Function with debugging techniques."""
+    \"\"\"Function with debugging techniques.\"\"\"
     print(f"DEBUG: Input data type: {type(data)}")
     print(f"DEBUG: Input data value: {data}")
 
