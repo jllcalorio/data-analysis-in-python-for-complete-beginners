@@ -97,7 +97,6 @@ helps us create better learning experiences for everyone.
 " %}
 
 {% include question.html header="Short-term Goals (Next Month)" text="
-
 1. **Join the Community**:
    - Follow Python communities on social media
    - Join local Python meetups or online forums
@@ -112,12 +111,13 @@ helps us create better learning experiences for everyone.
    - Analyze a dataset related to your interests or field of study
    - Create a simple automation script
    - Contribute to a small open-source project
+" %}
 
-**Long-term Development (Next 3-6 Months)**
-
+{% include question.html header="Long-term Development (Next 3-6 Months)" text="
 1. **Specialize**: Choose an area that excites you—web development, data science, automation, or machine learning
 2. **Take Advanced Courses**: Build on today's foundation with more specialized training
 3. **Create a Portfolio**: Document your projects to showcase your growing skills
+" %}
 
 **Recommended Resources**
 
