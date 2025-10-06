@@ -14,9 +14,9 @@ topics: errors
 These cause syntax errors (won't run)
 
 ```python
-# print("Hello World"
+# print(\"Hello World\"
 # if x = 5:
-#     print("error")
+#     print(\"error\")
 ```
 
 **Pop quiz**
