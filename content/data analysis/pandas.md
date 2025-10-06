@@ -55,9 +55,9 @@ Some ```print``` functions to see what are the characteristics of ```data```.
 
 ```python
 print(df)
-print(f\"\nDataFrame shape: {df.shape}\")
+print(f\"DataFrame shape: {df.shape}\")
 print(f\"Column names: {list(df.columns)}\")
-print(f\"Data types:\n{df.dtypes}\")
+print(f\"Data types:{df.dtypes}\")
 ```
 " %}
 
@@ -93,6 +93,6 @@ This code prints column-specific information from a DataFrame.
 
 ```python
 print(f\"Unique cities: {df['City'].nunique()}\")
-print(f\"Value counts for Department:\n{df['Department'].value_counts()}\")
+print(f\"Value counts for Department:{df['Department'].value_counts()}\")
 ```
 " %}
