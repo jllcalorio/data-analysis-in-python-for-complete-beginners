@@ -172,9 +172,9 @@ don't let today be the end of your Python story—let it be the beginning. We be
 - Follow-up Q&A session: November 3-8, 2025, and really, I'm just at the 8th Floor, College of Medicine Bldg.
 " %}
 
-**Thank you for your enthusiasm, your questions, your willingness to try new things, and for making this workshop engaging and rewarding for everyone involved.**
+### Thank you for your enthusiasm, your questions, your willingness to try new things, and for making this workshop engaging and rewarding for everyone involved.
 
-**Now go forth and code! Your Python adventure starts now. 🐍✨**
+### Now go forth and code! Your Python adventure starts now. 🐍✨
 
 ---
 {% capture text %}
