@@ -95,13 +95,13 @@ print(df_with_missing.isnull().sum())
 
 **Strategies for handling missing data**
 
-1. Drop rows with missing values
+**Drop rows with missing values**
 
 ```python
 df_dropped = df_with_missing.dropna()
 ```
 
-2. Fill missing values
+**Fill missing values**
 
 ```python
 df_filled = df_with_missing.fillna({
@@ -110,7 +110,7 @@ df_filled = df_with_missing.fillna({
 })
 ```
 
-3. Forward fill or backward fill
+**Forward fill or backward fill**
 
 ```python
 df_ffill = df_with_missing.fillna(method='ffill')
