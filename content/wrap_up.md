@@ -53,15 +53,16 @@ This workshop has given you more than just technical skills. You've developed:
 - **Career readiness**: Whether you're a student planning your future or a professional looking to expand your skillset, you now have marketable, in-demand abilities
 " %}
 
-### For Your Future
+{% include question.html header="For Your Future" text="
 
 You're no longer just a consumer of technology—you're a creator. You can:
 - Automate repetitive tasks in your studies or work
 - Analyze data for research projects, business decisions, or personal interests
 - Build simple applications to solve problems you encounter
 - Continue learning more advanced programming concepts with a solid foundation
+" %}
 
-## Live Comments and Reflections
+{% include question.html header="Live Comments and Reflections" text="
 
 *[Space for live participant feedback during the session]*
 
@@ -72,6 +73,7 @@ You're no longer just a consumer of technology—you're a creator. You can:
 **What problem do you want to solve first with your new Python skills?**
 
 **How do you feel about programming now compared to when we started?**
+" %}
 
 ## Your Feedback Matters
 
