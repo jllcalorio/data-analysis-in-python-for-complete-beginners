@@ -143,6 +143,6 @@ With these intermediate skills mastered, you're prepared to tackle:
 The foundation you've built here will serve you well as we move into Data Analysis with Python, where you'll apply these skills to real-world data problems using powerful libraries like pandas, matplotlib, and scipy.
 
 {% capture text %}
-Remember: The key to mastering these concepts is practice. Try modifying the examples, create your own modules, and don't be afraid to experiment. Every error is a learning opportunity, and every function you write makes you a better programmer!
+**Remember:** The key to mastering these concepts is practice. Try modifying the examples, create your own modules, and don't be afraid to experiment. Every error is a learning opportunity, and every function you write makes you a better programmer!
 {% endcapture %}
 {% include card.html text=text header="Setup Overview" %}
