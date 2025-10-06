@@ -13,21 +13,21 @@ Now let's perform various ```statistical tests``` to extract meaningful insights
 
 Think of them as the **vital signs of your data** — they give you a quick snapshot of what’s going on.
 
-🧪 Key Components You’ll Often Use:
+🧪 **Key Components You’ll Often Use:**
 - Measures of central tendency:
-  - Mean (average blood pressure)
-  - Median (middle value of patient age)
-  - Mode (most common diagnosis)
+  - Mean (e.g., average blood pressure)
+  - Median (e.g., middle value of patient age)
+  - Mode (e.g., most common diagnosis)
 - Measures of variability:
-  - Range (youngest to oldest patient)
-  - Standard deviation (how spread out glucose levels are)
+  - Range (e.g., youngest to oldest patient)
+  - Standard deviation (e.g., how spread out glucose levels are)
 - Frequencies and proportions:
   - Counts and percentages (e.g., 60% of patients are female)
-- Visual summaries:
+- Visual summaries (although this belongs to the 'Data Visualization' part, but still are descriptive in nature):
   - Tables, histograms, pie charts — like those in journal articles or case reports
 
 
-Let's import the stuff that we need to use.
+**To start**, let's import the stuff that we need to use.
 
 ```python
 from scipy import stats
