@@ -119,20 +119,22 @@ helps us create better learning experiences for everyone.
 3. **Create a Portfolio**: Document your projects to showcase your growing skills
 " %}
 
-**Recommended Resources**
+## Recommended Resources
 
-**Free Learning Platforms**:
+{% include question.html header="Free Learning Platforms" text="
 - Python.org's official tutorial
 - Codecademy's Python course
 - freeCodeCamp's Python curriculum
 - Kaggle Learn (especially for data science)
+" %}
 
-**Books for Continued Learning**:
+{% include question.html header="Books for Continued Learning" text="
 - \"Automate the Boring Stuff with Python\" by Al Sweigart
 - \"Python Crash Course\" by Eric Matthes
 - \"Python for Data Analysis\" by Wes McKinney
+" %}
 
-**Practice Platforms**:
+{% include question.html header="Practice Platforms" text="
 - HackerRank
 - LeetCode (for algorithmic thinking)
 - Kaggle (for data science projects)
