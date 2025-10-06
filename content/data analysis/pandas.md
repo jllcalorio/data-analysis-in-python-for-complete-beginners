@@ -48,9 +48,9 @@ data = {
 
 df = pd.DataFrame(data)
 print(df)
-print(f"\nDataFrame shape: {df.shape}")
-print(f"Column names: {list(df.columns)}")
-print(f"Data types:\n{df.dtypes}")
+print(f\"\nDataFrame shape: {df.shape}\")
+print(f\"Column names: {list(df.columns)}\")
+print(f\"Data types:\n{df.dtypes}\")
 ```
 " %}
 
