@@ -9,11 +9,16 @@ Now let's perform various ```statistical tests``` to extract meaningful insights
 
 {% include question.html header="Descriptive Statistics" text="
 
+Import the stuff that we need to use.
+
 ```python
 from scipy import stats
 import numpy as np
+```
 
-# Comprehensive descriptive statistics
+Let's define a comprehensive descriptive statistics function.
+
+```python
 def describe_data(data, column_name):
     \"\"\"Generate comprehensive descriptive statistics.\"\"\"
     print(f\"\n=== Descriptive Statistics for {column_name} ===\")
@@ -27,12 +32,17 @@ def describe_data(data, column_name):
     print(f\"Kurtosis: {stats.kurtosis(data):.2f}\")
     print(f\"Range: {np.max(data) - np.min(data):.2f}\")
     print(f\"IQR: {np.percentile(data, 75) - np.percentile(data, 25):.2f}\")
+```
 
-# Analyze salary and age
+Analyze salary and age
+
+```python
 describe_data(df['salary'], 'Salary')
 describe_data(df['age'], 'Age')
 ```
 " %}
+
+## Univariate tests
 
 {% include question.html header="t-tests" text="
 
