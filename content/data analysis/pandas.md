@@ -36,8 +36,9 @@ print(f\"Oldest person: {ages.idxmax()}\")
 
 {% include question.html header="DataFrame - Two-dimensional data" text="
 
+Creating a DataFrame
+
 ```python
-# Creating a DataFrame
 data = {
     'Name': ['Alice', 'Bob', 'Charlie', 'Diana', 'Eve'],
     'Age': [25, 30, 35, 28, 32],
@@ -56,21 +57,35 @@ print(f\"Data types:\n{df.dtypes}\")
 
 {% include question.html header="DataFrame Inspection Methods" text="
 
+Below are some essential DataFrame methods.
+
+This code prints the 1st 3 rows of the DataFrame.
+
 ```python
-# Essential DataFrame methods
-print(\"First 3 rows:\")
 print(df.head(3))
+```
 
-print(\"\nLast 2 rows:\")
+This code prints the last 2 rows of the DataFrame.
+
+```python
 print(df.tail(2))
+```
 
-print(\"\nDataFrame info:\")
+This code prints the some information about the DataFrame.
+
+```python
 print(df.info())
+```
 
-print(\"\nDescriptive statistics:\")
+This code prints quick and simple descriptive statistics for the DataFrame.
+
+```python
 print(df.describe())
+```
 
-print(\"\nColumn-specific info:\")
+This code prints column-specific information from a DataFrame.
+
+```python
 print(f\"Unique cities: {df['City'].nunique()}\")
 print(f\"Value counts for Department:\n{df['Department'].value_counts()}\")
 ```
