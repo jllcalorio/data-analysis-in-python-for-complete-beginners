@@ -1,4 +1,4 @@
-# **DMSFI-CRD Python Workshop - August 2025**
+# **DMSFI-CRD Python Workshop - October 2025**
 
 Welcome to our comprehensive Python programming workshop! This intensive learning experience is designed to take you from complete beginner to confident Python programmer with practical data analysis skills.
 
@@ -10,7 +10,7 @@ Python has become one of the most popular and versatile programming languages in
 
 - **Duration:** 3-day intensive workshop
 - **Format:** Hands-on learning with practical exercises
-- **Schedule:** August 2025
+- **Schedule:** October 2025
 - **Delivery:** Interactive sessions with live coding demonstrations
 
 # Learning Objectives
