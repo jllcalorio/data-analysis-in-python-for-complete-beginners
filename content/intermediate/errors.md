@@ -26,9 +26,9 @@ Where do you think is the error, and what is causing the error?
 " solution="
 
 ```python
-**1st line:** Missing closing parenthesis
-**2nd line:** Should be == or :
-**3rd line:** Incorrect indentation
+1st line: Missing closing parenthesis
+2nd line: Should be == or :
+3rd line: Incorrect indentation
 ```
 " %}
 
