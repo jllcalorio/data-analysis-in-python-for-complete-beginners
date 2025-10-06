@@ -234,8 +234,11 @@ numeric_columns = ['age', 'salary', 'years_employed']
 correlation_matrix = df[numeric_columns].corr()
 print(\"Correlation Matrix:\")
 print(correlation_matrix.round(3))
+```
 
-# Test significance of correlations
+Test significance of correlations
+
+```python
 def correlation_significance(x, y):
     r, p = stats.pearsonr(x, y)
     return r, p
@@ -263,44 +266,41 @@ print(f\"Standard error: {std_err:.2f}\")
 
 {% include question.html header="Logistic Regression" text="
 
+Predict high salary (above median) based on age and years employed
+
 ```python
-# Predict high salary (above median) based on age and years employed
 median_salary = df['salary'].median()
 df['high_salary'] = (df['salary'] > median_salary).astype(int)
 ```
 
-
+Prepare features
 
 ```python
-# Prepare features
 X = df[['age', 'years_employed']].values
 y = df['high_salary'].values
 ```
 
-
+Split data to training and testing data sets. This is a common practice in building a regression model.
 
 ```python
-# Split data
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 ```
 
-
+Fit logistic regression model.
 
 ```python
-# Fit logistic regression
 log_reg = LogisticRegression()
 log_reg.fit(X_train, y_train)
 ```
 
-
+Make the predictions
 
 ```python
-# Make predictions
 y_pred = log_reg.predict(X_test)
 y_pred_proba = log_reg.predict_proba(X_test)[:, 1]
 ```
 
-
+Print the results.
 
 ```python
 print(f\"\n=== Logistic Regression: Predicting High Salary ===\")
