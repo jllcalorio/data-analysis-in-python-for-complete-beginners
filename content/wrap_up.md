@@ -64,18 +64,16 @@ You're no longer just a consumer of technology—you're a creator. You can:
 
 {% include question.html header="Live Comments and Reflections" text="
 
-*[Space for live participant feedback during the session]*
-
-**What surprised you most about Python today?**
+**What surprised you most about Python during the duration of the workshop?**
 
 **Which concept clicked for you that seemed difficult at first?**
 
 **What problem do you want to solve first with your new Python skills?**
 
-**How do you feel about programming now compared to when we started?**
+**How do you feel about programming and data analysis now compared to when we started?**
 " %}
 
-## Your Feedback Matters
+{% include question.html header="Your Feedback Matters" text="
 
 Your experience today helps us improve future workshops for students and beginners just like you were this morning. Please take 3-5 minutes to share your thoughts:
 
@@ -88,15 +86,20 @@ Your honest feedback about:
 - Whether you'd recommend this workshop to friends or classmates
 
 helps us create better learning experiences for everyone.
+" %}
 
 ## What's Next on Your Python Journey?
 
-### Immediate Next Steps (This Week)
+{% include question.html header="What Could You Do Next?" text="
+
+**Immediate Next Steps (This Week)**
+
 1. **Practice What You've Learned**: Revisit today's exercises and try variations
 2. **Set Up Your Environment**: Install Python and your favorite editor on your personal computer
 3. **Find a Small Project**: Think of a simple problem you can solve with your new skills
 
-### Short-term Goals (Next Month)
+**Short-term Goals (Next Month)**
+
 1. **Join the Community**:
    - Follow Python communities on social media
    - Join local Python meetups or online forums
@@ -112,12 +115,14 @@ helps us create better learning experiences for everyone.
    - Create a simple automation script
    - Contribute to a small open-source project
 
-### Long-term Development (Next 3-6 Months)
+**Long-term Development (Next 3-6 Months)**
+
 1. **Specialize**: Choose an area that excites you—web development, data science, automation, or machine learning
 2. **Take Advanced Courses**: Build on today's foundation with more specialized training
 3. **Create a Portfolio**: Document your projects to showcase your growing skills
 
-### Recommended Resources
+**Recommended Resources**
+
 **Free Learning Platforms**:
 - Python.org's official tutorial
 - Codecademy's Python course
@@ -133,6 +138,7 @@ helps us create better learning experiences for everyone.
 - HackerRank
 - LeetCode (for algorithmic thinking)
 - Kaggle (for data science projects)
+" %}
 
 ## Your Certificate of Achievement
 
