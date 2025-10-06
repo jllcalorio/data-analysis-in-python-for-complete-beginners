@@ -7,22 +7,29 @@ topics: read, import, pandas, csv
 
 Real-world data comes in various formats. Let's learn to read different file types.
 
-# Reading CSV Files
+{% include question.html header="Reading CSV Files" text="
+
+Reading CSV files (most common format)
 
 ```python
-# Reading CSV files (most common format)
 # df = pd.read_csv('employees.csv')
+```
 
-# Common parameters for CSV reading
-df_csv = pd.read_csv('data.csv', 
-                     sep=',',           # Separator
-                     header=0,          # Row to use as column names
-                     index_col=0,       # Column to use as row index
-                     na_values=['N/A', 'NULL'],  # Values to treat as NaN
+Common parameters for CSV reading
+
+```python
+df_csv = pd.read_csv('data.csv',
+                     sep=',',                      # Separator
+                     header=0,                     # Row to use as column names
+                     index_col=0,                  # Column to use as row index
+                     na_values=['N/A', 'NULL'],    # Values to treat as NaN
                      parse_dates=['date_column'],  # Parse dates
-                     encoding='utf-8')  # File encoding
+                     encoding='utf-8')             # File encoding
+```
 
-# For demonstration, let's create and save sample data
+For demonstration, let's create and save sample data
+
+```python
 sample_data = pd.DataFrame({
     'employee_id': range(1, 101),
     'name': [f'Employee_{i}' for i in range(1, 101)],
@@ -31,11 +38,15 @@ sample_data = pd.DataFrame({
     'department': np.random.choice(['IT', 'Finance', 'HR', 'Marketing'], 100),
     'hire_date': pd.date_range('2020-01-01', periods=100, freq='W')
 })
-
-# Save sample data
-sample_data.to_csv('sample_employees.csv', index=False)
-print("Sample data created and saved!")
 ```
+
+Save sample data
+
+```python
+sample_data.to_csv('sample_employees.csv', index=False)
+print(\"Sample data created and saved!\")
+```
+" %}
 
 # Reading Other File Formats
 
