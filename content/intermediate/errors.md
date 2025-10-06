@@ -7,16 +7,29 @@ topics: errors
 
 **Errors** are inevitable in programming. Learning to handle them gracefully makes your programs robust and user-friendly.
 
-# Types of Errors
+## Types of Errors
 
-## Syntax Errors
+{% include question.html header="Syntax Errors" text="
+
+These cause syntax errors (won't run)
 
 ```python
-# These cause syntax errors (won't run)
-# print("Hello World"  # Missing closing parenthesis
-# if x = 5:            # Should be == or :
-#     print("error")   # Incorrect indentation
+# print("Hello World"
+# if x = 5:
+#     print("error")
 ```
+
+**Pop quiz**
+
+Where do you think is the error, and what is causing the error?
+
+" solution="
+
+**1st line:** Missing closing parenthesis
+**2nd line:** Should be == or :
+**3rd line:** Incorrect indentation
+
+" %}
 
 ## Runtime Errors (Exceptions)
 
@@ -55,12 +68,12 @@ def process_user_input():
     try:
         age = int(input("Enter your age: "))
         birth_year = 2025 - age
-        
+
         if age < 0:
             raise ValueError("Age cannot be negative")
-            
+
         return birth_year
-        
+
     except ValueError as e:
         if "invalid literal" in str(e):
             print("Please enter a valid number")
@@ -87,29 +100,29 @@ def read_file_safely(filename):
         file_handle = open(filename, 'r')
         content = file_handle.read()
         print("File read successfully!")
-        
+
     except FileNotFoundError:
         print(f"Error: File '{filename}' not found")
         content = None
-        
+
     except PermissionError:
         print(f"Error: No permission to read '{filename}'")
         content = None
-        
+
     except Exception as e:
         print(f"Unexpected error: {e}")
         content = None
-        
+
     else:
         # This runs only if no exception occurred
         print(f"File size: {len(content)} characters")
-        
+
     finally:
         # This always runs, even if there was an exception
         if file_handle:
             file_handle.close()
             print("File closed")
-            
+
     return content
 ```
 
@@ -123,17 +136,17 @@ class InsufficientFundsError(Exception):
 class BankAccount:
     def __init__(self, balance=0):
         self.balance = balance
-    
+
     def withdraw(self, amount):
         """Withdraw money from account."""
         if amount <= 0:
             raise ValueError("Withdrawal amount must be positive")
-        
+
         if amount > self.balance:
             raise InsufficientFundsError(
                 f"Cannot withdraw ${amount}. Balance is ${self.balance}"
             )
-        
+
         self.balance -= amount
         return self.balance
 
@@ -155,7 +168,7 @@ def debug_function(data):
     """Function with debugging techniques."""
     print(f"DEBUG: Input data type: {type(data)}")
     print(f"DEBUG: Input data value: {data}")
-    
+
     try:
         # Process data
         if isinstance(data, str):
@@ -166,10 +179,10 @@ def debug_function(data):
             result = [item * 2 for item in data]
         else:
             raise TypeError(f"Unsupported data type: {type(data)}")
-            
+
         print(f"DEBUG: Result: {result}")
         return result
-        
+
     except Exception as e:
         print(f"DEBUG: Exception occurred: {e}")
         print(f"DEBUG: Exception type: {type(e).__name__}")
