@@ -142,6 +142,7 @@ helps us create better learning experiences for everyone.
 
 ## Your Certificate of Achievement
 
+{% include question.html header="You've earned this recognition" text="
 You've earned this recognition through your dedication, curiosity, and hard work today. Your certificate acknowledges that you have successfully completed:
 
 - **Python Fundamentals Workshop**
@@ -149,22 +150,27 @@ You've earned this recognition through your dedication, curiosity, and hard work
 - **Skills Demonstrated**: Variable manipulation, data type conversion, control structures, function creation, module usage, data analysis with pandas, statistical testing, and data visualization
 
 *[Certificate will be distributed via email within 7 days]*
+" %}
 
 ## A Personal Message
 
-Remember, every expert was once a beginner. Every accomplished programmer wrote their first "Hello, World!" program just like you did 3 days ago. The difference between those who succeed in programming and those who don't isn't talent—it's persistence and curiosity.
+{% include question.html header="Remember" text="
+... every expert was once a beginner. Every accomplished programmer wrote their first "Hello, World!" program just like you did 3 days ago. The difference between those who succeed in programming and those who don't isn't talent—it's persistence and curiosity.
 
 You have both. You've proven it by dedicating your time to learning something completely new and challenging. You've asked questions, worked through problems, and pushed through moments of confusion to reach understanding.
 
 Programming is a journey, not a destination. There will always be new things to learn, new challenges to tackle, and new problems to solve. But now you have the foundation and, more importantly, the confidence to continue growing.
+" %}
 
 ## Stay Connected
 
-Don't let today be the end of your Python story—let it be the beginning. We believe in your potential, and we're excited to see what you'll build next.
+{% include question.html header="Please..." text="
+don't let today be the end of your Python story—let it be the beginning. We believe in your potential, and we're excited to see what you'll build next.
 
 **Questions? Need help?** Don't hesitate to reach out:
 - Workshop instructor email: jllcalorio@gmail.com
 - Follow-up Q&A session: August 25-29, 2025
+" %}
 
 Thank you for your enthusiasm, your questions, your willingness to try new things, and for making this workshop engaging and rewarding for everyone involved.
 
