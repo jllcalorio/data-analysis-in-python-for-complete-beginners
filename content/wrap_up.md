@@ -92,7 +92,7 @@ helps us create better learning experiences for everyone.
 
 {% include question.html header="What Could You Do Next?" text="
 
-{% include question.html header="Immediate Next Steps (This Week)**" text="
+{% include question.html header="Immediate Next Steps (This Week)" text="
 
 1. **Practice What You've Learned**: Revisit today's exercises and try variations
 2. **Set Up Your Environment**: Install Python and your favorite editor on your personal computer
