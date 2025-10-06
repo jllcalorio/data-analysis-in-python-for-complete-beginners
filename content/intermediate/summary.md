@@ -104,7 +104,7 @@ topics: summary, next steps
 
 - Logical grouping of related functionality
 - Clear import paths and dependencies
-- Proper use of name == "main" guards
+- Proper use of name == \"main\" guards
 - Comprehensive module documentation
 " %}
 
