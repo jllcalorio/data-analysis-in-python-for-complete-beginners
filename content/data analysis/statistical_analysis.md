@@ -155,12 +155,13 @@ if p_value < 0.05:
             group2 = df[df['department'] == dept2]['salary']
             t_stat, p_val = stats.ttest_ind(group1, group2)
             print(f\"{dept1} vs {dept2}: p = {p_val:.4f} {'*' if p_val < 0.05 else ''}\")
-            ```
+```
 
+**Two-way ANOVA**
 
+Example (salary by department and age group)
 
-            ```python
-# Two-way ANOVA example (salary by department and age group)
+```python
 # Create a more balanced dataset for demonstration
 balanced_data = []
 for dept in df['department'].unique():
@@ -179,9 +180,11 @@ if len(balanced_data) > 0:
 
 {% include question.html header="Chi-Square Tests" text="
 
+**Chi-square test of independence**
+
+This test checks if ```department``` and ```age group``` are independent
+
 ```python
-# Chi-square test of independence
-# Test if department and age group are independent
 contingency_table = pd.crosstab(df['department'], df['age_group'])
 print(f\"\n=== Chi-Square Test of Independence ===\")
 print(\"Contingency Table:\")
@@ -195,11 +198,10 @@ print(f\"Degrees of freedom: {dof}\")
 print(f\"Significant association at α=0.05: {'Yes' if p_value < 0.05 else 'No'}\")
 ```
 
-
+**Chi-square goodness of fit test**
+This test checks if ```department distribution``` follows expected proportions
 
 ```python
-# Chi-square goodness of fit test
-# Test if department distribution follows expected proportions
 observed_freq = df['department'].value_counts().sort_index()
 expected_proportions = [0.3, 0.25, 0.25, 0.2]  # Expected proportions
 expected_freq = np.array(expected_proportions) * len(df)
