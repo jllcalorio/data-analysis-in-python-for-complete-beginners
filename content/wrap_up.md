@@ -11,11 +11,11 @@ Take a moment to appreciate what you've accomplished today and in the past three
 
 ## What We've Learned Together
 
-### From Zero to Python Hero
+{% include question.html header="From Zero to Python Hero" text="
 
 You started with nothing more than curiosity, and now you can:
 
-{% include question.html header="Master the Fundamentals" text="
+**Master the Fundamentals**
 
 - Confidently work with variables and understand how Python stores and manipulates different types of data
 - Convert between data types when needed, knowing exactly when and why to do so
@@ -23,7 +23,7 @@ You started with nothing more than curiosity, and now you can:
 - Create and manipulate lists and dictionaries to organize your data effectively
 - Format strings professionally to display information clearly
 - Control program flow using if statements, loops, and functions to make your code intelligent and responsive
-" %}
+
 
 **Think Like a Programmer**
 
@@ -40,6 +40,7 @@ You started with nothing more than curiosity, and now you can:
 - Create meaningful visualizations that tell compelling stories with your data
 - Perform statistical analyses including t-tests, ANOVA, chi-square tests, and logistic regression
 - Transform raw numbers into actionable insights
+" %}
 
 ## What This Workshop Has Accomplished
 
