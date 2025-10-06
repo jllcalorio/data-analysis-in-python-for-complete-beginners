@@ -9,7 +9,25 @@ Now let's perform various ```statistical tests``` to extract meaningful insights
 
 {% include question.html header="Descriptive Statistics" text="
 
-Import the stuff that we need to use.
+**Descriptive statistics** are tools used to **summarize and describe the main features of a dataset**. In medicine, they help you make sense of patient data, lab results, or clinical trial outcomes **without making predictions or testing hypotheses**.
+
+Think of them as the **vital signs of your data** — they give you a quick snapshot of what’s going on.
+
+🧪 Key Components You’ll Often Use:
+- Measures of central tendency:
+  - Mean (average blood pressure)
+  - Median (middle value of patient age)
+  - Mode (most common diagnosis)
+- Measures of variability:
+  - Range (youngest to oldest patient)
+  - Standard deviation (how spread out glucose levels are)
+- Frequencies and proportions:
+  - Counts and percentages (e.g., 60% of patients are female)
+- Visual summaries:
+  - Tables, histograms, pie charts — like those in journal articles or case reports
+
+
+Let's import the stuff that we need to use.
 
 ```python
 from scipy import stats
