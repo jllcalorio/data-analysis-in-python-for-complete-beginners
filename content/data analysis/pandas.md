@@ -65,31 +65,31 @@ print(f\"Data types:{df.dtypes}\")
 
 Below are some essential DataFrame methods.
 
-This code prints the 1st 3 rows of the DataFrame.
+**This code prints the 1st 3 rows of the DataFrame.**
 
 ```python
 print(df.head(3))
 ```
 
-This code prints the last 2 rows of the DataFrame.
+**This code prints the last 2 rows of the DataFrame.**
 
 ```python
 print(df.tail(2))
 ```
 
-This code prints the some information about the DataFrame.
+**This code prints the some information about the DataFrame.**
 
 ```python
 print(df.info())
 ```
 
-This code prints quick and simple descriptive statistics for the DataFrame.
+**This code prints quick and simple descriptive statistics for the DataFrame.**
 
 ```python
 print(df.describe())
 ```
 
-This code prints column-specific information from a DataFrame.
+**This code prints column-specific information from a DataFrame.**
 
 ```python
 print(f\"Unique cities: {df['City'].nunique()}\")
