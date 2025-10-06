@@ -44,13 +44,14 @@ You started with nothing more than curiosity, and now you can:
 
 ## What This Workshop Has Accomplished
 
-### For You Personally
+{% include question.html header="For You Personally" text="
 
 This workshop has given you more than just technical skills. You've developed:
 - **Problem-solving confidence**: You now approach challenges systematically, breaking them into smaller, manageable parts
 - **Analytical thinking**: You can look at data and ask the right questions to uncover meaningful insights
 - **Technical literacy**: You speak the language of data and can communicate with developers, analysts, and researchers
 - **Career readiness**: Whether you're a student planning your future or a professional looking to expand your skillset, you now have marketable, in-demand abilities
+" %}
 
 ### For Your Future
 
