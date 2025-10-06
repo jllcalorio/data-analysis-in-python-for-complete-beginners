@@ -20,6 +20,7 @@ Creating a Series
 ```python
 ages = pd.Series([25, 30, 35, 28, 32],
                  index=['Alice', 'Bob', 'Charlie', 'Diana', 'Eve'])
+
 print(ages)
 print(f\"Data type: {ages.dtype}\")
 print(f\"Shape: {ages.shape}\")
@@ -33,7 +34,7 @@ print(f\"Oldest person: {ages.idxmax()}\")
 ```
 " %}
 
-## DataFrame - Two-dimensional data
+{% include question.html header="DataFrame - Two-dimensional data" text="
 
 ```python
 # Creating a DataFrame
@@ -51,24 +52,26 @@ print(f"\nDataFrame shape: {df.shape}")
 print(f"Column names: {list(df.columns)}")
 print(f"Data types:\n{df.dtypes}")
 ```
+" %}
 
-## DataFrame Inspection Methods
+{% include question.html header="DataFrame Inspection Methods" text="
 
 ```python
 # Essential DataFrame methods
-print("First 3 rows:")
+print(\"First 3 rows:\")
 print(df.head(3))
 
-print("\nLast 2 rows:")
+print(\"\nLast 2 rows:\")
 print(df.tail(2))
 
-print("\nDataFrame info:")
+print(\"\nDataFrame info:\")
 print(df.info())
 
-print("\nDescriptive statistics:")
+print(\"\nDescriptive statistics:\")
 print(df.describe())
 
-print("\nColumn-specific info:")
-print(f"Unique cities: {df['City'].nunique()}")
-print(f"Value counts for Department:\n{df['Department'].value_counts()}")
+print(\"\nColumn-specific info:\")
+print(f\"Unique cities: {df['City'].nunique()}\")
+print(f\"Value counts for Department:\n{df['Department'].value_counts()}\")
 ```
+" %}
