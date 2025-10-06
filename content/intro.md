@@ -50,7 +50,7 @@ By the end of this workshop, participants will be able to:
 This workshop is designed for:
 
 {% include question.html header="Primary Audience" text="
-- **Students** in data science, computer science, or related fields
+- **Students** in the Davao Medical School Foundation, Inc.
 - **Complete beginners** with no prior programming experience
 - **Professionals** looking to add Python skills to their toolkit
 - **Researchers** who need to analyze data programmatically
@@ -58,27 +58,27 @@ This workshop is designed for:
 
 {% include question.html header="Prerequisites" text="
 - **No programming experience required** - we start from the very basics
-- Basic computer literacy (file management, using applications)
-- Willingness to learn and practice hands-on coding
-- A laptop with internet connection for installation and practice
+- **Basic computer literacy** (file management, using applications)
+- **Willingness to learn** and practice hands-on coding
+- **A laptop with internet connection** for installation and practice
 " %}
 
 {% include question.html header="Who Will Benefit Most" text="
-- Individuals seeking to transition into data-driven roles
-- Students preparing for advanced coursework requiring programming
-- Professionals in fields like business, healthcare, education, or research
-- Anyone curious about programming and data analysis
+- Medical professionals aiming to integrate data science into clinical practice or research
+- Medical students preparing for coursework or electives involving biostatistics, informatics, or computational tools
+- Clinicians and researchers seeking to enhance decision-making through data-driven approaches
+- Healthcare professionals curious about programming, data analysis, and their applications in medicine
 " %}
 ---
 
 ## Expected Outcomes
 
 {% include question.html header="Immediate Skills (End of Workshop)" text="
-- Confidently write basic to intermediate Python programs
-- Understand and apply fundamental programming concepts
-- Perform basic data manipulation and analysis tasks
-- Create simple visualizations from datasets
-- Debug common programming errors independently
+- Confidently **write basic to intermediate** Python programs
+- **Understand and apply** fundamental programming concepts
+- Perform basic **data manipulation and analysis tasks**
+- Create **simple visualizations** from datasets
+- **Debug** common programming errors independently
 " %}
 
 {% include question.html header="Long-term Benefits" text="
@@ -92,7 +92,7 @@ This workshop is designed for:
 {% include question.html header="Practical Projects" text="
 By workshop completion, you'll have created:
 - A personal library of useful Python functions
-- Several data analysis projects you can showcase
+- Some data analysis projects you can showcase
 - Solutions to real-world data problems
 - A foundation for continued learning and development
 " %}
