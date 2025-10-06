@@ -47,7 +47,13 @@ data = {
     'Department': ['IT', 'Finance', 'IT', 'HR', 'Finance']
 }
 
+# This part is where we specify that the want to format the 'data' to be a DataFrame.
 df = pd.DataFrame(data)
+```
+
+Some ```print``` functions to see what are the characteristics of ```data```.
+
+```python
 print(df)
 print(f\"\nDataFrame shape: {df.shape}\")
 print(f\"Column names: {list(df.columns)}\")
