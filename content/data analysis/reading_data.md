@@ -48,28 +48,40 @@ print(\"Sample data created and saved!\")
 ```
 " %}
 
-# Reading Other File Formats
+{% include question.html header="Reading Other File Formats" text="
+
+Reading Excel files
 
 ```python
-# Excel files
-# df_excel = pd.read_excel('data.xlsx', sheet_name='Sheet1')
-
-# JSON files
-# df_json = pd.read_json('data.json')
-
-# SQL databases (requires sqlalchemy)
-# from sqlalchemy import create_engine
-# engine = create_engine('sqlite:///database.db')
-# df_sql = pd.read_sql('SELECT * FROM table_name', engine)
-
-# For our workshop, let's work with the CSV we created
-df = pd.read_csv('sample_employees.csv')
-df['hire_date'] = pd.to_datetime(df['hire_date'])  # Convert to datetime
-print("Data loaded successfully!")
-print(df.head())
+df_excel = pd.read_excel('data.xlsx', sheet_name='Sheet1')
 ```
 
-# Handling Missing Data
+Reading JSON files
+
+```python
+df_json = pd.read_json('data.json')
+```
+
+Reading SQL databases (requires sqlalchemy)
+
+```python
+from sqlalchemy import create_engine
+engine = create_engine('sqlite:///database.db')
+df_sql = pd.read_sql('SELECT * FROM table_name', engine)
+```
+
+For our workshop, let's work with the CSV we created
+
+```python
+df = pd.read_csv('sample_employees.csv')
+df['hire_date'] = pd.to_datetime(df['hire_date'])  # Convert to datetime
+
+print(\"Data loaded successfully!\")
+print(df.head())
+```
+" %}
+
+{% include question.html header="Handling Missing Data" text="
 
 ```python
 # Create some missing data for demonstration
@@ -77,23 +89,34 @@ df_with_missing = df.copy()
 df_with_missing.loc[5:10, 'salary'] = np.nan
 df_with_missing.loc[15:20, 'department'] = np.nan
 
-print("Missing data summary:")
+print(\"Missing data summary:\")
 print(df_with_missing.isnull().sum())
+```
 
-# Strategies for handling missing data
-# 1. Drop rows with missing values
+**Strategies for handling missing data**
+
+1. Drop rows with missing values
+
+```python
 df_dropped = df_with_missing.dropna()
+```
 
-# 2. Fill missing values
+2. Fill missing values
+
+```python
 df_filled = df_with_missing.fillna({
     'salary': df_with_missing['salary'].median(),
     'department': 'Unknown'
 })
+```
 
-# 3. Forward fill or backward fill
+3. Forward fill or backward fill
+
+```python
 df_ffill = df_with_missing.fillna(method='ffill')
 
-print(f"Original shape: {df_with_missing.shape}")
-print(f"After dropping NaN: {df_dropped.shape}")
-print(f"After filling NaN: {df_filled.shape}")
+print(f\"Original shape: {df_with_missing.shape}\")
+print(f\"After dropping NaN: {df_dropped.shape}\")
+print(f\"After filling NaN: {df_filled.shape}\")
 ```
+" %}
