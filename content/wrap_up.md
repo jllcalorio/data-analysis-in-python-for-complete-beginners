@@ -90,15 +90,13 @@ helps us create better learning experiences for everyone.
 
 ## What's Next on Your Python Journey?
 
-{% include question.html header="What Could You Do Next?" text="
-
-**Immediate Next Steps (This Week)**
-
+{% include question.html header="Immediate Next Steps (This Week)" text="
 1. **Practice What You've Learned**: Revisit today's exercises and try variations
 2. **Set Up Your Environment**: Install Python and your favorite editor on your personal computer
 3. **Find a Small Project**: Think of a simple problem you can solve with your new skills
+" %}
 
-**Short-term Goals (Next Month)**
+{% include question.html header="Short-term Goals (Next Month)" text="
 
 1. **Join the Community**:
    - Follow Python communities on social media
