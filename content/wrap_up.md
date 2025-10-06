@@ -5,10 +5,9 @@ title: Wrap-up
 
 ## Your Python Journey Ends Here
 
-{% include question.html header="Congratulations on Your Achievement! 🎉" text="
+### Congratulations on Your Achievement
 
 Take a moment to appreciate what you've accomplished today and in the past three (3) days. When you walked into this workshop, Python might have seemed like a mysterious programming language spoken only by programmers in hoodies. Now, you're leaving with the fundamental skills to write your own Python programs, analyze real data, and solve problems that matter to you.
-" %}
 
 ## What We've Learned Together
 
