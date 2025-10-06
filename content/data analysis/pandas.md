@@ -57,14 +57,13 @@ Some ```print``` functions to see what are the characteristics of ```data```.
 print(df)
 print(f\"DataFrame shape: {df.shape}\")
 print(f\"Column names: {list(df.columns)}\")
-print(f\"Data types:{df.dtypes}\")
+print(f\"Data types: {df.dtypes}\")
 ```
 " %}
 
 {% include question.html header="DataFrame Inspection Methods" text="
 
 Below are some essential DataFrame methods.
-
 
 **This code prints the 1st 3 rows of the DataFrame.**
 
