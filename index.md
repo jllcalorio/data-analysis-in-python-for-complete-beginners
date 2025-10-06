@@ -1,5 +1,5 @@
 ---
-title: Python Workshop
+title: Data Analysis in Python for Complete Beginners
 layout: lesson-content
 ---
 
