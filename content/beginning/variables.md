@@ -29,6 +29,7 @@ print(patient_age)    # Output: 45
 **Mini Exercise**
 
 **Try It Yourself** 🧠
+
 Create three variables to store:
 - A patient’s heart rate (in beats per minute)
 - Their body temperature (in °C)
@@ -37,7 +38,13 @@ Create three variables to store:
 
 " solution="
 ```python
-xddddd
+heart_rate = 140
+body_temp = 36.4
+admitted = True
+
+print(heart_rate)
+print(body_temp)
+print(admitted)
 ```
 
 " %}
