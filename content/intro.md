@@ -155,5 +155,5 @@ Once installed, open **Anaconda Navigator**, find **Jupyter Notebook**, and clic
 ---
 
 {% capture text %}
-*This workshop is brought to you by the Senior Statistician, Center for Research and Development, DMSFI — committed to empowering medical professionals with the tools of data science, evidence-based research, and digital innovation.*{% endcapture %}
+This workshop is brought to you by the **Senior Statistician** *(which most times a Data Scientist, sometimes a Bioinformatician, sometimes a Biostatistician)*, [Center for Research and Development](https://www.facebook.com/dmsfiCRD), [Davao Medical School Foundation, Inc.](https://www.facebook.com/DavaoMedical) — committed to empowering medical professionals with the tools of data science, evidence-based research, and digital innovation.{% endcapture %}
 {% include alert.html text=text color=secondary %}
