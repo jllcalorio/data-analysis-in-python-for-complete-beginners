@@ -8,6 +8,9 @@ topics: dictionary, store values, key-value pairs
 **Dictionaries** store data in *key-value pairs*. They're perfect for organizing related information!
 
 {% include question.html header="Creating Dictionaries" text="
+
+**Dictionaries** are great for storing structured data — like a patient’s ```demographic information```, ```diagnosis```, and ```vital signs``` — **all in one variable**.
+
 ```python
 # Empty dictionary
 empty_dict = {}
@@ -25,16 +28,16 @@ patient_record = {
 print(patient_record)
 # {'name': 'John Doe', 'age': 45, 'sex': 'Male', 'diagnosis': 'Hypertension', 'bp': '140/90', 'is_admitted': True}
 ```
-
-**Dictionaries** are great for storing structured data — like a patient’s ```demographic information```, ```diagnosis```, and ```vital signs``` — **all in one variable**.
 " %}
 
 {% include question.html header="Accessing Dictionary Values" text="
 ```python
-print(student[\"name\"])                    # Alice
-print(student.get(\"age\"))                 # 20
-print(student.get(\"grade\", \"Not found\"))  # Not found (Default if key doesn't exist)
+print(patient_record[\"diagnosis\"])              # Hypertension
+print(patient_record.get(\"bp\"))                 # 140/90
+print(patient_record.get(\"heart_rate\", \"N/A\"))  # N/A (Default if key doesn't exist)
 ```
+
+This is like checking a patient’s chart — if a piece of information doesn’t exist, Python can return a default value (e.g., “N/A”).
 " %}
 
 {% include question.html header="Modifying Dictionaries" text="
