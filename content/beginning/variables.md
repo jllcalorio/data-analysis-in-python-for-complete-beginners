@@ -5,22 +5,39 @@ title: Variables
 topics: variable, data, values, comments
 ---
 
-*Variables* are like containers that store data values. In Python, you don't need to declare the type of variable explicitly - Python figures it out automatically!
+**Variables** are like **containers that store information** — think of them as labeled drawers where you can keep different kinds of data such as a patient’s name, age, or blood pressure.
+
+In Python, you don’t have to specify what type of data a variable will hold — Python automatically figures that out for you!
 
 {% include question.html header="Creating Variables" text="
 
-Creating variables is simple. 
+Creating variables is simple.
 
 It's not an exaggeration that variables are going to be your friends in the long run.
 
 ```python
-name = \"Alice\"
-age = 25
-height = 5.6
-is_student = True
+patient_name = 'Maria Santos'
+patient_age = 45
+patient_bmi = 24.6
+has_diabetes = True
 
-print(name)    # Output: Alice
-print(age)     # Output: 25
+print(patient_name)   # Output: Maria Santos
+print(patient_age)    # Output: 45
+```
+**Example context:** Imagine you’re storing basic information from a patient’s medical record — each variable holds one detail about the patient.
+
+**Mini Exercise**
+
+**Try It Yourself** 🧠
+Create three variables to store:
+- A patient’s heart rate (in beats per minute)
+- Their body temperature (in °C)
+- Whether they are currently admitted (True or False)
+- Then, print all three variables!
+
+" solution="
+```python
+xddddd
 ```
 
 **Bonus**: Comments
