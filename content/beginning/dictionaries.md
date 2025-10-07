@@ -45,19 +45,21 @@ This is like checking a patient’s chart — if a piece of information doesn’
 Adding/updating values
 
 ```python
-student[\"grade\"] = \"A\"        # Add new key-value pair
-student[\"age\"] = 21           # Update existing value
+patient_record[\"bp\"] = \"130/85\"        # Update blood pressure
+patient_record[\"heart_rate\"] = 72      # Add new key-value pair
 
-print(student)  # {'name': 'Alice', 'age': 21, 'major': 'Computer Science', 'gpa': 3.8, 'grade': 'A'}
+print(patient_record)
+# {'name': 'John Doe', 'age': 45, 'sex': 'Male', 'diagnosis': 'Hypertension', 'bp': '130/85', 'is_admitted': True, 'heart_rate': 72}
 ```
 
 Removing items
 
 ```python
-del student[\"grade\"]                             # Remove specific key
-removed_value = student.pop(\"age\", \"Not found\")  # Remove and return value
+del patient_record[\"is_admitted\"]
+removed_value = patient_record.pop(\"heart_rate\", \"Not found\")
 
-print(student)  # {'name': 'Alice', 'major': 'Computer Science', 'gpa': 3.8}
+print(patient_record)
+# {'name': 'John Doe', 'age': 45, 'sex': 'Male', 'diagnosis': 'Hypertension', 'bp': '130/85'}
 ```
 " %}
 
@@ -66,25 +68,34 @@ print(student)  # {'name': 'Alice', 'major': 'Computer Science', 'gpa': 3.8}
 Get the keys
 
 ```python
-print(student.keys())      # dict_keys(['name', 'major', 'gpa'])
+print(patient_record.keys())     # dict_keys(['name', 'age', 'sex', 'diagnosis', 'bp'])
 ```
 
 Get the values
 
 ```python
-print(student.values())    # dict_values(['Alice', 'Computer Science', 3.8])
+print(patient_record.values())   # dict_values(['John Doe', 45, 'Male', 'Hypertension', '130/85'])
 ```
 
 Get the item pairs
 
 ```python
-print(student.items())     # dict_items([('name', 'Alice'), ('major', 'Computer Science'), ('gpa', 3.8)])
+print(patient_record.items())    # dict_items([('name', 'John Doe'), ('age', 45), ('sex', 'Male'), ('diagnosis', 'Hypertension'), ('bp', '130/85')])
 ```
 
 Check if key exists
 
 ```python
-print(\"name\" in student)   # True
-print(\"grade\" in student)  # False
+print(\"diagnosis\" in patient_record)  # True
+print(\"temperature\" in patient_record)  # False
 ```
+
+**In hospital data systems**, you might check if certain patient information (like ```temperature``` or ```lab_results```) exists before performing calculations or updates.
 " %}
+
+{% capture text %}
+Imagine you’re developing a script to summarize patient data from an Excel file — how could dictionaries help you store and retrieve each patient’s details efficiently?
+
+Think of one real-world scenario in your medical or research setting where a dictionary-like structure could simplify your workflow.
+{% endcapture %}
+{% include alert.html text=text color=secondary %}
