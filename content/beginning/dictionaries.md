@@ -25,6 +25,8 @@ patient_record = {
 print(patient_record)
 # {'name': 'John Doe', 'age': 45, 'sex': 'Male', 'diagnosis': 'Hypertension', 'bp': '140/90', 'is_admitted': True}
 ```
+
+**Dictionaries** are great for storing structured data — like a patient’s ```demographic information```, ```diagnosis```, and ```vital signs``` — **all in one variable**.
 " %}
 
 {% include question.html header="Accessing Dictionary Values" text="
@@ -34,8 +36,6 @@ print(student.get(\"age\"))                 # 20
 print(student.get(\"grade\", \"Not found\"))  # Not found (Default if key doesn't exist)
 ```
 " %}
-
-**Dictionaries** are great for storing structured data — like a patient’s ```demographic information```, ```diagnosis```, and ```vital signs``` — **all in one variable**.
 
 {% include question.html header="Modifying Dictionaries" text="
 
