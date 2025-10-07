@@ -26,6 +26,7 @@ else:
 ```
 
 The code above helps automatically classify patients based on age and blood pressure readings, similar to decision rules used in clinical triage systems.
+" %}
 
 {% include question.html header="For Loops" text="
 
