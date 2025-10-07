@@ -33,9 +33,9 @@ print(student[\"name\"])                    # Alice
 print(student.get(\"age\"))                 # 20
 print(student.get(\"grade\", \"Not found\"))  # Not found (Default if key doesn't exist)
 ```
+" %}
 
 **Dictionaries** are great for storing structured data — like a patient’s ```demographic information```, ```diagnosis```, and ```vital signs``` — **all in one variable**.
-" %}
 
 {% include question.html header="Modifying Dictionaries" text="
 
