@@ -151,7 +151,7 @@ Ready to begin your Python journey? Let's dive into the fundamentals and start b
 2. To **download Anaconda**, go to [https://www.anaconda.com/download/success](https://www.anaconda.com/download/success) and click one of the options under \"**Distribution Installers**\". Double-click the downloaded file and follow the default options for installation.
   - Anaconda is a free and open-source distribution of the Python and R programming languages for scientific computing. It simplifies package management and deployment, making it the standard choice for data science.
 3. In the **Anaconda Navigator**'s **Home** tab, scroll down and look for '**jupyter notebook**' and click 'Launch'.
-4. That's it! **We can now start** our coding journey!
+4. **```That's it!``` We can now start** our coding journey!
 " %}
 ---
 
