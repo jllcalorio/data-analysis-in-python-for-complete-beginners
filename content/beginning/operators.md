@@ -5,13 +5,52 @@ title: Operators
 topics: arithmetic, comparison, logical, assignment, operators
 ---
 
-Operators allow you to perform operations on variables and values.
+Operators allow you to perform calculations and logical checks on variables and values. In medical and research contexts, you might use operators to:
 
-This includes mathematical operators, comparative operators, etc.
+- Compute a patient’s BMI from height and weight
+- Compare lab results to normal ranges
+- Combine conditions like “is diabetic AND hypertensive”
 
 {% include question.html header="Arithmetic Operators" text="
 
 Performing mathematical operators can be done in Python. If you remember PEMDAS, yes, it can be done.
+
+**Set the variables.**
+
+```python
+weight_kg = 70
+height_m = 1.75
+```
+
+**Arithmetic operations using medical data**
+
+```python
+bmi = weight_kg / (height_m ** 2)
+print(bmi)   # BMI calculation using division and exponentiation
+```
+
+**Basic arithmetic**
+
+```python
+age = 30
+years_until_retirement = 65 - age
+print(years_until_retirement)  # Output: 35
+```
+
+**Example of floor division and modulus.**
+
+- Floor division: Divides one number by another and rounds down to the nearest whole number (integer)
+- Modulus (remainder): returns the remainder after dividing one number by another
+
+```python
+patients = 53
+beds_per_room = 4
+
+print(patients // beds_per_room)  # 13 full rooms
+print(patients % beds_per_room)   # 1 remaining patient without a full room
+```
+
+In case you want to try other variables:
 
 ```python
 a = 10
@@ -45,15 +84,14 @@ In Python, you can compare values if they are the same or different, or if a val
 If you want to check if two (2) values are the same, you should use double equal sign (==), not just one. Why? Because using one equal sign (=) corresponds to setting the left side of the equal sign to be the 'variable' name.
 
 ```python
-x = 5
-y = 10
+patient_temp = 38.2
+normal_temp = 37.0
 
-print(x == y)   # Equal: False, checks if 2 values ARE EQUAL
-print(x != y)   # Not equal: True, checks if 2 values ARE NOT EQUAL
-print(x < y)    # Less than: True, checks if x is less than y
-print(x > y)    # Greater than: False, checks if x is greater than y
-print(x <= y)   # Less than or equal: True, checks if x is less than or equal to y
-print(x >= y)   # Greater than or equal: False, checks if y is greater than or equal to y
+print(patient_temp == normal_temp)   # False, temperature is not equal
+print(patient_temp > normal_temp)    # True, patient has fever
+print(patient_temp < normal_temp)    # False, not lower
+print(patient_temp >= 38.0)          # True, borderline fever
+print(patient_temp != normal_temp)   # True, definitely different
 ```
 " %}
 
@@ -62,13 +100,15 @@ print(x >= y)   # Greater than or equal: False, checks if y is greater than or e
 Logical operators are Boolean operators used to combine or invert truth values.
 
 ```python
-is_sunny = True
-is_warm = False
+has_diabetes = True
+has_hypertension = False
 
-print(is_sunny and is_warm)  # False, this checks if both values are True
-print(is_sunny or is_warm)   # True, this checks if either value is True
-print(not is_sunny)          # False, this inverts the Boolean value, i.e., from True to False, and False to True
+print(has_diabetes and has_hypertension)  # False, patient has only one condition
+print(has_diabetes or has_hypertension)   # True, at least one condition is True
+print(not has_diabetes)                   # False, inverts True to False
 ```
+
+🩺 **Logical operators** are often used when filtering datasets — for example, **'Find all patients who are diabetic AND hypertensive'.**
 " %}
 
 {% include question.html header="Assignment Operators" text="
@@ -78,12 +118,19 @@ Assignment operators are used to assign values to variables and, in many cases, 
 They combine a basic operation (like addition or multiplication) with assignment, making code more concise and readable.
 
 ```python
-counter = 0     # Normal variable assignment, we assign the value 10 to the variable 'counter'
-counter += 5    # Same as: counter = counter + 5, adds 5 to 'counter' and assigns back to 'counter'
-counter -= 2    # Same as: counter = counter - 2, subtracts 2 to 'counter' and assigns back to 'counter'
-counter *= 3    # Same as: counter = counter * 3, multiples 3 to 'counter' and assigns back to 'counter'
-counter /= 2    # Same as: counter = counter / 2, divides 2 to 'counter' and assigns back to 'counter'
+patient_count = 100    # Start with 100 patients
+patient_count += 5     # 5 new admissions
+patient_count -= 3     # 3 discharged
+patient_count *= 1.05  # 5% increase projected
+patient_count /= 2     # Split between two wards
 
-print(counter)  # Output: 4.5
+print(patient_count)  # Output: 51.75
 ```
 " %}
+
+{% capture text %}
+**Why this matters:**
+
+Operators are one of the foundations of data analysis. You’ll use them to calculate averages, compare lab results, and set conditions in your analyses — just like evaluating whether a patient meets diagnostic criteria.
+{% endcapture %}
+{% include alert.html text=text color=secondary %}
