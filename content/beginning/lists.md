@@ -106,3 +106,9 @@ print(temperatures[::-1])  # Readings in reverse order
 
 **Slicing** is helpful when selecting subsets of data — for instance, extracting readings for a ```specific day``` or ```patient```.
 " %}
+
+
+{% capture text %}
+Lists allow you to store and organize multiple pieces of related data in one place. In medicine, this could represent a patient’s list of medications, recorded temperatures, or test results. They’re flexible, easy to manipulate, and fundamental in handling repeated or time-series data.
+{% endcapture %}
+{% include alert.html text=text color=secondary %}
