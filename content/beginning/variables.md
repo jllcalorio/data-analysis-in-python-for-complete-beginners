@@ -40,7 +40,10 @@ Create three variables to store:
 xddddd
 ```
 
-**Bonus**: Comments
+" %}
+
+
+{% include question.html header="Bonus: Comments" text="
 
 Comments are lines in the code that are ignored by the interpreter and serve as notes or explanations for humans reading the code.
 
