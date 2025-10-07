@@ -74,8 +74,8 @@ Useful for converting comma-separated values (like lab results or medication lis
 
 ```python
 medications = \"Aspirin,Metformin,Lisinopril\"
-med_list = medications.split(",")      # ['Aspirin', 'Metformin', 'Lisinopril']
-rejoined = " | ".join(med_list)        # Aspirin | Metformin | Lisinopril
+med_list = medications.split(\",\")      # ['Aspirin', 'Metformin', 'Lisinopril']
+rejoined = \" | \".join(med_list)        # Aspirin | Metformin | Lisinopril
 
 print(medications)
 print(med_list)
