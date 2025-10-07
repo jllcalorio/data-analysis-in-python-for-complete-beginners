@@ -105,15 +105,4 @@ print(temperatures[::-1])  # Readings in reverse order
 ```
 
 **Slicing** is helpful when selecting subsets of data — for instance, extracting readings for a ```specific day``` or ```patient```.
-
-You can still use indexing from the end using negative indices.
-
-```python
-numbers[-3:]    # Last 3 items: [7, 8, 9]
-numbers[:-2]    # All except last 2: [0, 1, 2, 3, 4, 5, 6, 7]
-
-numbers[::3]    # Every third item: [0, 3, 6, 9]
-numbers[::-1]   # Reversed list: [9, 8, 7, ..., 0]
-```
-
 " %}
