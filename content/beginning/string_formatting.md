@@ -5,69 +5,85 @@ title: String Formatting
 topics: string, format
 ---
 
-Professional string formatting makes your output **clean and readable**.
+**String formatting** makes your output clean, readable, and useful for generating patient summaries, research reports, or formatted outputs from clinical data.
 
 {% include question.html header="f-strings (Recommended - Python 3.6+)" text="
 
 Set the data.
 
 ```python
-name = \"Alice\"
-age = 25
-score = 87.5
+name = \"Dr. Santos\"
+age = 45
+bp = \"130/85\"
+diagnosis = \"Hypertension\"
 ```
-You can combine strings and numbers using this basic f-string formatting. This makes your code dynamic for cases when you want to use this multiple times.
+You can combine text and variable values neatly using ```f-strings```, perfect for generating dynamic summaries or reports.
 
 ```python
-message = f\"Hello, {name}! You are {age} years old.\"
-print(message)  # Hello, Alice! You are 25 years old.
+message = f\"Patient seen by {name}, age {age}, with a diagnosis of {diagnosis}.\"
+print(message)
+
+# Patient seen by Dr. Santos, age 45, with a diagnosis of Hypertension.
 ```
 
-You can also format the numbers using f-strings.
+You can also format numerical outputs — for instance, when displaying lab results or computed values:
 
 ```python
-print(f\"Your score is {score:.1f}%\")  # Your score is 87.5%
-print(f\"Your score is {score:.0f}%\")  # Your score is 88%
+glucose = 92.457
+print(f\"Fasting blood glucose: {glucose:.1f} mg/dL\")  # Fasting blood glucose: 92.5 mg/dL
+print(f\"Fasting blood glucose: {glucose:.0f} mg/dL\")  # Fasting blood glucose: 92 mg/dL
 ```
 " %}
 
 {% include question.html header=".format() Method" text="
 
-Using the '.format' method lets you make use of these curly braces {} and just specify at the end the variable names. This is a bit cleaner code formatting in my opinion because it lets you see at the end which variables did you use.
+Before f-strings, Python commonly used the .format() method — it’s still useful and readable:
 
 ```python
-name = \"Bob\"
-age  = 30
+patient_name = \"Maria Cruz\"
+age = 60
+bp = \"150/90\"
 
-message = \"Hello, {}! You are {} years old.\".format(name, age)
+message = \"Patient {} ({} y/o) has a BP reading of {}.\".format(patient_name, age, bp)
+print(message)
 
-print(message) # Hello, Bob! You are 30 years old.
+# Patient Maria Cruz (60 y/o) has a BP reading of 150/90.
+
 ```
+
+This approach is especially useful when your variables are defined elsewhere in your program, such as when reading from files or data entry forms.
 " %}
 
 {% include question.html header="String Methods" text="
 
-Printing methods for strings.
+Python includes many built-in methods to clean or modify text — perfect when cleaning raw data (like patient notes or survey entries).
 
 ```python
-text = \"  Hello World  \"
+text = \"  Hypertension Stage II  \"
 
-print(text)                             #   Hello World  
-print(text.upper())                     #   HELLO WORLD  
-print(text.lower())                     #   hello world  
-print(text.strip())                     # Hello World (removes whitespace)
-print(text.replace(\"World\", \"Python\"))  #   Hello Python  
+print(text)                                 #   Hypertension Stage II  
+print(text.upper())                         #   HYPERTENSION STAGE II
+print(text.lower())                         #   hypertension stage ii
+print(text.strip())                         # Hypertension Stage II (removes whitespace)
+print(text.replace(\"Stage II\", \"Stage I\"))  #   Hypertension Stage I
 ```
 
 Splitting and joining
 
-```python
-sentence = \"apple,banana,orange\"
-fruits   = sentence.split(\",\")   # ['apple', 'banana', 'orange']
-rejoined = \" | \".join(fruits)    # apple | banana | orange
+Useful for converting comma-separated values (like lab results or medication lists) into lists for easier analysis.
 
-print(sentence)                  # apple,banana,orange
-print(fruits)                    # ['apple', 'banana', 'orange']
-print(rejoined)                  # apple | banana | orange
+```python
+medications = \"Aspirin,Metformin,Lisinopril\"
+med_list = medications.split(",")      # ['Aspirin', 'Metformin', 'Lisinopril']
+rejoined = " | ".join(med_list)        # Aspirin | Metformin | Lisinopril
+
+print(medications)
+print(med_list)
+print(rejoined)
 ```
 " %}
+
+{% capture text %}
+**String formatting** helps you present data in clear, readable, and professional ways — whether you’re summarizing patient data, generating reports, or printing analysis results. Clean text formatting is essential in medical reporting and data communication.
+{% endcapture %}
+{% include alert.html text=text color=secondary %}
