@@ -5,7 +5,7 @@ title: Lists
 topics: list, collection, multiple data storing
 ---
 
-A list is a built-in Python data structure used to store multiple items in a single variable. Lists are ordered, mutable, and can contain mixed data types.
+**Lists** can store multiple types of data, not just medical or clinical data. For instance, a hospital system might store a list of patient names, lab test results, or vital signs in a list and even salaries.
 
 They're one of the most useful data structures in Python!
 
@@ -18,11 +18,14 @@ Lists in Python can be of any type: integers, strings, floats, Booleans, even ot
 empty_list = [] # Can be used to initialize a list as a container of results
 
 # List with items
-fruits  = [\"apple\", \"banana\", \"orange\"]
-numbers = [1, 2, 3, 4, 5]
-mixed   = [\"hello\", 42, 3.14, True]
+# Example: list of patient names
+patients = ['Alice', 'Ben', 'Carla', 'David']
 
-print(fruits)  # Output: ['apple', 'banana', 'orange']
+# Example: list of blood pressure readings (mmHg)
+bp_readings = [120, 130, 110, 140]
+
+# Example: mixed list of different data types
+patient_info = ['John Doe', 45, 72.5, True]  # name, age, weight(kg), is_admitted
 ```
 " %}
 
@@ -30,21 +33,21 @@ print(fruits)  # Output: ['apple', 'banana', 'orange']
 
 Items in lists can be accessed using their ```index```. The index (or position) of the item in a list start at 0.
 
-Thus, in ```pythonfruits = [\"apple\", \"banana\", \"orange\", \"grape\"]```, the index of apple is 0, and the index of banana is 1.
+Thus, in ```patients = ['Alice', 'Ben', 'Carla', 'David']```, the index of Alice is 0, and the index of Ben is 1.
 
 Weirdly, the index of the last item in the list is -1, while the 2nd to the last index is -2. Try it out in your PC!
 
 **Tip:** In R, the index starts at 1.
 
 ```python
-fruits = [\"apple\", \"banana\", \"orange\", \"grape\"]
-
 # Accessing by index (starts at 0)
-print(fruits[0])   # First item:     apple
-print(fruits[1])   # Second item:    banana
-print(fruits[-1])  # Last item:      grape
-print(fruits[-2])  # Second to last: orange
+print(patients[0])   # First patient: Alice
+print(patients[1])   # Second patient: Ben
+print(patients[-1])  # Last patient: David
+print(patients[-2])  # Second to last: Carla
 ```
+
+In clinical data, indexing can be used to retrieve specific patient records or lab results from a list.
 " %}
 
 {% include question.html header="List Methods" text="
@@ -57,30 +60,32 @@ These list methods are used when you want to:
 - reordering or copying items in a list
 
 ```python
-fruits = [\"apple\", \"banana\"]
+patients = ['Alice', 'Ben']
 ```
 Adding items
 
 ```python
-fruits.append(\"orange\")           # Add to end
-fruits.insert(1, \"grape\")         # Insert at position 1
-print(fruits)                     # ['apple', 'grape', 'banana', 'orange']
+patients.append('Carla')            # Add to end
+patients.insert(1, 'David')         # Insert at position 1
+print(patients)                     # ['Alice', 'David', 'Ben', 'Carla']
 ```
 Removing items
 
 ```python
-fruits.remove(\"grape\")           # Remove specific item
-last_item = fruits.pop()          # Remove and return last item
-print(fruits)                     # ['apple', 'banana']
-print(last_item)                  # orange
+patients.remove('David')            # Remove specific patient
+last_patient = patients.pop()       # Remove and return last patient
+print(patients)                     # ['Alice', 'Ben']
+print(last_patient)                 # Carla
 ```
 Other useful methods
 
 ```python
-fruits.extend([\"kiwi\", \"mango\"])  # Add multiple items
-print(len(fruits))                # Get length: 4
-print(fruits.count(\"apple\"))      # Count occurrences: 1
+patients.extend(['Ella', 'Fred'])   # Adding multiple new patients
+print(len(patients))                # Get total count of patients: 4
+print(patients.count('Alice'))      # Count occurrences of a specific patient: 1
 ```
+
+These list operations are common when managing patient registries, lists of medications, or data collected in clinical studies.
 " %}
 
 {% include question.html header="List Slicing" text="
@@ -90,13 +95,16 @@ Slicing allows you to extract a portion of a list using a concise syntax.
 It follows this syntax: ```list_name[start:stop:step]```
 
 ```python
-numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+temperatures = [36.5, 37.1, 36.8, 37.5, 38.0, 36.9, 37.2, 36.7, 37.3, 37.0]
 
-print(numbers[2:5])    # Items 2 to 4: [2, 3, 4]
-print(numbers[:3])     # First 3 items: [0, 1, 2]
-print(numbers[7:])     # From index 7 to end: [7, 8, 9]
-print(numbers[::2])    # Every second item: [0, 2, 4, 6, 8]
+print(temperatures[2:5])   # Readings 2 to 4: [36.8, 37.5, 38.0]
+print(temperatures[:3])    # First 3 readings
+print(temperatures[7:])    # Last few readings
+print(temperatures[::2])   # Every second reading
+print(temperatures[::-1])  # Readings in reverse order
 ```
+
+**Slicing** is helpful when selecting subsets of data — for instance, extracting readings for a ```specific day``` or ```patient```.
 
 You can still use indexing from the end using negative indices.
 
