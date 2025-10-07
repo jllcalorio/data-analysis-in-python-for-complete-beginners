@@ -128,6 +128,8 @@ By workshop completion, you’ll have created:
 
 Ready to begin your Python journey? Let’s dive into the fundamentals and start building your programming skills from the ground up. The next section will introduce you to the basic building blocks of Python programming.
 
+**Important:** Make sure you have Python installed on your computer before we begin. Installation instructions and setup guidance will be provided in our first session.
+
 {% include question.html header="Let's install Python in your computer!" text="
 1. To **download Python**, go to https://www.python.org/downloads/ and click '**Download Python x.xx.x**'. There are separate download options depending on your operating system (OS), example, Windows, macOS, Linux, etc. Double-click the downloaded file and follow the default options for installation.
 2. To **download Anaconda**, go to https://www.anaconda.com/download/success and click one of the options under \"**Distribution Installers**\". Double-click the downloaded file and follow the default options for installation.
@@ -135,7 +137,5 @@ Ready to begin your Python journey? Let’s dive into the fundamentals and start
 3. In the **Anaconda Navigator**'s **Home** tab, scroll down and look for '**jupyter notebook**' and click 'Launch'.
 4. That's it! **We can now start** our coding journey!
 " %}
-
-**Important:** Make sure you have Python installed on your computer before we begin. Installation instructions and setup guidance will be provided in our first session.
 
 *This workshop is brought to you by the Senior Statistician form the Center for Research and Development. The center is committed to providing quality technical education and fostering innovation in data science and programming.*
