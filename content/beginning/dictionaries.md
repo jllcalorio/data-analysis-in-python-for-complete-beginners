@@ -14,9 +14,9 @@ empty_dict = {}
 
 # Dictionary with data
 patient_record = {
-    \"name": \"John Doe\",
-    \"age": 45,
-    \"sex": \"Male\",
+    \"name\": \"John Doe\",
+    \"age\": 45,
+    \"sex\": \"Male\",
     \"diagnosis\": \"Hypertension\",
     \"bp\": \"140/90\",
     \"is_admitted\": True
