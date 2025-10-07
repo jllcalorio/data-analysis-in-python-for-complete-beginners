@@ -106,8 +106,6 @@ patientName = 'Maria'    # Should use snake_case
 " %}
 
 {% capture text %}
-**Final Touch**
-
 🧩 **Why this matters:**
 
 In data science and healthcare analytics, variable names help you understand what data you’re working with — just like clearly labeling patient charts ensures accurate communication in clinical settings.
