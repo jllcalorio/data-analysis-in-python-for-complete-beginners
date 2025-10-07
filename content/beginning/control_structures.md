@@ -146,13 +146,13 @@ This function encapsulates a clinical rule (BMI categories), demonstrating how l
 def classify_bmi(weight_in_kg, height_in_meters):
     bmi = weight_in_kg / (height_in_meters ** 2)
     if bmi < 18.5:
-        return "Underweight"
+        return \"Underweight\"
     elif bmi < 25:
-        return "Normal"
+        return \"Normal\"
     elif bmi < 30:
-        return "Overweight"
+        return \"Overweight\"
     else:
-        return "Obese"
+        return \"Obese\"
 
 print(classify_bmi(70, 1.75))
 ```
