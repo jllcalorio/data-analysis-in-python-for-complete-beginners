@@ -5,37 +5,27 @@ title: Control structures
 topics: loop, if, for, while, functions
 ---
 
-Control structures determine the order in which your code executes.
+**Control structures** determine **the order in which your code executes**, allowing you to create decision-making and repetition logic that drives your program’s behavior.
+
+Control structures can automate workflows such as checking patient eligibility, iterating over lab results, or categorizing patients based on diagnostic criteria.
 
 {% include question.html header="If Statements" text="
 
 The ```if``` statements are used for conditional execution, allowing a block of code to run only if a specified condition is true (e.g., ```if temperature > 30: print \"It's hot!\"```). This is done **to create decision-making logic** in your programs.
 
 ```python
-age = 18
+age = 72
+bp = 145
 
-if age >= 18:
-    print(\"You are an adult\")
-elif age >= 13:
-    print(\"You are a teenager\")
+if age >= 60 and bp > 140:
+    print(\"High-risk: Schedule follow-up consultation.\")
+elif age >= 60 and bp <= 140:
+    print(\"Monitor regularly.\")
 else:
-    print(\"You are a child\")
+    print(\"Low-risk: Maintain routine check-ups.\")
 ```
 
-You can also have **more than one** condition.
-
-```python
-weather = \"sunny\"
-temperature = 75
-
-if weather == \"sunny\" and temperature > 70:
-    print(\"Perfect day for a picnic!\")
-elif weather == \"rainy\" or temperature < 60:
-    print(\"Stay inside today\")
-else:
-    print(\"Decent weather\")
-```
-" %}
+The code above helps automatically classify patients based on age and blood pressure readings, similar to decision rules used in clinical triage systems.
 
 {% include question.html header="For Loops" text="
 
@@ -44,17 +34,18 @@ else:
 Loop through a list
 
 ```python
-fruits = [\"apple\", \"banana\", \"orange\"]
-for fruit in fruits:
-    print(f\"I like {fruit}\")
+patients = [\"Alice\", \"Bob\", \"Carlos\"]
+for name in patients:
+    print(f\"Processing lab report for {name}\")
 
 # Output
-# I like apple
-# I like banana
-# I like orange
+# Processing lab report for Alice
+# Processing lab report for Bob
+# Processing lab report for Carlos
 ```
+This loop ensures that all patient reports are processed without manual repetition—useful when automating data cleaning or report generation for large datasets.
 
-Loop through a range of numbers
+**Loop through a range of numbers**
 
 ```python
 for i in range(5):  # 0 to 4
@@ -68,17 +59,17 @@ for i in range(5):  # 0 to 4
 # Count: 4
 ```
 
-Loop through a dictionary
+**Loop through a dictionary**
 
 ```python
-student = {\"name\": \"Alice\", \"age\": 20, \"major\": \"Computer Science\"}
+student = {\"name\": \"Alice\", \"age\": 20, \"is_diabetic\": True}
 for key, value in student.items():
     print(f\"{key}: {value}\")
 
 # Output
 # name: Alice
 # age: 20
-# major: Computer Science
+# is_diabetic: True
 ```
 " %}
 
@@ -147,10 +138,25 @@ print(f\"Room area: {room_area} square feet\")
 ```
 " %}
 
-{% capture text %}Note:
-Remember the **indents** in your if, for, while statements and in your functions. They act as indicators for Python to recognize that the next line of code is part of the if statement or function.
-{% endcapture %}
+{% include question.html header="Reusable Function for BMI Classification" text="
 
+This function encapsulates a clinical rule (BMI categories), demonstrating how logic and computation combine to yield meaningful interpretations in healthcare analytics.
+
+```python
+def classify_bmi(weight_in_kg, height_in_meters):
+    bmi = weight_in_kg / (height_in_meters ** 2)
+    if bmi < 18.5:
+        return "Underweight"
+    elif bmi < 25:
+        return "Normal"
+    elif bmi < 30:
+        return "Overweight"
+    else:
+        return "Obese"
+
+print(classify_bmi(70, 1.75))
+```
+" %}
 
 {% capture text %}
 **Note:**
