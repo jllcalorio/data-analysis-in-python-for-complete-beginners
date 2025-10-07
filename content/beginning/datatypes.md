@@ -60,7 +60,7 @@ For example, is a lab result value '42' stored as text or as a number?
 
 " solution="
 ```python
-result = "42"
+result = '42'
 print(type(result))  # Output: <class 'str'>
 
 value = 42
@@ -88,13 +88,13 @@ We can also do vice-versa.
 ```python
 patient_bmi = 22.5
 bmi_str = str(patient_bmi)
-print("Patient BMI is " + bmi_str)
+print('Patient BMI is ' + bmi_str)
 ```
 " %}
 
 {% include question.html header="String to float" text="
 ```python
-glucose_str = "5.8"
+glucose_str = '5.8'
 glucose_float = float(glucose_str)
 print(glucose_float + 0.2)            # Output: 6.0
 ```
