@@ -3,15 +3,15 @@ nav_order: 1
 title: Introduction
 ---
 
-## Data Analysis in Python for Complete Beginners (October 2025).
-
-Welcome to our comprehensive Python programming workshop! This intensive learning experience is designed to take you from complete beginner to confident Python programmer with practical data analysis skills.
+Welcome to this beginner-friendly workshop designed especially for medical students and healthcare professionals. Over three immersive days, you’ll learn Python from the ground up — not just as a programming language, but as a practical tool for analyzing clinical and research data.
 
 ---
 
 {% include question.html header="Workshop Overview" text="
 
-Python has become one of the most popular and versatile programming languages in the world, powering everything from web applications to artificial intelligence systems. This workshop provides a structured, hands-on approach to learning Python programming fundamentals and applying them to real-world data analysis tasks.
+Python has become one of the most widely used languages in healthcare research and medical informatics. From analyzing patient data and visualizing disease trends to supporting AI-based diagnostics, Python is transforming how health professionals handle data.
+
+This workshop provides a **hands-on, structured approach to learning Python fundamentals and applying them to real-world medical and research datasets**.
 " %}
 
 {% include question.html header="Duration & Format" text="
@@ -23,17 +23,16 @@ Python has become one of the most popular and versatile programming languages in
 
 ---
 
-## Learning Objectives
+## Learning Objectives - Medical Context
 
 By the end of this workshop, participants will be able to:
 
 {% include question.html header="Technical Skills" text="
-- **Master Python Fundamentals**: Understand variables, data types, operators, and control structures
-- **Write Functional Code**: Create reusable functions and work with Python modules
-- **Handle Data Effectively**: Use lists, dictionaries, and string manipulation techniques
-- **Perform Data Analysis**: Utilize pandas for data manipulation and basic statistical analysis
-- **Create Visualizations**: Generate meaningful charts and graphs from data
-- **Debug and Troubleshoot**: Identify and resolve common programming errors
+- **Handle Data Effectively:** Organize and manage patient or laboratory data using Python’s built-in structures
+- **Perform Data Analysis:** Use ```pandas``` to explore health-related datasets and compute descriptive statistics
+- **Create Visualizations:** Generate charts for patient outcomes, clinical trials, or epidemiological trends
+- **Perform Statistical Tests:** Apply tests such as *t-test*, *ANOVA*, and *chi-square* to biomedical datasets
+- **Build a Foundation:** Prepare for advanced applications like biostatistics, machine learning, and clinical decision support
 " %}
 
 {% include question.html header="Practical Applications" text="
@@ -47,7 +46,7 @@ By the end of this workshop, participants will be able to:
 
 ## Target Audience
 
-This workshop is designed for:
+This workshop is specially designed for DMSFI students and healthcare professionals who are ready to explore how programming and data can enhance medical decision-making, research, and innovation.
 
 {% include question.html header="Primary Audience" text="
 - **Students** in the Davao Medical School Foundation, Inc.
@@ -81,19 +80,19 @@ This workshop is designed for:
 - **Debug** common programming **errors** independently
 " %}
 
-{% include question.html header="Long-term Benefits" text="
-- **Career Advancement**: Python skills are highly valued across industries
-- **Research Capabilities**: Analyze your own data more efficiently
+{% include question.html header="Long-term Benefits: Clinical & Research Impact" text="
+- **Data-Driven Insight**: Confidently explore and interpret clinical or survey data
+- **Research Independence**: Perform your own data cleaning and analysis for publications
 - **Problem-Solving**: Develop computational thinking skills
 - **Foundation Building**: Prepared for advanced topics like machine learning
-- **Automation**: Streamline repetitive tasks in your work or studies
+- **Automation in Practice**: Streamline repetitive workflows, such as summarizing lab data or generating reports
 " %}
 
 {% include question.html header="Practical Projects" text="
 By workshop completion, you'll have created:
 - A personal library of useful Python functions
-- Some data analysis projects you can showcase
-- Solutions to real-world data problems
+- Mini-projects analyzing sample clinical datasets (e.g., patient demographics, vital signs, or lab results)
+- Solutions to data-driven questions often encountered in healthcare and research
 - A foundation for continued learning and development
 " %}
 ---
@@ -136,7 +135,7 @@ By workshop completion, you'll have created:
 " %}
 
 {% include question.html header="Certificate of Completion" text="
-Participants who complete all workshop activities will receive a certificate recognizing their achievement and newly acquired Python programming skills.
+Participants who complete all workshop activities will receive a **Certificate of Completion in “Data Analysis in Python for Complete Beginners”**, issued by the Center for Research and Development, DMSFI.
 " %}
 ---
 
@@ -144,17 +143,17 @@ Participants who complete all workshop activities will receive a certificate rec
 
 Ready to begin your Python journey? Let's dive into the fundamentals and start building your programming skills from the ground up. The next section will introduce you to the basic building blocks of Python programming.
 
-**Important**: Make sure you have Python installed on your computer before we begin. Installation instructions and setup guidance will be provided in our first session.
+**Important**: Before the workshop begins, please install **Python** and **Anaconda** on your laptop. Don’t worry — we’ll guide you step by step during the first session.
 
 {% include question.html header="Let's install Python in your computer!" text="
 1. To **download Python**, go to [https://www.python.org/downloads/](https://www.python.org/downloads/) and click '**Download Python x.xx.x**'. There are separate download options depending on your operating system (OS), example, Windows, macOS, Linux, etc. Double-click the downloaded file and follow the default options for installation.
 2. To **download Anaconda**, go to [https://www.anaconda.com/download/success](https://www.anaconda.com/download/success) and click one of the options under \"**Distribution Installers**\". Double-click the downloaded file and follow the default options for installation.
   - Anaconda is a free and open-source distribution of the Python and R programming languages for scientific computing. It simplifies package management and deployment, making it the standard choice for data science.
-3. In the **Anaconda Navigator**'s **Home** tab, scroll down and look for '**jupyter notebook**' and click '**Launch**'.
-4. **That's it! We can now start** our coding journey!
+
+Once installed, open **Anaconda Navigator**, find **Jupyter Notebook**, and click **Launch** — you’re ready to code!
 " %}
 ---
 
 {% capture text %}
-*This workshop is brought to you by the Senior Statistician from the Center for Research and Development. The center is committed to providing quality technical education and fostering innovation in data science and programming.*{% endcapture %}
+*This workshop is brought to you by the Senior Statistician, Center for Research and Development, DMSFI — committed to empowering medical professionals with the tools of data science, evidence-based research, and digital innovation.*{% endcapture %}
 {% include alert.html text=text color=secondary %}
