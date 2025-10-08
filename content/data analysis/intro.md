@@ -5,7 +5,7 @@ title: Data Analysis with Python
 topics: introduction, data analysis, statistics, modules
 ---
 
-Welcome to the exciting world of data analysis!
+## Welcome to the exciting world of data analysis!
 
 This section will help you move beyond basic Python programming and show you how to turn **health and clinical data** into meaningful insights that can inform **patient care, research, and medical education**.
 
