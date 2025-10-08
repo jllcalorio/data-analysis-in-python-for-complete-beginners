@@ -152,7 +152,7 @@ What are its advantages of a ```lambda``` function.
 
 - **Inline definition:** You can define a function in a single line without naming it
 - **Saves space:** Ideal for short, throwaway functions used once or in a small scope
-- Great for Testing and Prototyping
+- Great for **Testing and Prototyping**
 
 What are the disadvantages?
 
