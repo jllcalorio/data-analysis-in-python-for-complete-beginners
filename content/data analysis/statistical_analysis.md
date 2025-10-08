@@ -233,7 +233,7 @@ X = df[['Age', 'BMI']].values
 y = df['Hypertensive'].values
 ```
 
-**Split data to training and testing data sets. **
+**Split data to training and testing data sets.**
 
 This is a common practice in building a regression model.
 
