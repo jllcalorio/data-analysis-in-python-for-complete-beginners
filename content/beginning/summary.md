@@ -21,12 +21,12 @@ topics: summary, next steps
 {% include question.html header="Skills You Can Now Apply" text="
 With these fundamentals, you can now:
 
-- Store and manipulate clinical or research data
-- Organize patient information using lists and dictionaries
-- Automate decision rules and workflows with if-statements and loops
-- Write reusable functions to calculate medical indices or summarize datasets
-- Format output for reports, dashboards, or data summaries
-- Debug and improve your scripts — a key step toward reliable data analysis
+- Store and manipulate **clinical or research data**
+- **Organize patient information** using lists and dictionaries
+- **Automate decision rules and workflows** with if-statements and loops
+- Write **reusable functions** to calculate medical indices or summarize datasets
+- Format output for **reports, dashboards, or data summaries**
+- Debug and improve your scripts — a key step toward **reliable data analysis**
 " %}
 
 {% include question.html header="What's Next?" text="
@@ -34,9 +34,9 @@ With these fundamentals, you can now:
 You’re now ready to advance to **Intermediate Python for Medical Data Analysis**, where you’ll:
 
 - Build more complex functions and automate routine reports
-- Use modules and libraries such as ```pandas```, ```matplotlib```, and ```numpy``` for data handling and visualization
+- Use **modules and libraries** such as ```pandas```, ```matplotlib```, and ```numpy``` for data handling and visualization
 - Handle data errors gracefully
-- Develop scalable programs for hospital or research settings
+- Develop **scalable programs** for hospital or research settings
 
 The foundation you’ve built here will support your journey into **data analysis, clinical research, and AI-driven health solutions**.
 
