@@ -5,25 +5,33 @@ title: Data Querying and Selection
 topics: query, select, filter
 ---
 
-Learning to extract specific data is crucial for analysis.
+When analyzing clinical or research data, we often need to **filter patients**, **extract specific variables**, or **identify subgroups** (e.g., diabetic patients with high glucose).
+
+This section teaches you how to efficiently query and select relevant medical data using pandas.
 
 {% include question.html header="Selecting Columns" text="
 
-Single column selection
+**Single column selection**
+
+💡 *Use case:* Selecting only the **patient names** for anonymization or reporting.
 
 ```python
 names = df['name']
 print(f\"Names (Series): {type(names)}\")
 ```
 
-Multiple column selection
+**Multiple column selection**
+
+💡 *Use case:* Extracting basic demographic and diagnosis data for a summary table.
 
 ```python
-basic_info = df[['name', 'age', 'department']]
+basic_info = df[['Name', 'Age', 'Diagnosis']]
 print(f\"Basic info (DataFrame): {type(basic_info)}\")
 ```
 
-Column selection with conditions
+**Column selection with conditions**
+
+💡 *Use case:* Identifying all numeric variables (e.g., blood pressure, glucose) for statistical analysis.
 
 ```python
 numeric_columns = df.select_dtypes(include=[np.number])
@@ -33,57 +41,80 @@ print(f\"Numeric columns: {list(numeric_columns.columns)}\")
 
 {% include question.html header="Selecting Rows" text="
 
-Row selection by index
+**Row selection by index**
+
+💡 *Use case:* Quickly view the first few patient records.
 
 ```python
-first_employee = df.iloc[0]  # First row
-first_five = df.iloc[0:5]    # First 5 rows
+first_patient = df.iloc[0]          # First row
+first_five_patients = df.iloc[0:5]  # First 5 rows
 ```
 
-Row selection by condition
+**Row selection by condition**
+
+💡 *Use case:* Filtering patients with **hyperglycemia** or a specific medical condition.
 
 ```python
-high_earners = df[df['salary'] > 80000]
-it_employees = df[df['department'] == 'IT']
+high_glucose = df[df['Glucose'] > 150]
+hypertensive_patients = df[df['Diagnosis'] == 'Hypertension']
 
-print(f\"High earners: {len(high_earners)} employees\")
-print(f\"IT employees: {len(it_employees)} employees\")
+print(f\"High glucose patients: {len(high_glucose)}\")
+print(f\"Hypertensive patients: {len(hypertensive_patients)}\")
 ```
 
-Multiple conditions
+**Multiple conditions**
+
+💡 *Use case:* Identify **high-risk patient groups** for focused analysis.
 
 ```python
-senior_it = df[(df['age'] > 40) & (df['department'] == 'IT')]
-young_high_earners = df[(df['age'] < 30) & (df['salary'] > 70000)]
+elderly_diabetics = df[(df['Age'] > 60) & (df['Diagnosis'] == 'Diabetes')]
+young_healthy = df[(df['Age'] < 30) & (df['Diagnosis'] == 'Healthy')]
 
-print(f\"Senior IT employees: {len(senior_it)}\")
-print(f\"Young high earners: {len(young_high_earners)}\")
+print(f\"Elderly diabetics: {len(elderly_diabetics)}\")
+print(f\"Young healthy individuals: {len(young_healthy)}\")
 ```
 " %}
 
 {% include question.html header="Advanced Querying" text="
 
-Using ```query``` method (more readable for complex conditions)
+**Using ```query``` method (more readable for complex conditions)**
+
+💡 *Use case:* Query diabetic patients with hypertension or recent hospital admissions.
 
 ```python
-experienced_workers = df.query('age > 35 and salary > 60000')
-recent_hires = df.query('hire_date > \"2022-01-01\"')
+high_bp_diabetics = df.query('Diagnosis == \"Diabetes\" and Blood_Pressure > 140')
+recent_admissions = df.query('Admission_Date > \"2024-01-01\"')
 
-print(f\"Experienced workers: {len(experienced_workers)}\")
-print(f\"Recent hires: {len(recent_hires)}\")
+print(f\"High BP diabetics: {len(high_bp_diabetics)}\")
+print(f\"Recent admissions: {len(recent_admissions)}\")
 ```
 
-Using ```isin``` for multiple values
+**Using ```isin``` for multiple values**
+
+💡 *Use case:* Selecting patients with comorbidities.
 
 ```python
-target_departments = df[df['department'].isin(['IT', 'Finance'])]
-print(f\"IT and Finance employees: {len(target_departments)}\")
+target_conditions = df[df['Diagnosis'].isin(['Diabetes', 'Hypertension'])]
+print(f\"Patients with Diabetes or Hypertension: {len(target_conditions)}\")
 ```
 
-String operations
+*String operations*
+
+💡 *Use case:* Useful for **data cleaning or searching names**.
 
 ```python
-employees_with_a = df[df['name'].str.contains('a', case=False)]
-print(f\"Employees with 'a' in name: {len(employees_with_a)}\")
+patients_with_a = df[df['Name'].str.contains('a', case=False)]
+print(f\"Patients with 'a' in name: {len(patients_with_a)}\")
 ```
 " %}
+
+{% capture text %}
+**Key Takeaways**
+
+- You can **select and filter** medical data easily using pandas.
+- Use **row and column selection** to extract specific patient subsets.
+- **Conditional filtering** allows targeted analysis (e.g., high-risk patients, comorbidities).
+- The ```query()``` method makes complex filters more readable and natural.
+- These skills are essential for **clinical research**, **public health analytics**, and **hospital record management**.
+{% endcapture %}
+{% include alert.html text=text color=secondary %}
