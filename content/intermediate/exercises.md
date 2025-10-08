@@ -5,7 +5,7 @@ title: Simple Exercises with Solutions
 topics: exercises
 ---
 
-## Exercise 1: BMI Calculator Module
+{% include question.html header="Exercise 1: BMI Calculator Module" text="
 
 **Goal:**
 
@@ -19,6 +19,8 @@ Write a simple module (```bmi_calculator.py```) that computes **Body Mass Index 
 2. Create another function ```interpret_bmi(bmi)``` that:
   - Returns ```"Underweight"```, ```"Normal weight"```, ```"Overweight"```, or ```"Obese"``` depending on the BMI
 3. In the main program (```main.py```), ask the user for their weight and height, then print their BMI and category.
+
+" solution="
 
 ```python
 # bmi_calculator.py
@@ -54,8 +56,9 @@ category = bmi.interpret_bmi(bmi_value)
 
 print(f\"Your BMI is {bmi_value:.1f} ({category})\")
 ```
+" %}
 
-## Exercise 2: Medication Dosage Calculator
+{% include question.html header="Exercise 2: Medication Dosage Calculator" text="
 
 **Goal:**
 
@@ -68,6 +71,8 @@ Create a function that calculates a child’s **drug dosage** based on weight (e
   - Function ```calculate_dosage(weight, dose_mg_per_kg)```
   - Function ```recommend_range(weight)``` that prints the safe dosage range (10–15 mg/kg)
 3. Test with a few sample inputs.
+
+" solution="
 
 ```python
 # dosage_calculator.py
@@ -99,8 +104,9 @@ total_mg = dose.calculate_dosage(weight, chosen_dose)
 
 print(f\"Total dose: {total_mg:.0f} mg\")
 ```
+" %}
 
-## Exercise 3: Heart Rate Evaluator
+{% include question.html header="Exercise 3: Heart Rate Evaluator" text="
 
 **Goal:**
 
@@ -115,6 +121,8 @@ Create a function that classifies a **resting heart rate** reading based on simp
   - 60–100 → \"Normal\"
   - Above 100 → \"Tachycardia\"
 3. Test the function using different values.
+
+" solution="
 
 ```python
 # heart_rate.py
@@ -141,6 +149,7 @@ classification = hr.classify_heart_rate(rate)
 
 print(f\"Heart Rate: {rate} bpm → {classification}\")
 ```
+" %}
 
 {% capture text %}
 **Concepts Practiced**
