@@ -79,20 +79,14 @@ if __name__ == \"__main__\":
 " %}
 
 {% include question.html header="Using Your Module" text="
-```python
-# main.py
-import calculator
-```
 
-Use functions from the module
-
-Now create another file, **main.py**, where we import and use our module.
+Now create another file, main.py, where we import and use our module.
 
 ```python
 import medical_calculator
 ```
 
-Use functions from the module:
+**Use functions from the module:**
 
 ```python
 bmi_value = medical_calculator.bmi(65, 1.68)
