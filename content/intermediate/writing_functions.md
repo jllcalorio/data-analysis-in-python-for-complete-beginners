@@ -32,7 +32,7 @@ print(message)                     # Output: Hello, Dr. Reyes! Welcome to your a
 Let’s define a function that creates a **basic patient profile** — similar to what you’d store in an electronic medical record (EMR).
 
 ```python
-def create_profile(name, age, city="Davao", diagnosis="Not yet diagnosed"):
+def create_profile(name, age, city=\"Davao\", diagnosis=\"Not yet diagnosed\"):
     \"\"\"Create a patient profile with default values.\"\"\"
     profile = {
         \"name\": name,
