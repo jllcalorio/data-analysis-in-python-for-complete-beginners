@@ -224,3 +224,11 @@ for data in test_data:
     except Exception as e:
         print(f\"Failed: {e}\n\")
 ```
+
+{% capture text %}
+Error handling is not just about preventing crashes — it’s about **ensuring reliability and trust** in your programs.
+In healthcare applications, properly handled errors can prevent incorrect medication doses, invalid data entries, or loss of patient information.
+
+Robust exception handling ensures that your systems **fail gracefully**, log meaningful messages, and protect both users and data integrity.
+{% endcapture %}
+{% include alert.html text=text color=secondary %}
