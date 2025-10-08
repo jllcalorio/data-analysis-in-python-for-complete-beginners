@@ -5,31 +5,33 @@ title: Data Filtering and Transformation
 topics: filtering, transformation
 ---
 
-Transform your data to extract insights and prepare for analysis.
+**Transforming data** helps uncover patterns in **patient records**, **clinical measurements**, and **laboratory results**.
+
+In medical data analysis, we often group data (e.g., by hospital department or diagnosis), compute summary statistics (e.g., average glucose by group), and create derived variables such as BMI or risk categories.
 
 {% include question.html header="Grouping and Aggregation" text="
 
-Basic ```groupby``` operations
+**Basic ```groupby``` operations**
 
 ```python
-dept_stats = df.groupby('department').agg({
-    'salary': ['mean', 'median', 'std', 'count'],
-    'age': ['mean', 'min', 'max']
+dept_stats = df.groupby('Department').agg({
+    'Blood_Pressure': ['mean', 'median', 'std', 'count'],
+    'Age': ['mean', 'min', 'max']
 }).round(2)
 
 print(\"Department statistics:\")
 print(dept_stats)
 ```
 
-Custom aggregation functions
+**Custom aggregation functions**
 
 ```python
-def salary_range(series):
+def bp_range(series):
     return series.max() - series.min()
 
-custom_stats = df.groupby('department').agg({
-    'salary': [salary_range, 'mean'],
-    'age': ['count']
+custom_stats = df.groupby('Diagnosis').agg({
+    'Blood_Pressure': [bp_range, 'mean'],
+    'Age': ['count']
 })
 
 print(\"\nCustom aggregation:\")
@@ -39,50 +41,62 @@ print(custom_stats)
 
 {% include question.html header="Data Transformation" text="
 
-Creating new columns
+**Creating new columns**
 
 ```python
-df['salary_category'] = pd.cut(df['salary'],
-                              bins=[0, 50000, 75000, 100000, float('inf')],
-                              labels=['Low', 'Medium', 'High', 'Very High'])
+# Categorize fasting glucose levels
+df['Glucose_Category'] = pd.cut(df['Glucose'],
+                               bins=[0, 100, 125, 200, float('inf')],
+                               labels=['Normal', 'Prediabetes', 'Diabetes', 'Critical'])
 
-df['years_employed'] = (pd.Timestamp.now() - df['hire_date']).dt.days / 365.25
-df['years_employed'] = df['years_employed'].round(1)
+# Calculate BMI if height and weight are given
+df['BMI'] = (df['Weight_kg'] / (df['Height_m'] ** 2)).round(1)
 
-df['age_group'] = pd.cut(df['age'],
-                        bins=[0, 30, 45, 60, 100],
-                        labels=['Young', 'Mid-career', 'Senior', 'Veteran'])
+# Age group classification
+df['Age_Group'] = pd.cut(df['Age'],
+                         bins=[0, 18, 40, 60, 100],
+                         labels=['Child', 'Young Adult', 'Middle-aged', 'Elderly'])
 
 print(\"New columns created:\")
-print(df[['name', 'salary', 'salary_category', 'years_employed', 'age_group']].head())
+print(df[['Name', 'Glucose', 'Glucose_Category', 'BMI', 'Age_Group']].head())
 ```
 " %}
 
 {% include question.html header="Sorting and Ranking" text="
 
-Sorting data
+**Sorting data**
 
 ```python
-salary_sorted = df.sort_values('salary', ascending=False)
-print(\"Top 5 earners:\")
-print(salary_sorted[['name', 'salary', 'department']].head())
+glucose_sorted = df.sort_values('Glucose', ascending=False)
+print(\"Top 5 patients with highest glucose:\")
+print(glucose_sorted[['Name', 'Glucose', 'Diagnosis']].head())
 ```
 
-Multiple column sorting
+**Multiple column sorting**
 
 ```python
-multi_sorted = df.sort_values(['department', 'salary'], ascending=[True, False])
-print(\"\nSorted by department, then salary (desc):\")
-print(multi_sorted[['name', 'department', 'salary']].head(10))
+multi_sorted = df.sort_values(['Diagnosis', 'Glucose'], ascending=[True, False])
+print(\"\nSorted by diagnosis, then glucose (desc):\")
+print(multi_sorted[['Name', 'Diagnosis', 'Glucose']].head(10))
 ```
 
-Ranking
+**Ranking**
 
 ```python
-df['salary_rank'] = df['salary'].rank(ascending=False)
-df['dept_salary_rank'] = df.groupby('department')['salary'].rank(ascending=False)
+df['Glucose_Rank'] = df['Glucose'].rank(ascending=False)
+df['Dept_BP_Rank'] = df.groupby('Department')['Blood_Pressure'].rank(ascending=False)
 
-print(\"\nSalary rankings:\")
-print(df[['name', 'department', 'salary', 'salary_rank', 'dept_salary_rank']].head())
+print(\"\nRankings:\")
+print(df[['Name', 'Department', 'Blood_Pressure', 'Dept_BP_Rank']].head())
 ```
 " %}
+
+{% capture text %}
+**Key Takeaways**
+
+- **Grouping and aggregation** summarize patient data efficiently (e.g., average BP or glucose by diagnosis).
+- **Custom aggregation** lets you compute medical-specific metrics like BP range or mean BMI.
+- **Data transformation** helps create derived health indicators (e.g., BMI, glucose category, age group).
+- **Sorting and ranking** assist in prioritizing patients or identifying extreme cases.
+{% endcapture %}
+{% include alert.html text=text color=secondary %}
