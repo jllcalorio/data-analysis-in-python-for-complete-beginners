@@ -133,7 +133,7 @@ print(f\"F-statistic: {f_stat:.4f}, P-value: {p_value:.4f}\")
 
 💡 *Clinical meaning:* Tests if BMI differs across departments — perhaps due to varying patient populations or conditions.
 
-Post-hoc analysis is required to be implemented if ANOVA is significant, i.e., the p-value < 0.05. This threshold is the usual threshold for significant p-values. You can be very strict and go down to 0.01, or maybe less strict by going up to 0.10. However, the latter is not very recommended because studies with these thresholds
+**Post-hoc analysis** is required to be implemented if ANOVA is significant, i.e., the p-value < 0.05. This threshold is the usual threshold for significant p-values. You can be very strict and go down to 0.01, or maybe less strict by going up to 0.10. However, the latter is not very recommended because studies with these thresholds
 
 - have results that are considered to have **weak evidence** and increases the risk of **Type I errors**—falsely rejecting a true null hypothesis
 - are less likely to replicate in future studies
@@ -201,7 +201,7 @@ print(corr_matrix.round(3))
 
 {% include question.html header="Simple Linear Regression" text="
 
-Predict Glucose from BMI.
+**Predict Glucose from BMI.**
 
 ```python
 slope, intercept, r, p, std_err = stats.linregress(df['BMI'], df['Glucose'])
