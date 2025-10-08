@@ -22,7 +22,7 @@ Write a simple module (```bmi_calculator.py```) that computes **Body Mass Index 
 
 " solution="
 
-bmi_calculator.py
+```**bmi_calculator.py**```
 
 ```python
 \"\"\"Simple BMI Calculator Module\"\"\"
@@ -43,7 +43,7 @@ def interpret_bmi(bmi):
         return \"Obese\"
 ```
 
-main.py
+```**main.py**```
 
 ```python
 import bmi_calculator as bmi
