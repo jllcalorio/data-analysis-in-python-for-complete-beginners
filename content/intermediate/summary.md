@@ -7,135 +7,83 @@ topics: summary, next steps
 
 **Congratulations!** You've completed the Intermediate Python section and significantly expanded your programming capabilities. Let's review what you've accomplished:
 
-## Key Skills Mastered:
+## What You’ve Mastered
 
-{% include question.html header="Advanced Function Writing" text="
+{% include question.html header="Advanced Functions" text="
 
-- **Complex parameter handling:** Default parameters, ```*args```, ```**kwargs```
-- **Lambda functions:** For concise, one-line operations
-- **Higher-order functions:** Functions that work with other functions
-- **Type hints and documentation:** Writing professional, maintainable code
-- **Function design principles:** Creating reusable, well-structured functions
+- Handled parameters like ```*args```, ```**kwargs```, and default values
+- Used **lambda** and **higher-order functions**
+- Added **type hints** and **docstrings** for clarity
+- Designed **clean, reusable, well-structured** functions
 " %}
 
-{% include question.html header="Module Management" text="
+{% include question.html header="Modules and Packages" text="
 
-- **Import strategies:** Different ways to import functions and modules
-- **Built-in modules:** Leveraging Python's standard library (math, random, datetime, os)
-- **Custom modules:** Creating your own reusable code libraries
-- **Package organization:** Structuring larger projects with packages and init.py files
-- **Module best practices:** Writing importable, testable code
+- Imported and organized code effectively
+- Used **built-in modules** (e.g., ```math```, ```datetime```, ```os```)
+- Created **custom modules** for reuse
+- Structured projects with **packages** and ```__init__.py```
+- Followed best practices for **importable and testable** code
 " %}
 
-{% include question.html header="Error Handling Mastery" text="
+{% include question.html header="Error Handling" text="
 
-- **Exception types:** Understanding different kinds of errors
-- **Try-except blocks:** Graceful error handling
-- **Custom exceptions:** Creating application-specific error types
-- **Debugging techniques:** Strategies for finding and fixing problems
-- **Robust programming:** Writing code that handles unexpected situations
+- Understood **common exception types**
+- Used ```try-except``` and ```finally``` for controlled error management
+- Defined **custom exceptions** for specific use cases
+- Practiced **debugging and robust programming** techniques
 " %}
 
-## Real-World Applications
+## Real-World Applications You Built
 
 {% include question.html header="Through the exercises, you've built:" text="
 
-- **Advanced Calculator:** With comprehensive error handling
-- **Student Grade Manager:** File I/O with JSON data persistence
-- **Data Processing Pipeline:** Data validation and transformation
-- **Configuration Manager:** Professional application configuration system
+- **Advanced BMI Calculator** – a simple module (```bmi_calculator.py```) that computes **Body Mass Index (BMI)**
+- **Medication Dosage Calculator** – a function that calculates a child’s **drug dosage** based on weight
+- **Heart Rate Evaluator** – a function that classifies a **resting heart rate**
 " %}
 
-## Programming Principles You Now Understand:
+## Key Programming Principles You Now Understand:
 
 {% include question.html header="Code Organization" text="
 
-- Breaking complex problems into manageable functions
-- Organizing related functions into modules
-- Creating reusable code that can be imported across projects
+- Break big problems into smaller, logical **functions**
+- Group related logic into **modules**
+- Use the if ```__name__ == "__main__"```: guard properly
 " %}
 
 {% include question.html header="Error Prevention and Handling" text="
 
-- Anticipating potential problems in your code
-- Providing meaningful error messages to users
-- Recovering gracefully from unexpected situations
+- Anticipate and validate inputs
+- Provide **clear, actionable error messages**
+- Catch specific errors instead of using ```generic except```
 " %}
 
-{% include question.html header="Professional Development Practices" text="
+{% include question.html header="Professional Practices" text="
 
-- Writing documentation and type hints
-- Creating comprehensive test cases
-- Following Python naming conventions and style guidelines
+- Add **type hints** and **docstrings**
+- Follow **PEP 8 naming conventions**
+- Write simple **nit tests** for critical functions
 " %}
 
-## What You Can Now Build:
+## What You Can Build Now
 
 {% include question.html header="Intermediate Applications" text="
 
-- Multi-file Python applications with proper organization
-- Programs that read/write data files with error handling
-- Utilities that other programmers can import and use
-- Applications with robust error handling and user feedback
+- Multi-file **Python applications** with good structure
+- Programs that handle files and user input safely
+- **Utilities and modules** that others can import and use
+- Apps with **graceful error handling** and informative output
 " %}
 
-## Foundation for Advanced Topics
+{% include question.html header="Next Steps" text="
 
-{% include question.html header="You're now prepared for:" text="
+You’re ready for Advanced Python topics, such as:
 
-- Object-oriented programming concepts
-- Database integration
+- Object-Oriented Programming (OOP)
+- Databases and APIs
 - Web development frameworks
-- Data science libraries (pandas, numpy, matplotlib)
-- API development and consumption
-" %}
-
-## Best Practices You've Learned:
-
-{% include question.html header="Function Design" text="
-
-- Single responsibility principle (each function does one thing well)
-- Clear parameter names and documentation
-- Appropriate error handling and validation
-- Consistent return types and behavior
-" %}
-
-{% include question.html header="Module Organization" text="
-
-- Logical grouping of related functionality
-- Clear import paths and dependencies
-- Proper use of name == \"main\" guards
-- Comprehensive module documentation
-" %}
-
-{% include question.html header="Error Management" text="
-
-- Specific exception handling rather than catching all errors
-- Meaningful error messages for debugging and user experience
-- Proper resource cleanup with finally blocks
-- Custom exceptions for application-specific problems
-" %}
-
-## Your Development Journey:
-
-{% include question.html header="From Beginner to Intermediate" text="
-
-You've transitioned from writing simple scripts to creating structured, maintainable applications. You can now:
-
-- Plan and organize complex programs
-- Handle unexpected situations gracefully
-- Create code that other developers can use and understand
-- Debug problems systematically
-" %}
-
-{% include question.html header="Ready for Advanced Concepts" text="
-
-With these intermediate skills mastered, you're prepared to tackle:
-
-- Advanced Python libraries and frameworks
-- Complex data analysis projects
-- Professional software development practices
-- Collaborative programming projects
+- Data Science libraries (```pandas```, ```numpy```, ```matplotlib```, ```scipy```)
 " %}
 
 ## Next Steps:
@@ -143,6 +91,13 @@ With these intermediate skills mastered, you're prepared to tackle:
 The foundation you've built here will serve you well as we move into Data Analysis with Python, where you'll apply these skills to real-world data problems using powerful libraries like pandas, matplotlib, and scipy.
 
 {% capture text %}
-**Remember:** The key to mastering these concepts is practice. Try modifying the examples, create your own modules, and don't be afraid to experiment. Every error is a learning opportunity, and every function you write makes you a better programmer!
+**Remember:**
+
+The best way to master Python is through consistent practice.
+
+Type out the examples.
+Experiment with your own variations.
+Break your code. Fix it. Learn from it.
+Every function you write strengthens your foundation.
 {% endcapture %}
-{% include card.html text=text header="Setup Overview" %}
+{% include alert.html text=text color=secondary %}
