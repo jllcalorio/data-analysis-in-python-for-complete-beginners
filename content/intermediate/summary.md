@@ -96,8 +96,12 @@ The foundation you've built here will serve you well as we move into Data Analys
 The best way to master Python is through consistent practice.
 
 Type out the examples.
+
 Experiment with your own variations.
+
 Break your code. Fix it. Learn from it.
+
 Every function you write strengthens your foundation.
+
 {% endcapture %}
 {% include alert.html text=text color=secondary %}
