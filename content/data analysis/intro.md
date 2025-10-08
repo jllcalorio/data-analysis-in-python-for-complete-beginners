@@ -36,3 +36,110 @@ import seaborn as sns            # Statistical data visualization
 from scipy import stats          # Statistical functions
 ```
 " %}
+
+{% include question.html header="1. pandas — For Data Manipulation" text="
+**What it does:** Handles tabular data (like Excel sheets or patient records).
+
+You can filter, summarize, and transform data easily.
+
+```python
+import pandas as pd
+
+# Example patient dataset
+data = {'Name': ['Ana', 'Luis', 'Maria'],
+        'Age': [34, 45, 29],
+        'Blood_Pressure': [120, 135, 110]}
+df = pd.DataFrame(data)
+
+# View average blood pressure
+print(\"Average BP:\", df['Blood_Pressure'].mean())
+```
+
+💡*Use case:* Compute the average blood pressure of patients in a study.
+" %}
+
+{% include question.html header="2. numpy — For Numerical Calculations" text="
+**What it does:** Performs fast mathematical operations on arrays and matrices.
+
+```python
+import numpy as np
+
+# Systolic blood pressure readings
+bp = np.array([120, 130, 110, 125, 140])
+
+# Compute mean and standard deviation
+print(\"Mean BP:\", np.mean(bp))
+print(\"SD BP:\", np.std(bp))
+```
+
+💡*Use case:* Analyze variability in blood pressure readings from a clinical trial.
+" %}
+
+{% include question.html header="3. matplotlib — For Basic Visualization" text="
+**What it does:** Creates simple plots and charts.
+
+```python
+import matplotlib.pyplot as plt
+
+ages = [23, 45, 34, 50, 29]
+plt.hist(ages, bins=5)
+plt.title(\"Age Distribution of Study Participants\")
+plt.xlabel(\"Age\")
+plt.ylabel(\"Count\")
+plt.show()
+```
+
+💡 *Use case:* Visualize the age distribution of your study participants.
+" %}
+
+{% include question.html header="4. seaborn — For Statistical Data Visualization" text="
+**What it does:** Makes elegant and easy statistical plots.
+
+```python
+import seaborn as sns
+import pandas as pd
+
+df = pd.DataFrame({
+    'Gender': ['Male', 'Female', 'Female', 'Male'],
+    'Cholesterol': [190, 170, 210, 200]
+})
+
+sns.boxplot(x='Gender', y='Cholesterol', data=df)
+plt.title(\"Cholesterol Levels by Gender\")
+plt.show()
+```
+
+💡 *Use case:* Compare cholesterol levels across genders or groups.
+" %}
+
+{% include question.html header="5. scipy — For Statistical Analysis" text="
+**What it does:** Performs statistical tests, correlations, and probability functions.
+
+```python
+from scipy import stats
+
+# Two groups of fasting blood sugar values
+group_A = [95, 100, 110, 120, 130]
+group_B = [90, 92, 88, 85, 93]
+
+t_stat, p_value = stats.ttest_ind(group_A, group_B)
+print(\"t-statistic:\", t_stat)
+print(\"p-value:\", p_value)
+```
+
+💡 *Use case:* Compare two treatment groups’ fasting blood sugar levels.
+" %}
+
+{% capture text %}
+**In short**
+
+Python offers powerful tools for **handling, visualizing, and analyzing data**.
+
+- **pandas** is your best friend for managing patient records or clinical datasets.
+- **numpy** enables fast, vectorized calculations on medical measurements.
+- **matplotlib** and **seaborn** help you visualize trends clearly for research or presentations.
+- **scipy** provides statistical tools to support evidence-based conclusions.
+
+Together, these libraries form the foundation of data analytics in Python.
+{% endcapture %}
+{% include alert.html text=text color=secondary %}
