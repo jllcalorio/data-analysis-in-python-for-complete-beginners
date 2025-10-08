@@ -74,9 +74,9 @@ Create a function that calculates a child’s **drug dosage** based on weight (e
 
 " solution="
 
-```python
-# dosage_calculator.py
+**dosage_calculator.py**
 
+```python
 \"\"\"Simple medication dosage calculator\"\"\"
 
 def calculate_dosage(weight, dose_mg_per_kg):
@@ -90,9 +90,9 @@ def recommend_range(weight):
     print(f\"Safe range: {min_dose:.0f} mg - {max_dose:.0f} mg per dose\")
 ```
 
-```python
-# main.py
+**main.py**
 
+```python
 import dosage_calculator as dose
 
 weight = float(input(\"Enter child's weight (kg): \"))
@@ -124,9 +124,9 @@ Create a function that classifies a **resting heart rate** reading based on simp
 
 " solution="
 
-```python
-# heart_rate.py
+**heart_rate.py**
 
+```python
 \"\"\"Heart rate classification module\"\"\"
 
 def classify_heart_rate(rate):
@@ -139,9 +139,9 @@ def classify_heart_rate(rate):
         return \"Tachycardia (High heart rate)\"
 ```
 
-```python
-# main.py
+**main.py**
 
+```python
 import heart_rate as hr
 
 rate = int(input(\"Enter resting heart rate (bpm): \"))
