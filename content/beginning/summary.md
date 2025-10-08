@@ -5,41 +5,44 @@ title: Summary
 topics: summary, next steps
 ---
 
-**Congratulations!** You've learned the fundamental building blocks of Python programming:
+**Congratulations!** You’ve now mastered the **fundamental building blocks of Python programming** — an essential skill for today’s data-driven healthcare environment.
 
 {% include question.html header="Key Concepts Mastered" text="
 
-- **Variables:** Storing and managing data
-- **Data Types:** Working with strings, integers, floats, and Booleans
-- **Operators:** Performing calculations and comparisons
-- **Lists:** Organizing multiple items in order
-- **Dictionaries:** Storing key-value pairs for structured data
-- **String Formatting:** Creating professional, readable output
-- **Control Structures:** Making decisions and repeating actions with if statements, loops, and functions
+- **Variables** — storing and managing data such as patient age, height, or blood test results
+- **Data Types** — working with strings (names), integers (counts), floats (measurements), and Booleans (True/False health flags)
+- **Operators** — performing calculations and comparisons for medical indicators (e.g., BMI, dosage checks)
+- **Lists** — organizing collections like medication names or lab values
+- **Dictionaries** — storing structured data such as patient profiles or electronic medical records
+- **String Formatting** — presenting readable reports or summaries for clinicians
+- **Control Structures** — making automated decisions (e.g., flagging abnormal lab results) and repeating routine tasks using loops and functions
 " %}
 
 {% include question.html header="Skills You Can Now Apply" text="
+With these fundamentals, you can now:
 
-- Store and manipulate different types of data
-- Organize information using lists and dictionaries
-- Control program flow with conditional statements and loops
-- Create reusable code with functions
-- Format output professionally
-- Debug basic programming errors
+- Store and manipulate clinical or research data
+- Organize patient information using lists and dictionaries
+- Automate decision rules and workflows with if-statements and loops
+- Write reusable functions to calculate medical indices or summarize datasets
+- Format output for reports, dashboards, or data summaries
+- Debug and improve your scripts — a key step toward reliable data analysis
 " %}
 
 {% include question.html header="What's Next?" text="
 
-You're now ready to move on to Intermediate Python, where you'll learn to:
+You’re now ready to advance to **Intermediate Python for Medical Data Analysis**, where you’ll:
 
-- Write more complex functions
-- Work with modules and external libraries
-- Handle errors gracefully
-- Build larger, more organized programs
+- Build more complex functions and automate routine reports
+- Use modules and libraries such as ```pandas```, ```matplotlib```, and ```numpy``` for data handling and visualization
+- Handle data errors gracefully
+- Develop scalable programs for hospital or research settings
+
+The foundation you’ve built here will support your journey into **data analysis, clinical research, and AI-driven health solutions**.
+
+Keep practicing — coding is a skill best learned through experimentation and application!
 " %}
 
-The foundation you've built here will serve you well as we explore more advanced Python concepts. Keep practicing these fundamentals - they're the building blocks for everything else you'll learn in Python!
-
-{% capture text %}Programming is learned by doing. Don't just read the code examples - type them out, modify them, and experiment with your own variations!
+{% capture text %}Python is more than just a programming language — it’s a **tool for discovery and efficiency in healthcare**. By mastering these basics, you’ve taken your first step toward **using data to improve patient outcomes and decision-making**.
 {% endcapture %}
 {% include card.html text=text header="Remember" %}
