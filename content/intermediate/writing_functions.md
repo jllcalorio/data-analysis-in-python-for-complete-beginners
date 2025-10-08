@@ -115,6 +115,7 @@ patient = create_patient_record(
 )
 print(patient)
 ```
+" %}
 
 {% include question.html header="Lambda Functions (Anonymous Functions)" text="
 
