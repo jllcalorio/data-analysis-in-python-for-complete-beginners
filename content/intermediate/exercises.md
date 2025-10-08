@@ -17,7 +17,7 @@ Write a simple module (```bmi_calculator.py```) that computes **Body Mass Index 
   - Takes ```weight``` (in kilograms) and ```height``` (in meters)
   - Returns the BMI value
 2. Create another function ```interpret_bmi(bmi)``` that:
-  - Returns ```"Underweight"```, ```"Normal weight"```, ```"Overweight"```, or ```"Obese"``` depending on the BMI
+  - Returns ```\"Underweight\"```, ```\"Normal weight\"```, ```\"Overweight\"```, or ```\"Obese\"``` depending on the BMI
 3. In the main program (```main.py```), ask the user for their weight and height, then print their BMI and category.
 
 " solution="
