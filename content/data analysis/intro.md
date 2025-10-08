@@ -22,11 +22,11 @@ By the end of this section, you’ll be able to:
 - **Visualize patterns** such as blood pressure trends or lab result distributions
 - **Perform basic statistical analyses** to support clinical and research conclusions
 
-{% include question.html header="Introduction to Data Analysis Libraries" text="
+## Introduction to Data Analysis Libraries
+
+{% include question.html header="Essential libraries" text="
 
 Before diving into analysis, let’s explore the core Python libraries that make data analysis possible — and how they apply to the medical field.
-
-Below are the essential libraries that we want.
 
 ```python
 import pandas as pd              # Data manipulation and analysis
