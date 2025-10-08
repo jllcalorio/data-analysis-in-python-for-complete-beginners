@@ -5,15 +5,26 @@ title: Data Analysis with Python
 topics: introduction, data analysis, statistics, modules
 ---
 
-Welcome to the exciting world of data analysis! This section will transform you from a Python programmer into a data analyst capable of extracting meaningful insights from real-world datasets.
+Welcome to the exciting world of data analysis!
 
-You'll learn to use powerful libraries like pandas for data manipulation, matplotlib for visualization, and scipy for statistical analysis.
+This section will help you move beyond basic Python programming and show you how to turn **health and clinical data** into meaningful insights that can inform **patient care, research, and medical education**.
 
-By the end of this section, you'll be able to load datasets, clean and transform data, create compelling visualizations, and perform sophisticated statistical analyses that can inform business decisions and research conclusions.
+You’ll learn to use powerful Python libraries such as:
+
+- **pandas** — for cleaning and analyzing patient datasets
+- **matplotlib** and **seaborn** — for creating clear, evidence-based visualizations
+- **scipy** — for performing statistical tests and clinical comparisons
+
+By the end of this section, you’ll be able to:
+
+- **Load and explore datasets** from sources such as hospital records or surveys
+- **Clean and transform** messy data (e.g., missing values in lab tests)
+- **Visualize patterns** such as blood pressure trends or lab result distributions
+- **Perform basic statistical analyses** to support clinical and research conclusions
 
 {% include question.html header="Introduction to Data Analysis Libraries" text="
 
-Before we dive into analysis, let's understand the key libraries that make Python a powerhouse for data science:
+Before diving into analysis, let’s explore the core Python libraries that make data analysis possible — and how they apply to the medical field.
 
 Below are the essential libraries that we want.
 
