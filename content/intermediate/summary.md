@@ -49,7 +49,7 @@ topics: summary, next steps
 
 - Break big problems into smaller, logical **functions**
 - Group related logic into **modules**
-- Use the if ```__name__ == "__main__"```: guard properly
+- Use the if ```__name__ == \"__main__\"```: guard properly
 " %}
 
 {% include question.html header="Error Prevention and Handling" text="
