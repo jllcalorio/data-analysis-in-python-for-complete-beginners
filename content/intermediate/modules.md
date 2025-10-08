@@ -2,70 +2,79 @@
 section: Intermediate Python
 nav_order: 4
 title: Modules
-topics: Template; Basic Config
+topics: Template; Basic Configuration
 ---
 
-Understanding **modules** is key to organizing your code and leveraging Python's ecosystem effectively.
+Understanding **modules** is essential to organizing your code and taking full advantage of Python’s extensive ecosystem. In healthcare and biomedical research, modules allow you to separate reusable logic — such as calculations, data cleaning, or patient analytics — into organized files.
 
 ## What Are Modules?
 
-A module is simply a Python file containing functions, classes, and variables. Any ```.py``` file can be imported as a module.
+A module is simply a Python file containing **functions**, **classes**, and **variables**.
+
+Any ```.py``` file can be imported as a module into another Python script.
+
+Modules help you:
+
+- Reuse code across multiple projects
+- Keep your code organized and maintainable
+- Share your work with colleagues or research collaborators
+
 
 {% include question.html header="Creating Your Own Modules" text="
 
-**Example:** ```calculator.py```
+Let’s create a file named ```medical_calculator.py``` — a simple module that **performs basic medical computations**.
 
-- This is a simple calculator module.
-- This module provides basic mathematical operations.
+**Example:** ```medical_calculator.py```
 
-Let's define some functions:
+This module provides **basic biomedical calculations** that could be used in clinical or research contexts.
 
-```python
-def add(a, b):
-    \"\"\"Add two numbers.\"\"\"
-    return a + b
-
-def subtract(a, b):
-    \"\"\"Subtract second number from first.\"\"\"
-    return a - b
-
-def multiply(a, b):
-    \"\"\"Multiply two numbers.\"\"\"
-    return a * b
-
-def divide(a, b):
-    \"\"\"Divide first number by second.\"\"\"
-    if b == 0:
-        raise ValueError(\"Cannot divide by zero!\")
-    return a / b
-
-def power(base, exponent):
-    \"\"\"Raise base to the power of exponent.\"\"\"
-    return base ** exponent
-```
-
-Let's also define module-level variables
+Let's define the functions:
 
 ```python
-PI = 3.14159
-E = 2.71828
+def bmi(weight, height):
+    \"\"\"Calculate Body Mass Index.\"\"\"
+    return weight / (height ** 2)
+
+def bsa(weight, height):
+    \"\"\"Calculate Body Surface Area (Mosteller formula).\"\"\"
+    return ((height * weight) / 3600) ** 0.5
+
+def mean_arterial_pressure(systolic, diastolic):
+    \"\"\"Calculate Mean Arterial Pressure (MAP).\"\"\"
+    return (2 * diastolic + systolic) / 3
+
+def temperature_c_to_f(celsius):
+    \"\"\"Convert Celsius to Fahrenheit.\"\"\"
+    return (celsius * 9/5) + 32
+
+def temperature_f_to_c(fahrenheit):
+    \"\"\"Convert Fahrenheit to Celsius.\"\"\"
+    return (fahrenheit - 32) * 5/9
 ```
 
-Code that runs when module is imported
+**Let's also define module-level variables**
+
+You can also define **constants** that are commonly used in medical calculations.
 
 ```python
-print(f\"Calculator module loaded. PI = {PI}\")
+NORMAL_BMI_RANGE = (18.5, 24.9)
+BODY_WATER_PERCENT = 0.6
 ```
 
-Code that only runs when module is executed directly
+Code That Runs When the Module Is Imported
+
+```python
+print(\"Medical Calculator module loaded successfully.\")
+```
+
+Code That Runs When the Module Is Executed Directly
 
 ```python
 if __name__ == \"__main__\":
-    print(\"Running calculator module tests...\")
-    print(f\"5 + 3 = {add(5, 3)}\")
-    print(f\"10 - 4 = {subtract(10, 4)}\")
-    print(f\"6 * 7 = {multiply(6, 7)}\")
-    print(f\"15 / 3 = {divide(15, 3)}\")
+    print(\"Running tests for Medical Calculator module...\")
+    print(f\"BMI (70kg, 1.75m): {bmi(70, 1.75):.2f}\")
+    print(f\"BSA (70kg, 175cm): {bsa(70, 175):.2f}\")
+    print(f\"MAP (120/80 mmHg): {mean_arterial_pressure(120, 80):.2f}\")
 ```
 " %}
 
@@ -77,34 +86,53 @@ import calculator
 
 Use functions from the module
 
-```python
-result1 = calculator.add(10, 5)
-result2 = calculator.multiply(4, 7)
+Now create another file, **main.py**, where we import and use our module.
 
-print(f\"Addition result: {result1}\")
-print(f\"Multiplication result: {result2}\")
-print(f\"PI value: {calculator.PI}\")
+```python
+import medical_calculator
 ```
 
-Alternative import methods
+Use functions from the module:
 
 ```python
-from calculator import add, subtract, PI
+bmi_value = medical_calculator.bmi(65, 1.68)
+map_value = medical_calculator.mean_arterial_pressure(118, 76)
 
-result3 = add(20, 15)
-result4 = subtract(30, 12)
-
-print(result3)
-print(result4)
+print(f\"BMI: {bmi_value:.2f}\")
+print(f\"Mean Arterial Pressure: {map_value:.1f} mmHg\")
 ```
 
-Import with alias
+**Alternative import methods**
 
 ```python
-import calculator as calc
+from medical_calculator import bmi, bsa
 
-result5 = calc.power(2, 8)
+print(f\"BMI: {bmi(58, 1.60):.2f}\")
+print(f\"BSA: {bsa(58, 160):.2f}\")
+```
 
-print(result5)
+**Import With Alias**
+
+```python
+import medical_calculator as mc
+
+print(f\"Temperature: {mc.temperature_c_to_f(37):.1f}°F\")
 ```
 " %}
+
+{% include question.html header="🩺 Why This Matters?" text="
+Using modules helps healthcare professionals, researchers, and data analysts reuse and standardize computations across projects.
+
+For example:
+
+- Standardize BMI formulas for all datasets
+- Maintain consistency in how blood pressure is interpreted
+- Reduce errors when analyzing patient data
+" %}
+
+{% capture text %}
+Modules make your code **modular, reusable, and easier to maintain** — crucial for building reliable healthcare tools and analysis pipelines.
+
+Whether you’re creating a clinical calculator, automating data cleaning, or building a patient outcome model, modular programming ensures **accuracy, collaboration, and scalability**.
+{% endcapture %}
+{% include alert.html text=text color=secondary %}
