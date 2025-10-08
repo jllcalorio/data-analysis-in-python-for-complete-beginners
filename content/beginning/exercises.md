@@ -5,39 +5,41 @@ title: Practice Exercises
 topics: exercises
 ---
 
-{% include question.html header="Exercise 1: Personal Information" text="Create a program that:
+{% include question.html header="Exercise 1: Medical Staff Profile" text="Create a program that:
 
-- Stores your personal information in variables (name, age, city)
-- Calculates your birth year
+- Stores a healthcare worker’s basic information (name, age, department)
+- Calculates their year of birth
 - Creates a formatted introduction message
 " solution="
 ```python
-name = \"Your Name\"
-age = 25
-city = \"Your City\"
+name = \"Dr. Maria Santos\"
+age = 35
+department = \"Pediatrics\"
 current_year = 2025
 
 birth_year = current_year - age
-intro = f\"Hi! I'm {name}, I'm {age} years old, I live in {city}, and I was born in {birth_year}.\"
+intro = f\"Hi! I'm {name}, a {age}-year-old physician from the {department} department, born in {birth_year}.\"
+
 print(intro)
 ```
 " %}
 
-{% include question.html header="Exercise 2: Shopping List Manager" text="Create a program that:
+{% include question.html header="Exercise 2: Medication Inventory Manager" text="Create a program that:
 
-- Creates a shopping list with at least 5 items
-- Adds 2 more items to the list
-- Removes 1 item from the list
-- Prints the final list with item numbers
+- Create a program that:
+- Starts with a list of medications
+- Adds new medications to the list
+- Removes one discontinued medication
+- Prints the final list with numbering
 " solution="
 ```python
-shopping_list = [\"milk\", \"bread\", \"eggs\", \"apples\", \"chicken\"]
-shopping_list.extend([\"rice\", \"cheese\"])
-shopping_list.remove(\"bread\")
+med_inventory = [\"Paracetamol\", \"Amoxicillin\", \"Ibuprofen\", \"Metformin\", \"Amlodipine\"]
+med_inventory.extend([\"Cefalexin\", \"Losartan\"])
+med_inventory.remove(\"Ibuprofen\")
 
-print(\"Shopping List:\")
-for i, item in enumerate(shopping_list, 1):
-    print(f\"{i}. {item}\")
+print(\"Medication Inventory:\")
+for i, med in enumerate(med_inventory, 1):
+    print(f\"{i}. {med}\")
 ```
 " %}
 
@@ -74,7 +76,34 @@ print(f\"Letter Grade: {letter_grade}\")
 ```
 " %}
 
-{% include question.html header="Exercise 4: Password Validator" text="Create a function that validates a password based on these criteria:
+{% include question.html header="Exercise 4: Patient Vital Score Calculator" text="Create a program that:
+- Stores a patient’s recorded vital scores (e.g., from multiple checkups)
+- Calculates the average
+- Categorizes the patient’s overall condition
+" solution="
+```python
+patient = {
+    \"name\": \"Juan Dela Cruz\",
+    \"bp_scores\": [120, 130, 125, 128, 118]
+}
+
+average = sum(patient[\"bp_scores\"]) / len(patient[\"bp_scores\"])
+
+if average >= 140:
+    condition = \"Hypertensive\"
+elif average >= 120:
+    condition = \"Prehypertensive\"
+else:
+    condition = \"Normal\"
+
+print(f\"Patient: {patient['name']}\")
+print(f\"BP Readings: {patient['bp_scores']}\")
+print(f\"Average BP: {average:.1f}\")
+print(f\"Condition: {condition}\")
+```
+" %}
+
+{% include question.html header="Exercise 5: Health Record Access Validator" text="Create a function that validates a hospital staff’s password before they can access patient records:
 
 - At least 8 characters long
 - Contains at least one number
@@ -84,16 +113,16 @@ print(f\"Letter Grade: {letter_grade}\")
 def validate_password(password):
     if len(password) < 8:
         return False, \"Password must be at least 8 characters long\"
-    
+
     has_number = any(char.isdigit() for char in password)
     has_upper = any(char.isupper() for char in password)
-    
+
     if not has_number:
         return False, \"Password must contain at least one number\"
-    
+
     if not has_upper:
         return False, \"Password must contain at least one uppercase letter\"
-    
+
     return True, \"Password is valid\"
 
 # Test the function
@@ -103,3 +132,8 @@ for pwd in test_passwords:
     print(f\"'{pwd}': {message}\")
 ```
 " %}
+
+{% capture text %}
+**Good luck!!!**
+{% endcapture %}
+{% include alert.html text=text color=secondary %}
