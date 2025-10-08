@@ -2,18 +2,20 @@
 section: Data Analysis with Python
 nav_order: 7
 title: Statistical Analysis
-topics: statistics, t-test, anova, chi-square, correlation, regression
+topics: statistics, t-test, ANOVA, chi-square, correlation, regression
 ---
 
-Now let's perform various ```statistical tests``` to extract meaningful insights from our data.
+**Statistical analysis** is at the heart of **medical research and clinical decision-making**. It allows us to determine whether observed patterns in patient data are due to chance or represent meaningful differences or associations.
 
 {% include question.html header="Descriptive Statistics" text="
 
-**Descriptive statistics** are tools used to **summarize and describe the main features of a dataset**. In medicine, they help you make sense of patient data, lab results, or clinical trial outcomes **without making predictions or testing hypotheses**.
+Descriptive statistics **summarize your dataset** and provide the foundation for deeper analysis.
 
-Think of them as the **vital signs of your data** — they give you a quick snapshot of what’s going on.
+In medicine, these **metrics describe patient demographics, laboratory results, and treatment outcomes** — helping you quickly understand what’s typical or unusual in your data.
 
-🧪 **Key Components You’ll Often Use:**
+Think of them as the **vital signs of your dataset** — providing a snapshot before diagnosing deeper relationships.
+
+🧪 **Common Measures**
 - Measures of central tendency:
   - Mean (e.g., average blood pressure)
   - Median (e.g., middle value of patient age)
@@ -34,7 +36,7 @@ from scipy import stats
 import numpy as np
 ```
 
-**Let's define a comprehensive descriptive statistics function.**
+**Let's define a function to describe clinical data.**
 
 ```python
 def describe_data(data, column_name):
@@ -45,18 +47,15 @@ def describe_data(data, column_name):
     print(f\"Median: {np.median(data):.2f}\")
     print(f\"Mode: {stats.mode(data, keepdims=True)[0][0]:.2f}\")
     print(f\"Standard Deviation: {np.std(data, ddof=1):.2f}\")
-    print(f\"Variance: {np.var(data, ddof=1):.2f}\")
-    print(f\"Skewness: {stats.skew(data):.2f}\")
-    print(f\"Kurtosis: {stats.kurtosis(data):.2f}\")
     print(f\"Range: {np.max(data) - np.min(data):.2f}\")
     print(f\"IQR: {np.percentile(data, 75) - np.percentile(data, 25):.2f}\")
 ```
 
-**Analyze salary and age**
+**Example Use**
 
 ```python
-describe_data(df['salary'], 'Salary')
-describe_data(df['age'], 'Age')
+describe_data(df['Glucose'], 'Fasting Glucose (mg/dL)')
+describe_data(df['Age'], 'Patient Age (years)')
 ```
 " %}
 
@@ -64,79 +63,75 @@ describe_data(df['age'], 'Age')
 
 {% include question.html header="t-tests" text="
 
-One-sample t-test
+**One-sample t-test**
 
-Let's check if average salary differs significantly from Php 70,000
-
-```python
-population_mean = 70000
-t_stat, p_value = stats.ttest_1samp(df['salary'], population_mean)
-
-print(f\"\n=== One-Sample T-Test ===\")
-print(f\"Testing if mean salary differs from ${population_mean:,}\")
-print(f\"Sample mean: ${df['salary'].mean():,.2f}\")
-print(f\"T-statistic: {t_stat:.4f}\")
-print(f\"P-value: {p_value:.4f}\")
-print(f\"Significant at α=0.05: {'Yes' if p_value < 0.05 else 'No'}\")
-```
-
-Two-sample t-test
-
-Let's compare the salaries between IT and Finance departments
+Check if the **average fasting glucose** differs significantly from the normal fasting level of **100 mg/dL**.
 
 ```python
-it_salaries = df[df['department'] == 'IT']['salary']
-finance_salaries = df[df['department'] == 'Finance']['salary']
+population_mean = 100
+t_stat, p_value = stats.ttest_1samp(df['Glucose'], population_mean)
 
-t_stat, p_value = stats.ttest_ind(it_salaries, finance_salaries)
-
-print(f\"\n=== Two-Sample T-Test ===\")
-print(f\"Comparing IT vs Finance salaries\")
-print(f\"IT mean salary: ${it_salaries.mean():,.2f}\")
-print(f\"Finance mean salary: ${finance_salaries.mean():,.2f}\")
+print(\"\n=== One-Sample T-Test ===\")
+print(f\"Testing if mean glucose differs from {population_mean} mg/dL\")
+print(f\"Sample mean: {df['Glucose'].mean():.2f}\")
 print(f\"T-statistic: {t_stat:.4f}\")
 print(f\"P-value: {p_value:.4f}\")
-print(f\"Significant difference at α=0.05: {'Yes' if p_value < 0.05 else 'No'}\")
 ```
 
-Paired t-test example (if we had before/after data)
+💡 *Clinical meaning:* A significant p-value (< 0.05) suggests that your patient group’s glucose levels are not within normal limits.
 
-Let's simulate salary increases
+**Two-sample t-test**
+
+Compare **cholesterol levels** between **male** and **female** patients.
+
+```python
+male_chol = df[df['Sex'] == 'Male']['Cholesterol']
+female_chol = df[df['Sex'] == 'Female']['Cholesterol']
+
+t_stat, p_value = stats.ttest_ind(male_chol, female_chol)
+
+print(\"\n=== Two-Sample T-Test ===\")
+print(f\"T-statistic: {t_stat:.4f}\")
+print(f\"P-value: {p_value:.4f}\")
+```
+
+💡 *Clinical meaning:* Tests if there’s a significant sex-based difference in cholesterol levels.
+
+**Paired t-test example (if we had before/after data)**
+
+Evaluate if **blood pressure medication** effectively reduces **systolic BP**.
 
 ```python
 np.random.seed(42)
-salary_before = df['salary'].sample(30).values
-salary_after = salary_before + np.random.normal(5000, 2000, 30)
+bp_before = df['Systolic_BP_Before'].sample(30).values
+bp_after = df['Systolic_BP_After'].sample(30).values
 
-t_stat, p_value = stats.ttest_rel(salary_before, salary_after)
+t_stat, p_value = stats.ttest_rel(bp_before, bp_after)
 
-print(f\"\n=== Paired T-Test ===\")
-print(f\"Testing salary increase effectiveness\")
-print(f\"Mean before: ${np.mean(salary_before):,.2f}\")
-print(f\"Mean after: ${np.mean(salary_after):,.2f}\")
-print(f\"T-statistic: {t_stat:.4f}\")
+print(\"\n=== Paired T-Test ===\")
+print(f\"Mean before: {np.mean(bp_before):.2f}\")
+print(f\"Mean after: {np.mean(bp_after):.2f}\")
 print(f\"P-value: {p_value:.4f}\")
-print(f\"Significant improvement at α=0.05: {'Yes' if p_value < 0.05 else 'No'}\")
 ```
+
+💡 *Clinical meaning:* Determines whether treatment significantly lowered blood pressure.
 " %}
 
 {% include question.html header="ANOVA (Analysis of Variance)" text="
 
-One-way Analysis of Variance (ANOVA)
+**One-way Analysis of Variance (ANOVA)**
 
-ANOVA is an extension to t-test, where there can be more than 2 groups being compared. In this case, we would like to compare salaries across all departments.
+ANOVA is an extension to t-test, where there can be more than 2 groups being compared. In this case, we want to compare the **mean BMI** across **different hospital departments** (e.g., Pediatrics, Internal Medicine, Surgery).
 
 ```python
-department_groups = [group['salary'].values for name, group in df.groupby('department')]
+dept_groups = [group['BMI'].values for name, group in df.groupby('Department')]
+f_stat, p_value = stats.f_oneway(*dept_groups)
 
-f_stat, p_value = stats.f_oneway(*department_groups)
-
-print(f\"\n=== One-Way ANOVA ===\")
-print(f\"Testing salary differences across all departments\")
-print(f\"F-statistic: {f_stat:.4f}\")
-print(f\"P-value: {p_value:.4f}\")
-print(f\"Significant differences at α=0.05: {'Yes' if p_value < 0.05 else 'No'}\")
+print(\"\n=== One-Way ANOVA ===\")
+print(f\"F-statistic: {f_stat:.4f}, P-value: {p_value:.4f}\")
 ```
+
+💡 *Clinical meaning:* Tests if BMI differs across departments — perhaps due to varying patient populations or conditions.
 
 Post-hoc analysis is required to be implemented if ANOVA is significant, i.e., the p-value < 0.05. This threshold is the usual threshold for significant p-values. You can be very strict and go down to 0.01, or maybe less strict by going up to 0.10. However, the latter is not very recommended because studies with these thresholds
 
@@ -148,33 +143,13 @@ Post-hoc analysis is required to be implemented if ANOVA is significant, i.e., t
 ```python
 if p_value < 0.05:
     print(\"\nPost-hoc pairwise comparisons:\")
-    departments = df['department'].unique()
+    departments = df['Department'].unique()
     for i, dept1 in enumerate(departments):
         for dept2 in departments[i+1:]:
-            group1 = df[df['department'] == dept1]['salary']
-            group2 = df[df['department'] == dept2]['salary']
-            t_stat, p_val = stats.ttest_ind(group1, group2)
+            group1 = df[df['Department'] == dept1]['BMI']
+            group2 = df[df['Department'] == dept2]['BMI']
+            _, p_val = stats.ttest_ind(group1, group2)
             print(f\"{dept1} vs {dept2}: p = {p_val:.4f} {'*' if p_val < 0.05 else ''}\")
-```
-
-**Two-way ANOVA**
-
-Example (salary by department and age group)
-
-```python
-# Create a more balanced dataset for demonstration
-balanced_data = []
-for dept in df['department'].unique():
-    for age_grp in df['age_group'].unique():
-        subset = df[(df['department'] == dept) & (df['age_group'] == age_grp)]
-        if len(subset) > 0:
-            balanced_data.extend(subset[['salary', 'department', 'age_group']].values)
-
-if len(balanced_data) > 0:
-    balanced_df = pd.DataFrame(balanced_data, columns=['salary', 'department', 'age_group'])
-
-    # Note: For true two-way ANOVA, you'd typically use statsmodels
-    print(f\"\nTwo-way ANOVA data prepared with {len(balanced_df)} observations\")
 ```
 " %}
 
@@ -182,43 +157,66 @@ if len(balanced_data) > 0:
 
 **Chi-square test of independence**
 
-This test checks if ```department``` and ```age group``` are independent
+Check if **Diagnosis** is associated with **Smoking Status**.
 
 ```python
-contingency_table = pd.crosstab(df['department'], df['age_group'])
-print(f\"\n=== Chi-Square Test of Independence ===\")
-print(\"Contingency Table:\")
-print(contingency_table)
+contingency = pd.crosstab(df['Diagnosis'], df['Smoker'])
+chi2, p, dof, exp = stats.chi2_contingency(contingency)
 
-chi2, p_value, dof, expected = stats.chi2_contingency(contingency_table)
-
-print(f\"\nChi-square statistic: {chi2:.4f}\")
-print(f\"P-value: {p_value:.4f}\")
-print(f\"Degrees of freedom: {dof}\")
-print(f\"Significant association at α=0.05: {'Yes' if p_value < 0.05 else 'No'}\")
+print(\"\n=== Chi-Square Test of Independence ===\")
+print(contingency)
+print(f\"P-value: {p:.4f}\")
 ```
 
+💡 *Clinical meaning:* A significant association suggests smoking status may relate to diagnosis (e.g., higher COPD rates among smokers).
+
 **Chi-square goodness of fit test**
-This test checks if ```department distribution``` follows expected proportions
+
+Test if **blood type distribution** follows expected population proportions.
 
 ```python
-observed_freq = df['department'].value_counts().sort_index()
-expected_proportions = [0.3, 0.25, 0.25, 0.2]  # Expected proportions
-expected_freq = np.array(expected_proportions) * len(df)
+observed = df['Blood_Type'].value_counts().sort_index()
+expected_proportions = [0.44, 0.42, 0.10, 0.04]  # Example for O, A, B, AB
+expected = np.array(expected_proportions) * len(df)
 
-chi2, p_value = stats.chisquare(observed_freq, expected_freq)
-
-print(f\"\n=== Chi-Square Goodness of Fit Test ===\")
-print(f\"Testing if department distribution matches expected proportions\")
-print(f\"Observed frequencies: {observed_freq.values}\")
-print(f\"Expected frequencies: {expected_freq}\")
-print(f\"Chi-square statistic: {chi2:.4f}\")
+chi2, p_value = stats.chisquare(observed, expected)
+print(\"\n=== Chi-Square Goodness of Fit ===\")
 print(f\"P-value: {p_value:.4f}\")
-print(f\"Significant deviation at α=0.05: {'Yes' if p_value < 0.05 else 'No'}\")
 ```
 " %}
 
 ## Correlation and Regression Analysis
+
+**Correlation**
+
+💡 *Clinical meaning:* Identify linear relationships (e.g., BMI positively correlating with fasting glucose).
+
+```python
+print(\"\n=== Correlation Analysis ===\")
+numeric_cols = ['Age', 'BMI', 'Glucose']
+corr_matrix = df[numeric_cols].corr()
+print(corr_matrix.round(3))
+```
+" %}
+
+{% include question.html header="Simple Linear Regression" text="
+
+Predict Glucose from BMI.
+
+```python
+slope, intercept, r, p, std_err = stats.linregress(df['BMI'], df['Glucose'])
+print(\"\n=== Linear Regression ===\")
+print(f\"Slope: {slope:.2f}, R²: {r**2:.3f}, P-value: {p:.4f}\")
+```
+
+💡 *Clinical meaning:* Each 1-unit increase in BMI predicts an average rise of X mg/dL in glucose.
+" %}
+
+{% include question.html header="Logistic Regression" text="
+
+**Predict **presence of hypertension** (Yes/No) using **Age** and **BMI**.**
+
+**Import stuff**
 
 ```python
 from sklearn.linear_model import LogisticRegression
@@ -226,92 +224,50 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, confusion_matrix
 ```
 
-{% include question.html header="Correlation analysis" text="
+**Set DataFrame**
 
 ```python
-print(f\"\n=== Correlation Analysis ===\")
-numeric_columns = ['age', 'salary', 'years_employed']
-correlation_matrix = df[numeric_columns].corr()
-print(\"Correlation Matrix:\")
-print(correlation_matrix.round(3))
+df['Hypertensive'] = (df['Systolic_BP'] >= 140).astype(int)
+
+X = df[['Age', 'BMI']].values
+y = df['Hypertensive'].values
 ```
 
-Test significance of correlations
+**Split data to training and testing data sets. **
 
-```python
-def correlation_significance(x, y):
-    r, p = stats.pearsonr(x, y)
-    return r, p
-
-for i, col1 in enumerate(numeric_columns):
-    for col2 in numeric_columns[i+1:]:
-        r, p = correlation_significance(df[col1], df[col2])
-        print(f\"{col1} vs {col2}: r = {r:.3f}, p = {p:.4f} {'*' if p < 0.05 else ''}\")
-```
-" %}
-
-{% include question.html header="Simple Linear Regression (using scipy)" text="
-
-```python
-slope, intercept, r_value, p_value, std_err = stats.linregress(df['age'], df['salary'])
-
-print(f\"\n=== Linear Regression: Age predicting Salary ===\")
-print(f\"Slope: {slope:.2f} (salary increase per year of age)\")
-print(f\"Intercept: {intercept:.2f}\")
-print(f\"R-squared: {r_value**2:.4f}\")
-print(f\"P-value: {p_value:.4f}\")
-print(f\"Standard error: {std_err:.2f}\")
-```
-" %}
-
-{% include question.html header="Logistic Regression" text="
-
-Predict high salary (above median) based on age and years employed
-
-```python
-median_salary = df['salary'].median()
-df['high_salary'] = (df['salary'] > median_salary).astype(int)
-```
-
-Prepare features
-
-```python
-X = df[['age', 'years_employed']].values
-y = df['high_salary'].values
-```
-
-Split data to training and testing data sets. This is a common practice in building a regression model.
+This is a common practice in building a regression model.
 
 ```python
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 ```
 
-Fit logistic regression model.
+**Fit logistic regression model.**
 
 ```python
 log_reg = LogisticRegression()
 log_reg.fit(X_train, y_train)
-```
-
-Make the predictions
-
-```python
 y_pred = log_reg.predict(X_test)
-y_pred_proba = log_reg.predict_proba(X_test)[:, 1]
 ```
-
-Print the results.
+**Print the results.**
 
 ```python
-print(f\"\n=== Logistic Regression: Predicting High Salary ===\")
-print(f\"Model coefficients: {log_reg.coef_[0]}\")
-print(f\"Model intercept: {log_reg.intercept_[0]:.4f}\")
-print(f\"Model accuracy: {log_reg.score(X_test, y_test):.3f}\")
-
+print(\"\n=== Logistic Regression: Predicting Hypertension ===\")
+print(f\"Accuracy: {log_reg.score(X_test, y_test):.3f}\")
 print(\"\nClassification Report:\")
 print(classification_report(y_test, y_pred))
-
 print(\"\nConfusion Matrix:\")
 print(confusion_matrix(y_test, y_pred))
 ```
 " %}
+
+{% capture text %}
+**Key Takeaway**
+
+- Use **descriptive statistics** to summarize patient data.
+- Apply **t-tests** and **ANOVA** to detect significant group differences.
+- Use **Chi-square tests** for categorical associations.
+- **Correlation** and **regression** uncover relationships and prediction patterns.
+
+Together, these tools form the **backbone of clinical research and evidence-based medicine** — helping transform raw data into actionable insights.
+{% endcapture %}
+{% include alert.html text=text color=secondary %}
