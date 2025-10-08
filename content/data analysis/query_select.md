@@ -98,7 +98,7 @@ target_conditions = df[df['Diagnosis'].isin(['Diabetes', 'Hypertension'])]
 print(f\"Patients with Diabetes or Hypertension: {len(target_conditions)}\")
 ```
 
-*String operations*
+**String operations**
 
 💡 *Use case:* Useful for **data cleaning or searching names**.
 
