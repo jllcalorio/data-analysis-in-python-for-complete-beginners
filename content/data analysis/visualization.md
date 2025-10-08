@@ -36,7 +36,7 @@ plt.grid(True, alpha=0.3)
 plt.show()
 ```
 
-Box plot - Glucose by Diagnosis
+**Box plot - Glucose by Diagnosis**
 
 💡 *Use case:* Compare glucose variability across different conditions (e.g., Diabetes, Hypertension, Normal).
 
