@@ -183,7 +183,7 @@ print(high_performers)
 " %}
 
 {% capture text %}
-Functions let you **automate repetitive tasks*, from **calculating averages** of lab results to **generating formatted patient summaries**.
+Functions let you **automate repetitive tasks**, from **calculating averages** of lab results to **generating formatted patient summaries**.
 
 They make your code **modular, reusable, and easier to understand**, especially when analyzing multiple patient records or large datasets.
 {% endcapture %}
