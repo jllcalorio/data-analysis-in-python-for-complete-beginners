@@ -45,4 +45,4 @@ Keep practicing — coding is a skill best learned through experimentation and a
 
 {% capture text %}Python is more than just a programming language — it’s a **tool for discovery and efficiency in healthcare**. By mastering these basics, you’ve taken your first step toward **using data to improve patient outcomes and decision-making**.
 {% endcapture %}
-{% include card.html text=text header="Remember" %}
+{% include alert.html text=text color=secondary %}
