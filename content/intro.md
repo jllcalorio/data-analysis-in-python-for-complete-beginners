@@ -36,11 +36,11 @@ By the end of this workshop, participants will be able to:
 " %}
 
 {% include question.html header="Practical Applications" text="
-- Read and process data from various file formats
-- Filter and query datasets to extract meaningful insights
-- Perform statistical tests (t-tests, ANOVA, chi-square, logistic regression)
-- Create professional data visualizations
-- Build a foundation for advanced Python applications
+- **Read and process** data from various file formats
+- **Filter and query** datasets to extract meaningful insights
+- **Perform statistical tests** (t-tests, ANOVA, chi-square, logistic regression)
+- Create professional **data visualizations**
+- **Build a foundation** for advanced Python applications
 " %}
 ---
 
@@ -63,10 +63,10 @@ This workshop is specially designed for DMSFI students and healthcare profession
 " %}
 
 {% include question.html header="Who Will Benefit Most" text="
-- Medical professionals aiming to integrate data science into clinical practice or research
-- Medical students preparing for coursework or electives involving biostatistics, informatics, or computational tools
-- Clinicians and researchers seeking to enhance decision-making through data-driven approaches
-- Healthcare professionals curious about programming, data analysis, and their applications in medicine
+- **Medical professionals** aiming to integrate data science into clinical practice or research
+- **Medical students** preparing for coursework or electives involving biostatistics, informatics, or computational tools
+- **Clinicians and researchers** seeking to enhance decision-making through data-driven approaches
+- **Healthcare professionals** curious about programming, data analysis, and their applications in medicine
 " %}
 ---
 
@@ -135,7 +135,7 @@ By workshop completion, you'll have created:
 " %}
 
 {% include question.html header="Certificate of Completion" text="
-Participants who complete all workshop activities will receive a **Certificate of Completion in “Data Analysis in Python for Complete Beginners”**, issued by the Center for Research and Development, DMSFI.
+Participants who complete all workshop activities will receive a **Certificate of Completion in "Data Analysis in Python for Complete Beginners",** issued by the Center for Research and Development, DMSFI.
 " %}
 ---
 
