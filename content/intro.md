@@ -167,7 +167,7 @@ Participants who complete all workshop activities will receive a **Certificate o
 
 {% include question.html header="III. Data Transformation and Aggregation" text="
 - **Grouping (```groupby```)** – Combining rows with the same value in one or more columns to perform summary calculations.
-- **Aggregation** – Calculating summary statistics such as mean, median, count, or standard deviation for each group.
+- **Aggregation** – Calculating summary statistics such as ```mean```, ```median```, ```count```, or ```standard deviation``` for each group.
 - **Custom Aggregation** – User-defined summary functions applied to groups (e.g., calculating salary range).
 - **Transformation** – Modifying existing columns or creating new ones based on calculations or conditions.
 - **Binning / Categorization** – Dividing continuous data into categories or intervals using ```pd.cut()```.
@@ -177,8 +177,8 @@ Participants who complete all workshop activities will receive a **Certificate o
 " %}
 
 {% include question.html header="IV. Data Visualization" text="
-- **Matplotlib** – A powerful Python library for creating static, 2D plots like histograms, scatter plots, and bar charts.
-- **Seaborn** – A visualization library built on Matplotlib that simplifies statistical plotting with cleaner aesthetics.
+- **Matplotlib** – A powerful Python library for creating static, 2D plots like ```histograms```, ```scatter plots```, and ```bar charts```.
+- **Seaborn** – A visualization library built on ```Matplotlib``` that simplifies statistical plotting with cleaner aesthetics.
 - **Figure** – The entire plotting area that may contain one or more subplots.
 - **Axes / Subplot** – Individual plots within a figure.
 - **Histogram** – Displays the frequency distribution of a numeric variable.
@@ -212,10 +212,10 @@ Participants who complete all workshop activities will receive a **Certificate o
 " %}
 
 {% include question.html header="VI. Hypothesis Testing" text="
-- **Null Hypothesis (H₀)** – The default assumption that there is no effect or difference.
-- **Alternative Hypothesis (H₁)** – States that there is an effect or difference.
+- **Null Hypothesis (H₀)** – The default assumption that there is **no effect or difference**.
+- **Alternative Hypothesis (H₁)** – States that **we fail to reject the null hypothesis**.
 - **p-value** – Probability of observing the data (or more extreme) assuming H₀ is true.
-- **Significance Level (α)** – Threshold (commonly 0.05) used to decide whether to reject H₀.
+- **Significance Level (α)** – Threshold (commonly ```0.05```) used to decide whether to reject H₀.
 - **Type I Error** – Incorrectly rejecting a true null hypothesis (false positive).
 - **Type II Error** – Failing to reject a false null hypothesis (false negative).
 " %}
