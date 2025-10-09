@@ -135,7 +135,7 @@ By workshop completion, you'll have created:
 " %}
 
 {% include question.html header="Certificate of Completion" text="
-Participants who complete all workshop activities will receive a **Certificate of Completion in \"Data Analysis in Python for Complete Beginners\",** issued by the Center for Research and Development, DMSFI.
+Participants who complete all workshop activities will receive a **Certificate of Completion in \"Data Analysis in Python for Complete Beginners,\"** issued by the Center for Research and Development, DMSFI.
 " %}
 ---
 
