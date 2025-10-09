@@ -226,7 +226,7 @@ Participants who complete all workshop activities will receive a **Certificate o
   - *Independent (two-sample) t-test:* compares means of two independent groups.
   - *Paired t-test:* compares means of the same group before and after a treatment.
 - **ANOVA (Analysis of Variance)** – Tests differences among means of three or more groups.
-  - *One-way ANOVA:** compares one factor across multiple groups.
+  - *One-way ANOVA:* compares one factor across multiple groups.
   - *Two-way ANOVA:* examines the effect of two factors simultaneously.
   - *Post-hoc tests:* pairwise comparisons following a significant ANOVA result.
 - **Chi-Square Test** – Tests relationships between categorical variables.
