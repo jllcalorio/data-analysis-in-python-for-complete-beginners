@@ -23,7 +23,7 @@ This workshop provides a **hands-on, structured approach to learning Python fund
 
 ---
 
-## Learning Objectives - Medical Context
+## Learning Objectives
 
 By the end of this workshop, participants will be able to:
 
@@ -136,6 +136,127 @@ By workshop completion, you'll have created:
 
 {% include question.html header="Certificate of Completion" text="
 Participants who complete all workshop activities will receive a **Certificate of Completion in \"Data Analysis in Python for Complete Beginners,\"** issued by the Center for Research and Development, DMSFI.
+" %}
+---
+
+## Definition of Terms
+
+{% include question.html header="I. Programming and Data Basics" text="
+- **Variable** – A named container used to store data values in a program.
+- **Data Type** – The classification of data that tells Python what kind of value is being stored (e.g., integer, float, string, boolean).
+- **List** – An ordered, mutable collection of items (e.g., ```[10, 20, 30]```).
+- **Dictionary** – A collection of key-value pairs (e.g., ```{'name': 'John', 'age': 30}```).
+- **Function** – A reusable block of code that performs a specific task.
+- **Module / Library** – A collection of pre-written Python functions and tools (e.g., ```numpy```, ```pandas```, ```matplotlib```).
+- **DataFrame** – A two-dimensional, labeled data structure in ```pandas``` similar to an Excel spreadsheet, with rows and columns.
+- **Series** – A one-dimensional labeled array (e.g., a single column of a DataFrame).
+- **Control Structures** – Logical structures that determine the order in which code executes, such as loops (```for```, ```while```) and conditionals (```if```, ```else```).
+" %}
+
+{% include question.html header="II. Data Querying and Selection" text="
+- **Querying** – Extracting specific subsets of data based on certain criteria or conditions.
+- **Filtering** – Selecting rows or columns in a dataset that meet a particular condition (e.g., salaries greater than ₱80,000).
+- **Indexing** – Accessing data using row or column labels or positions.
+- **iloc** – Index-based selection (integer position).
+- **loc** – Label-based selection (using column or row names).
+- **Boolean Masking** – Using logical conditions (```True```/```False```) to filter data.
+- **```isin()``` Function** – Filters rows where a column’s value matches any in a given list.
+- **String Operations** – Text-based filters or transformations (e.g., ```str.contains()``` to find names with a certain substring).
+- **```query()``` Method** – A more readable way to filter data using string expressions (e.g., ```df.query('age > 30 and salary > 60000')```).
+" %}
+
+{% include question.html header="III. Data Transformation and Aggregation" text="
+- **Grouping (```groupby```)** – Combining rows with the same value in one or more columns to perform summary calculations.
+- **Aggregation** – Calculating summary statistics such as mean, median, count, or standard deviation for each group.
+- **Custom Aggregation** – User-defined summary functions applied to groups (e.g., calculating salary range).
+- **Transformation** – Modifying existing columns or creating new ones based on calculations or conditions.
+- **Binning / Categorization** – Dividing continuous data into categories or intervals using ```pd.cut()```.
+- **Sorting** – Arranging rows in ascending or descending order based on column values.
+- **Ranking** – Assigning a rank (1st, 2nd, etc.) based on a specific column’s value.
+- **Chained Operations** – Combining multiple DataFrame methods in a single line (e.g., filtering → sorting → selecting).
+" %}
+
+{% include question.html header="IV. Data Visualization" text="
+- **Matplotlib** – A powerful Python library for creating static, 2D plots like histograms, scatter plots, and bar charts.
+- **Seaborn** – A visualization library built on Matplotlib that simplifies statistical plotting with cleaner aesthetics.
+- **Figure** – The entire plotting area that may contain one or more subplots.
+- **Axes / Subplot** – Individual plots within a figure.
+- **Histogram** – Displays the frequency distribution of a numeric variable.
+- **Box Plot** – Visualizes data spread and detects outliers using quartiles.
+- **Scatter Plot** – Shows relationships or correlations between two numeric variables.
+- **Bar Plot** – Represents categorical data using rectangular bars.
+- **Count Plot** – Displays the frequency of categories.
+- **Violin Plot** – Combines box plot and density plot to show data distribution.
+- **Heatmap** – Displays a color-coded correlation matrix or table of values.
+- **Pie Chart** – Represents proportions of categories in a circular chart.
+- **Legend** – A key that identifies what each color or symbol represents in a plot.
+- **Regression Line** – A line that shows the general trend in scatter plot data (e.g., using ```sns.regplot```).
+" %}
+
+{% include question.html header="V. Descriptive and Inferential Statistics" text="
+- **Statistics** – The branch of mathematics dealing with the collection, analysis, interpretation, and presentation of data.
+- **Descriptive Statistics** – Summarize data features without drawing conclusions beyond the data itself.
+- **Inferential Statistics** – Use sample data to make generalizations about a larger population.
+
+**🔹 Descriptive Measures**
+
+- **Mean** – The arithmetic average.
+- **Median** – The middle value when data are ordered.
+- **Mode** – The most frequently occurring value.
+- **Range** – Difference between the maximum and minimum values.
+- **Standard Deviation (SD)** – Measures how spread out the data are from the mean.
+- **Variance** – Square of the standard deviation.
+- **Interquartile Range (IQR)** – Difference between the 75th and 25th percentiles.
+- **Skewness** – Measures asymmetry in a distribution.
+- **Kurtosis** – Measures how heavy or light the tails of a distribution are compared to a normal distribution.
+" %}
+
+{% include question.html header="VI. Hypothesis Testing" text="
+- **Null Hypothesis (H₀)** – The default assumption that there is no effect or difference.
+- **Alternative Hypothesis (H₁)** – States that there is an effect or difference.
+- **p-value** – Probability of observing the data (or more extreme) assuming H₀ is true.
+- **Significance Level (α)** – Threshold (commonly 0.05) used to decide whether to reject H₀.
+- **Type I Error** – Incorrectly rejecting a true null hypothesis (false positive).
+- **Type II Error** – Failing to reject a false null hypothesis (false negative).
+" %}
+
+{% include question.html header="VII. Common Statistical Tests" text="
+- **T-test** – Compares means between groups.
+  - *One-sample t-test:* compares sample mean to a known population mean.
+  - *Independent (two-sample) t-test:* compares means of two independent groups.
+  - *Paired t-test:* compares means of the same group before and after a treatment.
+- **ANOVA (Analysis of Variance)** – Tests differences among means of three or more groups.
+  - *One-way ANOVA:** compares one factor across multiple groups.
+  - *Two-way ANOVA:* examines the effect of two factors simultaneously.
+  - *Post-hoc tests:* pairwise comparisons following a significant ANOVA result.
+- **Chi-Square Test** – Tests relationships between categorical variables.
+  - *Test of Independence:* determines if two categorical variables are related.
+  - *Goodness of Fit:* checks if observed data match expected distributions.
+" %}
+
+{% include question.html header="VIII. Correlation and Regression" text="
+- **Correlation** – Measures the strength and direction of a linear relationship between two variables (range: -1 to +1).
+  - *Positive correlation:* variables increase together.
+  - *Negative correlation:* one increases while the other decreases.
+- **Pearson’s r** – The most common correlation coefficient for continuous variables.
+- **Regression Analysis** – Predicts the value of a dependent variable based on one or more independent variables.
+- **Simple Linear Regression** – Uses one predictor variable to predict an outcome.
+  - *Slope:* change in outcome for every one-unit increase in predictor.
+  - *Intercept:* predicted outcome when the predictor is zero.
+  - *R-squared:* proportion of variance in the dependent variable explained by the independent variable.
+- **Logistic Regression** – Predicts binary outcomes (e.g., ```yes/no```, ```0/1```) using continuous or categorical predictors.
+  - *Odds Ratio:* how much the odds of the outcome change with a one-unit increase in the predictor.
+  - *Confusion Matrix:* table showing correct and incorrect predictions.
+  - *Accuracy:* proportion of correct predictions.
+  - *Classification Report:* summary including precision, recall, and F1-score.
+" %}
+
+{% include question.html header="IX. Data Science Utilities" text="
+- **Train-Test Split** – Dividing data into training (for model building) and testing (for evaluation).
+- **Random Seed** – Ensures reproducibility by fixing random number generation.
+- **Feature** – An independent variable or predictor in a dataset.
+- **Target Variable** – The dependent variable or outcome being predicted.
+- **Normalization / Scaling** – Adjusting data values to a common scale without distorting differences.
 " %}
 ---
 
