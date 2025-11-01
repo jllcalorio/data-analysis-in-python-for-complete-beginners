@@ -9,9 +9,7 @@ topics: variable, data, values, comments
 
 In Python, you don’t have to specify what type of data a variable will hold — Python automatically figures that out for you!
 
-{% include question.html header="Creating Variables" text="
-
-Creating variables is simple.
+{% include question.html header="Creating variables is simple." text="
 
 It's not an exaggeration that variables are going to be your friends in the long run.
 

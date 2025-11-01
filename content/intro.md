@@ -31,7 +31,7 @@ By the end of this workshop, participants will be able to:
 - **Handle Data Effectively:** Organize and manage patient or laboratory data using Python’s built-in structures
 - **Perform Data Analysis:** Use ```pandas``` to explore health-related datasets and compute descriptive statistics
 - **Create Visualizations:** Generate charts for patient outcomes, clinical trials, or epidemiological trends
-- **Perform Statistical Tests:** Apply tests such as *t-test*, *ANOVA*, and *chi-square* to biomedical datasets
+- **Perform Statistical Tests:** Apply tests such as *```t-test```*, *```ANOVA```*, *```chi-square```*, and *```logistic regression```* tests to biomedical datasets
 - **Build a Foundation:** Prepare for advanced applications like biostatistics, machine learning, and clinical decision support
 " %}
 
@@ -77,7 +77,6 @@ This workshop is specially designed for DMSFI students and healthcare profession
 - **Understand and apply** fundamental programming concepts
 - Perform basic **data manipulation and analysis tasks**
 - Create **simple visualizations** from datasets
-- **Debug** common programming **errors** independently
 " %}
 
 {% include question.html header="Long-term Benefits: Clinical & Research Impact" text="
@@ -130,7 +129,6 @@ By workshop completion, you'll have created:
 {% include question.html header="Resources for Continued Learning" text="
 - Complete workshop materials and code examples
 - Recommended resources for further study
-- Access to a supportive learning community
 - Clear pathways for advancing your Python skills
 " %}
 
@@ -143,36 +141,33 @@ Participants who complete all workshop activities will receive a **Certificate o
 
 {% include question.html header="I. Programming and Data Basics" text="
 - **Variable** – A named container used to store data values in a program.
-- **Data Type** – The classification of data that tells Python what kind of value is being stored (e.g., integer, float, string, boolean).
+- **Data Type** – The classification of data that tells Python what kind of value is being stored (e.g., ```integer```, ```float```, ```string```, ```boolean```).
 - **List** – An ordered, mutable collection of items (e.g., ```[10, 20, 30]```).
 - **Dictionary** – A collection of key-value pairs (e.g., ```{'name': 'John', 'age': 30}```).
 - **Function** – A reusable block of code that performs a specific task.
 - **Module / Library** – A collection of pre-written Python functions and tools (e.g., ```numpy```, ```pandas```, ```matplotlib```).
 - **DataFrame** – A two-dimensional, labeled data structure in ```pandas``` similar to an Excel spreadsheet, with rows and columns.
 - **Series** – A one-dimensional labeled array (e.g., a single column of a DataFrame).
-- **Control Structures** – Logical structures that determine the order in which code executes, such as loops (```for```, ```while```) and conditionals (```if```, ```else```).
+- **Control Structures** – Logical structures that determine the order in which code executes, such as **loops** (```for```, ```while```) and **conditionals** (```if```, ```else```).
 " %}
 
 {% include question.html header="II. Data Querying and Selection" text="
 - **Querying** – Extracting specific subsets of data based on certain criteria or conditions.
-- **Filtering** – Selecting rows or columns in a dataset that meet a particular condition (e.g., salaries greater than ₱80,000).
+- **Filtering** – Selecting rows or columns in a dataset that meet a particular condition (e.g., heart rate greater than 100 BPM).
 - **Indexing** – Accessing data using row or column labels or positions.
 - **iloc** – Index-based selection (integer position).
 - **loc** – Label-based selection (using column or row names).
 - **Boolean Masking** – Using logical conditions (```True```/```False```) to filter data.
 - **```isin()``` Function** – Filters rows where a column’s value matches any in a given list.
 - **String Operations** – Text-based filters or transformations (e.g., ```str.contains()``` to find names with a certain substring).
-- **```query()``` Method** – A more readable way to filter data using string expressions (e.g., ```df.query('age > 30 and salary > 60000')```).
+- **```query()``` Method** – A more readable way to filter data using string expressions (e.g., ```df.query('age > 30 and heart_rate > 100')```).
 " %}
 
 {% include question.html header="III. Data Transformation and Aggregation" text="
 - **Grouping (```groupby```)** – Combining rows with the same value in one or more columns to perform summary calculations.
 - **Aggregation** – Calculating summary statistics such as ```mean```, ```median```, ```count```, or ```standard deviation``` for each group.
-- **Custom Aggregation** – User-defined summary functions applied to groups (e.g., calculating salary range).
-- **Transformation** – Modifying existing columns or creating new ones based on calculations or conditions.
-- **Binning / Categorization** – Dividing continuous data into categories or intervals using ```pd.cut()```.
+- **Custom Aggregation** – User-defined summary functions applied to groups (e.g., ```calculating body mass index```).
 - **Sorting** – Arranging rows in ascending or descending order based on column values.
-- **Ranking** – Assigning a rank (1st, 2nd, etc.) based on a specific column’s value.
 - **Chained Operations** – Combining multiple DataFrame methods in a single line (e.g., filtering → sorting → selecting).
 " %}
 
@@ -185,7 +180,6 @@ Participants who complete all workshop activities will receive a **Certificate o
 - **Box Plot** – Visualizes data spread and detects outliers using quartiles.
 - **Scatter Plot** – Shows relationships or correlations between two numeric variables.
 - **Bar Plot** – Represents categorical data using rectangular bars.
-- **Count Plot** – Displays the frequency of categories.
 - **Violin Plot** – Combines box plot and density plot to show data distribution.
 - **Heatmap** – Displays a color-coded correlation matrix or table of values.
 - **Pie Chart** – Represents proportions of categories in a circular chart.
@@ -201,14 +195,12 @@ Participants who complete all workshop activities will receive a **Certificate o
 **🔹 Descriptive Measures**
 
 - **Mean** – The arithmetic average.
-- **Median** – The middle value when data are ordered.
+- **Median** – The middle value when data are sorted.
 - **Mode** – The most frequently occurring value.
 - **Range** – Difference between the maximum and minimum values.
 - **Standard Deviation (SD)** – Measures how spread out the data are from the mean.
 - **Variance** – Square of the standard deviation.
 - **Interquartile Range (IQR)** – Difference between the 75th and 25th percentiles.
-- **Skewness** – Measures asymmetry in a distribution.
-- **Kurtosis** – Measures how heavy or light the tails of a distribution are compared to a normal distribution.
 " %}
 
 {% include question.html header="VI. Hypothesis Testing" text="
@@ -230,8 +222,8 @@ Participants who complete all workshop activities will receive a **Certificate o
   - *Two-way ANOVA:* examines the effect of two factors simultaneously.
   - *Post-hoc tests:* pairwise comparisons following a significant ANOVA result.
 - **Chi-Square Test** – Tests relationships between categorical variables.
-  - *Test of Independence:* determines if two categorical variables are related.
-  - *Goodness of Fit:* checks if observed data match expected distributions.
+  - *Test of Independence:* determines if two categorical variables are related. This is usually the case.
+  - *Goodness of Fit:* checks if observed data match expected distributions. This is when we have a theoretical distribution or percentages.
 " %}
 
 {% include question.html header="VIII. Correlation and Regression" text="
@@ -248,7 +240,6 @@ Participants who complete all workshop activities will receive a **Certificate o
   - *Odds Ratio:* how much the odds of the outcome change with a one-unit increase in the predictor.
   - *Confusion Matrix:* table showing correct and incorrect predictions.
   - *Accuracy:* proportion of correct predictions.
-  - *Classification Report:* summary including precision, recall, and F1-score.
 " %}
 
 {% include question.html header="IX. Data Science Utilities" text="
@@ -264,11 +255,11 @@ Participants who complete all workshop activities will receive a **Certificate o
 
 Ready to begin your Python journey? Let's dive into the fundamentals and start building your programming skills from the ground up. The next section will introduce you to the basic building blocks of Python programming.
 
-**Important**: Before the workshop begins, please install **Python** and **Anaconda** on your laptop. Don’t worry — we’ll guide you step by step during the first session.
+**Important**: Before the workshop begins, please install **Python** and **Anaconda** on your laptop. Don’t worry — I’ll guide you step by step during the first session.
 
 {% include question.html header="Let's install Python in your computer!" text="
 1. To **download Python**, go to [https://www.python.org/downloads/](https://www.python.org/downloads/) and click '**Download Python x.xx.x**'. There are separate download options depending on your operating system (OS), example, Windows, macOS, Linux, etc. Double-click the downloaded file and follow the default options for installation.
-2. To **download Anaconda**, go to [https://www.anaconda.com/download/success](https://www.anaconda.com/download/success) and click one of the options under \"**Distribution Installers**\". Double-click the downloaded file and follow the default options for installation.
+2. To **download Anaconda**, go to [https://www.anaconda.com/download/success](https://www.anaconda.com/download/success) and click one of the options under \"**Distribution Installers**\". Once download is finished, double-click the downloaded file and follow the default options for installation.
   - Anaconda is a free and open-source distribution of the Python and R programming languages for scientific computing. It simplifies package management and deployment, making it the standard choice for data science.
 
 Once installed, open **Anaconda Navigator**, find **Jupyter Notebook**, and click **Launch** — you’re ready to code!
