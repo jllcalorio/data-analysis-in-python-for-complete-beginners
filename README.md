@@ -2,6 +2,8 @@
 
 Welcome to our comprehensive Python programming workshop! This intensive learning experience is designed to take you from complete beginner to confident Python programmer with practical data analysis skills.
 
+View this material online via https://jllcalorio.github.io/data-analysis-in-python-for-complete-beginners/.
+
 # Workshop Overview
 
 Python has become one of the most popular and versatile programming languages in the world, powering everything from web applications to artificial intelligence systems. This workshop provides a structured, hands-on approach to learning Python programming fundamentals and applying them to real-world data analysis tasks.
